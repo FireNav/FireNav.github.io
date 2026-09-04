@@ -1,520 +1,412 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="theme-color" content="#11110f">
+  <meta name="color-scheme" content="light dark">
+
+  <title>FireNav — Cooperative Navigation in Dynamic Indoor Fires</title>
+  <meta name="title" content="FireNav: A Physics-Grounded Benchmark for Cooperative Multi-Agent Navigation in Dynamic Indoor Fire Environments">
+  <meta name="description" content="FireNav is a physics-grounded benchmark for cooperative multi-agent navigation, perception, and search in dynamic indoor fire environments.">
+  <meta name="keywords" content="FireNav, embodied AI, multi-agent navigation, search and rescue, fire simulation, robotics, benchmark, ObjectNav, PersonNav">
+  <meta name="author" content="Anonymous Authors">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="FireNav">
+  <meta property="og:title" content="FireNav — Cooperative Navigation in Dynamic Indoor Fires">
+  <meta property="og:description" content="A physics-grounded benchmark for cooperative multi-agent navigation in dynamic indoor fire environments.">
+  <meta property="og:url" content="https://firenav.github.io/">
+  <meta property="og:image" content="https://firenav.github.io/static/images/social-preview.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
-
-  <!-- Twitter -->
+  <meta property="og:image:alt" content="FireNav cooperative navigation framework and hazard maps">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="FireNav — Cooperative Navigation in Dynamic Indoor Fires">
+  <meta name="twitter:description" content="Physics-grounded fire worlds, multimodal sensing, and risk-aware multi-agent navigation.">
+  <meta name="twitter:image" content="https://firenav.github.io/static/images/social-preview.jpg">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <meta name="citation_title" content="FireNav: A Physics-Grounded Benchmark for Cooperative Multi-Agent Navigation in Dynamic Indoor Fire Environments">
+  <meta name="citation_author" content="Anonymous Authors">
+  <meta name="citation_publication_date" content="2027">
+  <meta name="citation_conference_title" content="ACM MobiCom">
+  <meta name="citation_pdf_url" content="https://firenav.github.io/static/pdfs/FireNav_MobiCom2027.pdf">
 
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="static/images/favicon.ico">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "headline": "FireNav: A Physics-Grounded Benchmark for Cooperative Multi-Agent Navigation in Dynamic Indoor Fire Environments",
+    "description": "A physics-grounded benchmark for cooperative multi-agent navigation in dynamic indoor fire environments.",
+    "author": {"@type": "Organization", "name": "Anonymous Authors"},
+    "datePublished": "2027",
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+    "url": "https://firenav.github.io/",
+    "image": "https://firenav.github.io/static/images/social-preview.jpg",
+    "keywords": ["multi-agent navigation", "embodied AI", "fire simulation", "search and rescue", "robotics"]
   }
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <header class="site-header" data-header>
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="FireNav home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 28 36"><path d="M15.7 1.7c2.6 7-1.8 9.9-4.3 13.7-1.5 2.3-1.2 4.8.5 6.7-4.5-.8-6.8-4.1-5.9-8.7C1.8 17.8-.1 22.7 1.5 27c2 5.3 6.9 8.2 12.4 8.2 7.3 0 12.8-4.9 12.8-11.8 0-8.6-7.1-16.5-11-21.7Zm1.2 29.5c-3.5 1.4-7.4-.3-8.8-3.8-1.1-2.8-.2-5.8 1.9-7.7.2 3.9 2.6 5.4 4.7 4.6 2.6-1 2.1-4.1 1.8-5.7 2.5 2.4 4.4 4.6 4.7 7 .3 2.5-1.4 4.5-4.3 5.6Z"/></svg>
+        </span>
+        <span>FireNav</span>
+      </a>
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="#overview">Overview</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#results">Results</a>
+        <a href="#real-world">Real world</a>
+        <a class="nav-cta" href="#resources">Get the assets <span aria-hidden="true">↗</span></a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span></span> MobiCom 2027 submission</p>
+          <h1><span>FireNav</span> is a proving ground for robots that enter the fire.</h1>
+          <p class="hero-lede">A physics-grounded benchmark for cooperative multi-agent navigation in dynamic indoor fire environments.</p>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+          <div class="hero-actions" aria-label="Project links">
+            <a class="button button-primary" href="static/pdfs/FireNav_MobiCom2027.pdf" target="_blank" rel="noopener">
+              Read the paper <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-secondary" href="https://drive.google.com/drive/folders/1CXMR67kMRdj6dJoohCUBJ_WgjwU3BPbQ?usp=drive_lin" target="_blank" rel="noopener">
+              Download assets <span aria-hidden="true">↓</span>
+            </a>
+            <a class="text-link" href="#resources">Code &amp; fire plans <span aria-hidden="true">→</span></a>
+          </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+          <div class="submission-note">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span><strong>Anonymous authors</strong> · Project materials for double-blind review</span>
+          </div>
+        </div>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+        <figure class="hero-visual" data-reveal data-delay="1">
+          <div class="visual-index" aria-hidden="true">01 / DYNAMIC WORLDS</div>
+          <img src="static/images/fire-sequence.png" width="574" height="690" alt="Four indoor fire types evolving from early to late stages" fetchpriority="high">
+          <figcaption>
+            <span>Fire evolution</span>
+            <span>4 semantic scenarios · 3 severity levels</span>
+          </figcaption>
+        </figure>
+      </div>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+      <div class="shell stat-rail" aria-label="Benchmark summary" data-reveal>
+        <div><strong>181</strong><span>HM3DSem scenes<br>145 train · 36 val</span></div>
+        <div><strong>04</strong><span>Semantic fire<br>templates</span></div>
+        <div><strong>03</strong><span>Controllable<br>severity levels</span></div>
+        <div><strong>04</strong><span>RGB, depth,<br>thermal &amp; radar</span></div>
+      </div>
+    </section>
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+    <section class="section section-paper" id="overview">
+      <div class="shell paper-grid">
+        <div data-reveal>
+          <p class="section-kicker">The problem</p>
+          <h2>Static benchmarks stop where disaster response begins.</h2>
+        </div>
+        <div class="abstract-copy" data-reveal data-delay="1">
+          <p>Real indoor fires are dangerous, expensive, and difficult to reproduce. Yet existing embodied navigation benchmarks largely focus on single agents operating in static, hazard-free environments.</p>
+          <p>FireNav closes this gap with controllable fire evolution, hazard-coupled sensing, extensible search targets, and standardized cooperative navigation tasks. FireWorld transforms real-world 3D scans into dynamic fire environments using semantic scenario generation, physics-inspired voxel propagation, synchronized rendering, and multimodal sensor synthesis.</p>
+        </div>
+      </div>
+
+      <div class="shell impact-grid">
+        <article class="impact-card impact-dark" data-reveal>
+          <p class="impact-label">Fire impact on conventional navigation</p>
+          <strong>−39.1<span>%</span></strong>
+          <p>average success rate under dynamic fire</p>
+        </article>
+        <article class="impact-card" data-reveal data-delay="1">
+          <p class="impact-label">FireNav recovery</p>
+          <strong>+53.0<span>%</span></strong>
+          <p>average success rate over conventional navigation in fire</p>
+        </article>
+        <article class="impact-card" data-reveal data-delay="2">
+          <p class="impact-label">Safer planning</p>
+          <strong>−62.0<span>%</span></strong>
+          <p>severe hazard exposure in the risk-awareness ablation</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="benchmark">
+      <div class="shell">
+        <div class="section-heading section-heading-light" data-reveal>
+          <div>
+            <p class="section-kicker">Inside the benchmark</p>
+            <h2>From clean scans to changing hazards.</h2>
+          </div>
+          <p>FireWorld separates expensive hazard propagation from the online control loop, enabling reproducible fire timelines and low-latency robot interaction.</p>
+        </div>
+
+        <figure class="media-frame media-frame-dark" data-reveal>
+          <button class="zoom-trigger" type="button" data-lightbox="static/images/fireworld-pipeline.jpg" data-alt="FireWorld construction pipeline" aria-label="Enlarge FireWorld construction pipeline">
+            <img src="static/images/fireworld-pipeline.jpg" width="4280" height="1854" alt="FireWorld pipeline from scene scanning and fire plan generation to voxel propagation and sensor synthesis" loading="lazy">
+            <span aria-hidden="true">Expand ↗</span>
+          </button>
+          <figcaption><strong>FireWorld construction.</strong> Scene semantics and physical attributes drive fire plans, propagation, rendering, and synchronized sensor observations.</figcaption>
+        </figure>
+
+        <div class="feature-tabs" data-tabs data-reveal>
+          <div class="tab-list" role="tablist" aria-label="FireNav benchmark components">
+            <button id="tab-worlds" role="tab" aria-selected="true" aria-controls="panel-worlds" tabindex="0" data-tab="worlds"><span>01</span> Dynamic worlds</button>
+            <button id="tab-sensing" role="tab" aria-selected="false" aria-controls="panel-sensing" tabindex="-1" data-tab="sensing"><span>02</span> Multimodal sensing</button>
+            <button id="tab-tasks" role="tab" aria-selected="false" aria-controls="panel-tasks" tabindex="-1" data-tab="tasks"><span>03</span> Extensible tasks</button>
+          </div>
+          <div class="tab-panels">
+            <article id="panel-worlds" role="tabpanel" aria-labelledby="tab-worlds" data-panel="worlds">
+              <p class="mono-label">FIRE PLAN → VOXEL FIELD → TIMELINE</p>
+              <h3>Controllable and replayable by design.</h3>
+              <p>Semantic ignition selection and material priors parameterize where fire begins and how it evolves. The lightweight solver jointly models flame, smoke, temperature, fuel, buoyancy, spread, and dissipation.</p>
+              <ul>
+                <li>Four semantic scenario templates</li>
+                <li>Light, medium, and severe presets</li>
+                <li>Seeded, machine-readable fire plans</li>
+              </ul>
+            </article>
+            <article id="panel-sensing" role="tabpanel" aria-labelledby="tab-sensing" data-panel="sensing" hidden>
+              <p class="mono-label">ONE FIRE CLOCK → CONSISTENT OBSERVATIONS</p>
+              <h3>See the same hazard through complementary sensors.</h3>
+              <p>RGB and optical depth degrade as smoke increases, while thermal sensing exposes heat and simulated mmWave radar preserves sparse geometry. Every modality is synthesized from the same time-indexed hazard state.</p>
+              <ul>
+                <li>Volumetric flame and smoke rendering</li>
+                <li>Smoke-dependent depth noise and dropout</li>
+                <li>Thermal and radar-style observations</li>
+              </ul>
+            </article>
+            <article id="panel-tasks" role="tabpanel" aria-labelledby="tab-tasks" data-panel="tasks" hidden>
+              <p class="mono-label">OBJECTNAV + EXTERNAL ASSET → PERSONNAV</p>
+              <h3>Bring new targets into existing worlds.</h3>
+              <p>Category-extensible ObjectNav instantiates external embodied assets while retaining the original observation, action, and evaluation interfaces. FireNav uses this path to build person-search episodes for rescue.</p>
+              <ul>
+                <li>Scene-native and external targets</li>
+                <li>Reachable starts and valid viewpoints</li>
+                <li>One Habitat-compatible protocol</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sensors" id="sensing">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="section-kicker">Hazard-coupled perception</p>
+            <h2>When vision fails, the sensor stack adapts.</h2>
+          </div>
+          <p>FireNav fuses RGB-D, thermal, and smoke-resilient geometry into a shared 3D map. The hazard layer turns temperature, smoke, and sensing uncertainty into planning cost.</p>
+        </div>
+
+        <figure class="media-frame media-frame-wide" data-reveal>
+          <button class="zoom-trigger" type="button" data-lightbox="static/images/multimodal-observation.png" data-alt="Multimodal observations for PersonNav" aria-label="Enlarge multimodal sensor figure">
+            <img src="static/images/multimodal-observation.png" width="1807" height="1021" alt="Clean and smoke-affected RGB and depth alongside thermal, LiDAR, and radar observations of a person" loading="lazy">
+            <span aria-hidden="true">Expand ↗</span>
+          </button>
+          <figcaption><strong>PersonNav observation suite.</strong> Clean and fire-affected observations remain spatially and temporally aligned.</figcaption>
+        </figure>
+
+        <div class="sensor-grid" data-reveal>
+          <article><span>RGB-D</span><h3>Semantic geometry</h3><p>Models smoke attenuation, range noise, invalid returns, and depth dropout.</p></article>
+          <article><span>THERMAL</span><h3>Temperature field</h3><p>Projects the evolving voxel temperature into a normalized sensor image.</p></article>
+          <article><span>MMWAVE</span><h3>Smoke-resilient shape</h3><p>Approximates radar angular resolution and characteristic point sparsity.</p></article>
+          <article><span>FUSION</span><h3>Hazard-aware map</h3><p>Builds aligned obstacle and risk layers from every robot’s observations.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-task">
+      <div class="shell task-grid">
+        <div class="task-copy" data-reveal>
+          <p class="section-kicker">Category-extensible navigation</p>
+          <h2>Search beyond the categories already in the scene.</h2>
+          <p>External humanoid assets become first-class navigation goals: FireNav identifies valid placements, registers the new category, synthesizes evaluation viewpoints, and samples reachable starts.</p>
+          <div class="task-tags" aria-label="Supported benchmark tasks">
+            <span>ObjectNav</span><span>PersonNav</span><span>Multi-agent SAR</span>
+          </div>
+        </div>
+        <figure class="media-frame" data-reveal data-delay="1">
+          <button class="zoom-trigger" type="button" data-lightbox="static/images/category-extensible.jpg" data-alt="Category-extensible ObjectNav construction" aria-label="Enlarge category-extensible navigation figure">
+            <img src="static/images/category-extensible.jpg" width="4238" height="1678" alt="Pipeline for adding scene-native or externally supplied target assets to navigation episodes" loading="lazy">
+            <span aria-hidden="true">Expand ↗</span>
+          </button>
+          <figcaption>One construction pipeline for scene-native and externally provided targets.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-results" id="results">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="section-kicker">Evaluation</p>
+            <h2>Safer paths emerge from explicit risk.</h2>
+          </div>
+          <p>Across ObjectNav and PersonNav, FireNav improves task success and efficiency while reducing average and severe hazard exposure under the same dynamic-fire conditions.</p>
+        </div>
+
+        <figure class="media-frame risk-figure" data-reveal>
+          <button class="zoom-trigger" type="button" data-lightbox="static/images/risk-awareness.jpg" data-alt="Risk-blind versus risk-aware cooperative PersonNav" aria-label="Enlarge risk-aware planning comparison">
+            <img src="static/images/risk-awareness.jpg" width="4264" height="1068" alt="Risk-blind agents cross a hazardous region while risk-aware agents take a safer route to find a person" loading="lazy">
+            <span aria-hidden="true">Expand ↗</span>
+          </button>
+          <figcaption><strong>Risk-blind vs. risk-aware PersonNav.</strong> A longer detour sharply lowers cumulative hazard exposure and reaches the goal safely.</figcaption>
+        </figure>
+
+        <div class="result-grid">
+          <article data-reveal>
+            <span class="result-number">+35.7%</span>
+            <h3>Higher SPL</h3>
+            <p>Average improvement over conventional navigation under the same fire conditions.</p>
+          </article>
+          <article data-reveal data-delay="1">
+            <span class="result-number">−15.0%</span>
+            <h3>Lower AHE</h3>
+            <p>Average hazard exposure falls through multimodal perception and risk-aware planning.</p>
+          </article>
+          <article data-reveal data-delay="2">
+            <span class="result-number">−20.5%</span>
+            <h3>Lower SHER</h3>
+            <p>Severe hazard exposure rate drops across the evaluated tasks and planner combinations.</p>
+          </article>
+          <article data-reveal data-delay="3">
+            <span class="result-number">1 → 3</span>
+            <h3>Multi-agent gains</h3>
+            <p>Success rises from 33.0% with one agent to 42.5% with three, before returns diminish.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark real-section" id="real-world">
+      <div class="shell real-grid">
+        <div data-reveal>
+          <p class="section-kicker">Physical deployment</p>
+          <h2>From simulation to two quadruped robots.</h2>
+          <p>Two Unitree Go2 robots cooperatively search for a person and a bed. Each platform carries an Intel RealSense D455 and Livox Mid-360 LiDAR, with FAST-LIO2 localization and onboard trajectory tracking.</p>
+          <div class="runtime-row">
+            <div><strong>≈10 Hz</strong><span>onboard control</span></div>
+            <div><strong>≈4 Hz</strong><span>navigation loop</span></div>
+            <div><strong>2.1 s</strong><span>global VLM plan</span></div>
+          </div>
+        </div>
+        <figure class="media-frame media-frame-dark" data-reveal data-delay="1">
+          <button class="zoom-trigger" type="button" data-lightbox="static/images/real-world.jpg" data-alt="Real-world FireNav deployment" aria-label="Enlarge real-world robot experiment">
+            <img src="static/images/real-world.jpg" width="1237" height="728" alt="Two Unitree Go2 robots cooperatively navigating toward a person in a physical environment" loading="lazy">
+            <span aria-hidden="true">Expand ↗</span>
+          </button>
+          <figcaption>Closed-loop cooperative search using two physical quadruped robots.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-resources" id="resources">
+      <div class="shell">
+        <div class="resource-heading" data-reveal>
+          <p class="section-kicker">Open materials</p>
+          <h2>Build on FireNav.</h2>
+          <p>Benchmark data, model weights, embodied assets, fire plans, and the paper are organized here for review and reproduction.</p>
+        </div>
+
+        <div class="resource-grid">
+          <a class="resource-card resource-primary" href="https://drive.google.com/drive/folders/1CXMR67kMRdj6dJoohCUBJ_WgjwU3BPbQ?usp=drive_lin" target="_blank" rel="noopener" data-reveal>
+            <span class="resource-index">01</span>
+            <div><p>DATA RELEASE</p><h3>Dataset, weights &amp; embodied assets</h3><span>Open Google Drive</span></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <article class="resource-card" data-reveal data-delay="1">
+            <span class="resource-index">02</span>
+            <div>
+              <p>FIRE PLANS</p>
+              <h3>Per-scene plans</h3>
+              <code id="plan-path">scenes/&lt;scene_id&gt;/plans</code>
+              <button class="copy-path" type="button" data-copy="#plan-path">Copy path</button>
             </div>
-          </div>
+            <a class="resource-arrow" href="https://drive.google.com/drive/folders/1CXMR67kMRdj6dJoohCUBJ_WgjwU3BPbQ?usp=drive_lin" target="_blank" rel="noopener" aria-label="Open data release for fire plans">↗</a>
+          </article>
+
+          <article class="resource-card" data-reveal data-delay="2">
+            <span class="resource-index">03</span>
+            <div><p>SOURCE CODE</p><h3>Anonymous repository</h3><span class="pending-link">Anonymous GitHub URL pending</span></div>
+            <span class="status-pill">COMING SOON</span>
+          </article>
+
+          <a class="resource-card" href="static/pdfs/FireNav_MobiCom2027.pdf" target="_blank" rel="noopener" data-reveal data-delay="3">
+            <span class="resource-index">04</span>
+            <div><p>MANUSCRIPT</p><h3>FireNav paper</h3><span>Open PDF · 13.5 MB</span></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+    <section class="section citation-section" id="citation">
+      <div class="shell citation-grid">
+        <div data-reveal>
+          <p class="section-kicker">Citation</p>
+          <h2>Cite FireNav.</h2>
+          <p>This entry intentionally preserves author anonymity while the submission is under review.</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+        <div class="citation-box" data-reveal data-delay="1">
+          <button type="button" class="copy-citation" data-copy="#bibtex">Copy BibTeX</button>
+          <pre><code id="bibtex">@inproceedings{anonymous2027firenav,
+  title     = {FireNav: A Physics-Grounded Benchmark for
+               Cooperative Multi-Agent Navigation in Dynamic
+               Indoor Fire Environments},
+  author    = {Anonymous Authors},
+  booktitle = {Proceedings of ACM MobiCom},
+  year      = {2027}
 }</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
         </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 28 36"><path d="M15.7 1.7c2.6 7-1.8 9.9-4.3 13.7-1.5 2.3-1.2 4.8.5 6.7-4.5-.8-6.8-4.1-5.9-8.7C1.8 17.8-.1 22.7 1.5 27c2 5.3 6.9 8.2 12.4 8.2 7.3 0 12.8-4.9 12.8-11.8 0-8.6-7.1-16.5-11-21.7Zm1.2 29.5c-3.5 1.4-7.4-.3-8.8-3.8-1.1-2.8-.2-5.8 1.9-7.7.2 3.9 2.6 5.4 4.7 4.6 2.6-1 2.1-4.1 1.8-5.7 2.5 2.4 4.4 4.6 4.7 7 .3 2.5-1.4 4.5-4.3 5.6Z"/></svg>
+        </span>
+        <span>FireNav</span>
+      </a>
+      <p>Physics-grounded cooperative navigation<br>for dynamic indoor fire environments.</p>
+      <p class="footer-credit">Built from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>.</p>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <dialog class="lightbox" data-lightbox-dialog aria-label="Expanded research figure">
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">×</button>
+    <img src="" alt="">
+  </dialog>
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  <div class="toast" role="status" aria-live="polite" data-toast>Copied to clipboard</div>
+  <script src="static/js/index.js" defer></script>
+</body>
+</html>
