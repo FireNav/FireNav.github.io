@@ -1,0 +1,516 @@
+/* Shared layout for the research sections. The hero and site header are
+   intentionally outside this scope. Section heights follow their content. */
+#main > .section {
+  --content-width: 1280px;
+  --section-space: 56px;
+  --layout-gap: 32px;
+  --card-gap: 20px;
+  --title-size: clamp(1.875rem, 2.8vw, 2.5rem);
+  --body-size: 15px;
+  --card-title-size: 16px;
+  --note-size: 13px;
+  --label-size: 10px;
+  padding: var(--section-space) 0;
+  font-size: var(--body-size);
+  line-height: 1.7;
+}
+
+#main > .section .shell {
+  width: min(var(--content-width), calc(100% - 64px));
+}
+
+#main > .section h2 {
+  max-width: none;
+  margin: 0;
+  font-size: var(--title-size);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  text-wrap: pretty;
+}
+
+#main > .section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+#main > .section :is(.section-kicker, .mono-label) {
+  margin: 0 0 10px;
+  font-size: var(--label-size);
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+#main > .section :is(.section-heading, .paper-grid, .citation-grid, .task-grid, .real-grid) {
+  display: grid;
+  gap: var(--layout-gap);
+  align-items: start;
+}
+
+#main > .section .section-heading {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  margin-bottom: 24px;
+}
+
+#main > .section :is(.navigation-heading, .physical-heading) {
+  margin-bottom: 24px;
+}
+
+#main > .section .navigation-heading {
+  gap: var(--layout-gap);
+}
+
+#main > .section :is(.section-heading > p, .abstract-copy, .task-copy > p:not(.section-kicker), .navigation-summary, .physical-setup > p, .citation-grid > div > p:not(.section-kicker), .tab-panels article > p:not(.mono-label)) {
+  font-size: var(--body-size);
+  line-height: 1.75;
+}
+
+#main > .section .section-heading > p {
+  max-width: none;
+  margin: 0;
+}
+
+#main > .section .paper-grid {
+  grid-template-columns: minmax(180px, 0.24fr) minmax(0, 1fr);
+}
+
+#main > .section .abstract-copy p {
+  margin: 0 0 16px;
+}
+
+#main > .section .abstract-copy p:last-child {
+  margin-bottom: 0;
+}
+
+#main > .section :is(.task-grid, .real-grid) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+}
+
+#main > .section .real-grid {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+}
+
+#main > .section .task-copy > p:not(.section-kicker) {
+  margin-top: 16px;
+}
+
+#main > .section .task-tags {
+  margin-top: 20px;
+}
+
+#main > .section .citation-grid {
+  grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.4fr);
+}
+
+#main > .section :is(.impact-grid, .sensor-grid, .result-grid, .feature-tabs, .physical-recordings) {
+  margin-top: 28px;
+}
+
+#main > .section :is(.impact-card, .sensor-grid article, .result-grid article) {
+  min-height: 0;
+  padding: 22px;
+}
+
+#main > .section .impact-label {
+  min-height: 30px;
+  font-size: var(--label-size);
+  line-height: 1.5;
+}
+
+#main > .section .impact-card > strong {
+  margin: 16px 0;
+  font-size: clamp(2.25rem, 3.5vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+#main > .section .result-number {
+  font-size: clamp(2.25rem, 3.5vw, 3rem);
+  letter-spacing: -0.06em;
+}
+
+#main > .section :is(.sensor-grid h3, .result-grid h3) {
+  margin: 16px 0 8px;
+  font-size: var(--card-title-size);
+}
+
+#main > .section :is(.impact-card > p:last-child, .sensor-grid p, .result-grid p, .demo-card figcaption p) {
+  max-width: none;
+  font-size: var(--note-size);
+  line-height: 1.6;
+}
+
+#main > .section :is(.demo-grid, .demo-grid-three, .navigation-case .demo-grid, .physical-recordings .demo-grid) {
+  gap: var(--card-gap);
+}
+
+#main > .section .demo-card {
+  border-radius: 6px;
+}
+
+#main > .section .demo-card figcaption {
+  padding: 12px 16px;
+}
+
+#main > .section .demo-card h3 {
+  margin: 0;
+  font-size: var(--card-title-size);
+}
+
+#main > .section .demo-card figcaption p {
+  margin-top: 6px;
+}
+
+/* Empty demo slots should not consume the space of a full-size recording. */
+#main > .section .demo-stage:has(.demo-placeholder) {
+  aspect-ratio: auto;
+  min-height: clamp(180px, 17vw, 220px);
+}
+
+#main > .section .demo-placeholder {
+  padding: 20px;
+}
+
+#main > .section .demo-placeholder strong {
+  font-size: var(--card-title-size);
+}
+
+#main > .section .media-frame figcaption {
+  max-width: none;
+  padding: 10px 0;
+  font-family: var(--sans);
+  font-size: var(--note-size);
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+#main > .section .media-frame:not(.robot-platforms) .zoom-trigger > img {
+  max-height: 440px;
+  object-fit: contain;
+}
+
+#main > .section .robot-platforms figcaption {
+  padding: 10px 16px;
+}
+
+#main > .section :is(.demo-jump-links, .demo-reference) {
+  font-size: var(--note-size);
+}
+
+#main > .section .demo-jump-links {
+  gap: 10px 20px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+}
+
+#main > .section .feature-tabs {
+  grid-template-columns: minmax(220px, 0.3fr) minmax(0, 1fr);
+}
+
+#main > .section .tab-list button {
+  min-height: 64px;
+  gap: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: var(--body-size);
+}
+
+#main > .section .tab-panels {
+  min-height: 260px;
+  padding: 24px 0 0 28px;
+}
+
+#main > .section .tab-panels h3 {
+  margin-bottom: 12px;
+}
+
+#main > .section .tab-panels article > p:not(.mono-label) {
+  margin: 0;
+}
+
+#main > .section .tab-panels ul {
+  margin-top: 16px;
+}
+
+#main > .section :is(.tab-panels li, .task-tags span) {
+  padding: 6px 9px;
+  font-size: var(--label-size);
+  line-height: 1.5;
+}
+
+#main > .section .navigation-case + .navigation-case {
+  margin-top: 24px;
+}
+
+#main > .section :is(.navigation-case-heading, .recordings-heading) {
+  margin-bottom: 12px;
+}
+
+#main > .section :is(.navigation-category, .hardware-specs dd) {
+  font-size: var(--note-size);
+}
+
+#main > .section :is(.hardware-specs dt, .runtime-row span) {
+  font-size: var(--label-size);
+}
+
+#main > .section :is(.physical-transfer, .physical-details) {
+  margin-top: 28px;
+}
+
+#main > .section .physical-transfer {
+  padding-top: 24px;
+  border-top: 1px solid var(--dark-line);
+}
+
+#main > .section :is(.physical-transfer, .experiment-table-block) h3 {
+  margin: 0 0 10px;
+}
+
+#main > .section :is(.physical-transfer, .experiment-table-block) > p {
+  margin: 0 0 16px;
+  color: #c8c4bc;
+  font-size: var(--body-size);
+  line-height: 1.75;
+}
+
+#main > .section .transfer-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--card-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main > .section .transfer-steps li {
+  padding: 12px 16px;
+  border-left: 2px solid var(--ember);
+  background: var(--ink-soft);
+}
+
+#main > .section .transfer-steps span {
+  display: block;
+  margin-bottom: 6px;
+  color: #f99c72;
+  font: var(--label-size)/1.5 var(--mono);
+  letter-spacing: 0.06em;
+}
+
+#main > .section .transfer-steps strong {
+  display: block;
+  font-size: var(--note-size);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#main > .section .physical-details {
+  display: grid;
+  gap: 28px;
+}
+
+#main > .section .experiment-table-block {
+  min-width: 0;
+}
+
+#main > .section .experiment-table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--dark-line);
+  border-radius: 6px;
+  scrollbar-color: #6d685f var(--ink-soft);
+}
+
+#main > .section .experiment-table-scroll:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+#main > .section .experiment-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--note-size);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Keep a semantic caption without repeating the visible heading. */
+#main > .section .experiment-table caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+#main > .section .experiment-table :is(th, td) {
+  padding: 12px 16px;
+  vertical-align: top;
+}
+
+#main > .section .experiment-table thead {
+  background: var(--ink-soft);
+  color: var(--white);
+}
+
+#main > .section .experiment-table th {
+  font-weight: 600;
+}
+
+#main > .section .experiment-table tbody tr {
+  border-top: 1px solid var(--dark-line);
+}
+
+#main > .section .experiment-table td {
+  color: #c8c4bc;
+}
+
+#main > .section .grounding-table {
+  min-width: 620px;
+  table-layout: fixed;
+}
+
+#main > .section .grounding-stage {
+  width: 22%;
+}
+
+#main > .section .grounding-type {
+  width: 25%;
+}
+
+#main > .section .runtime-table {
+  min-width: 900px;
+  text-align: center;
+}
+
+#main > .section .runtime-table tr > :first-child {
+  text-align: left;
+}
+
+#main > .section .runtime-table td {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+
+#main > .section .runtime-table tbody tr:first-child td {
+  color: var(--amber);
+}
+
+#main > .section .citation-box {
+  min-width: 0;
+  border-radius: 6px;
+}
+
+#main > .section .citation-box pre {
+  padding: 52px 24px 24px;
+  font-size: 12px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.site-footer {
+  padding: 32px 0;
+}
+
+.site-footer .footer-grid {
+  gap: 24px;
+}
+
+.site-footer .footer-grid p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1040px) {
+  #main > .section {
+    --layout-gap: 24px;
+    --section-space: 48px;
+  }
+
+  #main > .section .shell {
+    width: calc(100% - 40px);
+  }
+
+  #main > .section :is(.task-grid, .real-grid) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  #main > .section .demo-grid-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+  #main > .section {
+    --section-space: 40px;
+    --layout-gap: 20px;
+    --card-gap: 16px;
+    --body-size: 14px;
+  }
+
+  #main > .section .shell {
+    width: calc(100% - 32px);
+  }
+
+  #main > .section :is(.section-heading, .paper-grid, .citation-grid, .task-grid, .real-grid, .feature-tabs, .demo-grid, .demo-grid-three) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #main > .section :is(.section-heading, .navigation-heading, .physical-heading) {
+    margin-bottom: 20px;
+  }
+
+  #main > .section :is(.impact-card, .sensor-grid article, .result-grid article) {
+    padding: 20px;
+  }
+
+  #main > .section .impact-label {
+    min-height: 0;
+  }
+
+  #main > .section .transfer-steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  #main > .section .experiment-table :is(th, td) {
+    padding: 10px 12px;
+  }
+
+  #main > .section .tab-panels {
+    min-height: 0;
+    padding: 20px 0 0;
+  }
+
+  #main > .section .tab-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  #main > .section .tab-list button {
+    min-width: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6px;
+    padding: 12px 6px;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  #main > .section .media-frame:not(.robot-platforms) .zoom-trigger > img {
+    max-height: none;
+  }
+
+  #main > .section .citation-box pre {
+    padding-right: 16px;
+    padding-left: 16px;
+    font-size: 11px;
+  }
+}

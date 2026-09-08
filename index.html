@@ -35,7 +35,9 @@
 
   <link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="static/images/favicon.ico">
+  <link rel="preload" as="image" href="static/images/background.webp" fetchpriority="high">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/sections.css">
 
   <script type="application/ld+json">
   {
@@ -72,6 +74,7 @@
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation" data-nav>
         <a href="#overview">Overview</a>
         <a href="#benchmark">Benchmark</a>
+        <a href="#demos">Demos</a>
         <a href="#results">Results</a>
         <a href="#real-world">Real world</a>
         <a class="nav-cta" href="#resources">Get the assets <span aria-hidden="true">↗</span></a>
@@ -81,22 +84,10 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="hero-glow" aria-hidden="true"></div>
       <div class="shell hero-grid">
         <div class="hero-copy" data-reveal>
           <p class="eyebrow"><span></span> MobiCom 2027 submission</p>
-          <h1><span>FireNav</span> is a proving ground for robots that enter the fire.</h1>
-          <p class="hero-lede">A physics-grounded benchmark for cooperative multi-agent navigation in dynamic indoor fire environments.</p>
-
-          <div class="hero-actions" aria-label="Project links">
-            <a class="button button-primary" href="static/pdfs/FireNav_MobiCom2027.pdf" target="_blank" rel="noopener">
-              Read the paper <span aria-hidden="true">↗</span>
-            </a>
-            <a class="button button-secondary" href="https://drive.google.com/drive/folders/1CXMR67kMRdj6dJoohCUBJ_WgjwU3BPbQ?usp=drive_lin" target="_blank" rel="noopener">
-              Download assets <span aria-hidden="true">↓</span>
-            </a>
-            <a class="text-link" href="#resources">Code &amp; fire plans <span aria-hidden="true">→</span></a>
-          </div>
+          <h1><span>FireNav:</span> A Physics-Grounded Benchmark for Cooperative Multi-Agent Navigation in Dynamic Indoor Fire Environments</h1>
 
           <div class="submission-note">
             <span class="status-dot" aria-hidden="true"></span>
@@ -104,33 +95,66 @@
           </div>
         </div>
 
-        <figure class="hero-visual" data-reveal data-delay="1">
-          <div class="visual-index" aria-hidden="true">01 / DYNAMIC WORLDS</div>
-          <img src="static/images/fire-sequence.png" width="574" height="690" alt="Four indoor fire types evolving from early to late stages" fetchpriority="high">
-          <figcaption>
-            <span>Fire evolution</span>
-            <span>4 semantic scenarios · 3 severity levels</span>
-          </figcaption>
-        </figure>
+        <section class="hero-resources" id="resources" aria-labelledby="resources-title">
+          <div class="resource-heading">
+            <p class="section-kicker">Open materials</p>
+            <h2 id="resources-title">Build on FireNav.</h2>
+          </div>
+
+          <div class="resource-grid">
+            <a class="resource-card resource-primary" href="https://drive.google.com/drive/folders/1CXMR67kMRdj6dJoohCUBJ_WgjwU3BPbQ?usp=drive_lin" target="_blank" rel="noopener">
+              <span class="resource-index">01</span>
+              <div><p>DATA RELEASE</p><h3>Dataset, weights &amp; embodied assets</h3><span>Open Google Drive</span></div>
+              <span class="resource-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <article class="resource-card">
+              <span class="resource-index">02</span>
+              <div>
+                <p>FIRE PLANS</p>
+                <h3>Per-scene plans</h3>
+                <code id="plan-path">scenes/&lt;scene_id&gt;/plans</code>
+                <button class="copy-path" type="button" data-copy="#plan-path">Copy path</button>
+                <a class="resource-example" href="https://anonymous.4open.science/r/FireNav/scenes/4ok3usBNeis/plans/4ok3usBNeis_multi_origin_medium_0e3c1811e576.json" target="_blank" rel="noopener">View example JSON <span aria-hidden="true">↗</span></a>
+                <p class="resource-description resource-example-caption">Scene 4ok3usBNeis · Multi-origin fire · Medium severity</p>
+              </div>
+              <a class="resource-arrow" href="https://anonymous.4open.science/r/FireNav/scenes/4ok3usBNeis/plans/" target="_blank" rel="noopener" aria-label="Browse fire plans for scene 4ok3usBNeis in the anonymous repository">↗</a>
+            </article>
+
+            <a class="resource-card" href="https://anonymous.4open.science/r/FireNav/README.md" target="_blank" rel="noopener">
+              <span class="resource-index">03</span>
+              <div><p>SOURCE CODE</p><h3>Anonymous repository</h3><span>Open repository &amp; README</span></div>
+              <span class="resource-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="resource-card" href="static/pdfs/FireNav_MobiCom2027.pdf" target="_blank" rel="noopener">
+              <span class="resource-index">04</span>
+              <div><p>MANUSCRIPT</p><h3>FireNav paper</h3><span>Open PDF · 13.5 MB</span></div>
+              <span class="resource-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+
+        <div class="shell stat-rail" aria-label="Benchmark summary" data-reveal>
+          <div><strong>181</strong><span>HM3DSem scenes<br>145 train · 36 val</span></div>
+          <div><strong>04</strong><span>Semantic fire<br>templates</span></div>
+          <div><strong>03</strong><span>Controllable<br>severity levels</span></div>
+          <div><strong>04</strong><span>RGB, depth,<br>thermal &amp; radar</span></div>
+        </div>
       </div>
 
-      <div class="shell stat-rail" aria-label="Benchmark summary" data-reveal>
-        <div><strong>181</strong><span>HM3DSem scenes<br>145 train · 36 val</span></div>
-        <div><strong>04</strong><span>Semantic fire<br>templates</span></div>
-        <div><strong>03</strong><span>Controllable<br>severity levels</span></div>
-        <div><strong>04</strong><span>RGB, depth,<br>thermal &amp; radar</span></div>
-      </div>
     </section>
 
     <section class="section section-paper" id="overview">
       <div class="shell paper-grid">
         <div data-reveal>
-          <p class="section-kicker">The problem</p>
-          <h2>Static benchmarks stop where disaster response begins.</h2>
+          <p class="section-kicker">Research summary</p>
+          <h2>Abstract</h2>
         </div>
         <div class="abstract-copy" data-reveal data-delay="1">
-          <p>Real indoor fires are dangerous, expensive, and difficult to reproduce. Yet existing embodied navigation benchmarks largely focus on single agents operating in static, hazard-free environments.</p>
-          <p>FireNav closes this gap with controllable fire evolution, hazard-coupled sensing, extensible search targets, and standardized cooperative navigation tasks. FireWorld transforms real-world 3D scans into dynamic fire environments using semantic scenario generation, physics-inspired voxel propagation, synchronized rendering, and multimodal sensor synthesis.</p>
+          <p>Multi-agent robotic systems offer a promising approach to search and rescue in indoor fires, but their systematic design and evaluation remain difficult. Real-world fire experiments are dangerous, expensive, and difficult to carry out, while existing embodied navigation benchmarks primarily target single-agent tasks in static or quasi-static, hazard-free environments.</p>
+          <p>To fill in this gap, we present FireNav, the first physics-grounded benchmark for cooperative multi-agent navigation in dynamic indoor fire environments. Its underlying infrastructure, FireWorld, transforms static 3D scenes into dynamic fire worlds through semantic scenario generation, physics-inspired voxel hazard propagation, synchronized rendering, and multimodal sensor data synthesis. To support human search-and-rescue, we introduce a category-extensible task construction pipeline that enables externally instantiated targets while preserving the original navigation interface. Building on this infrastructure, FireNav provides a unified hazard-aware navigation framework integrating multimodal perception, online hazard estimation, cooperative global planning, and local risk-aware navigation.</p>
+          <p>Extensive evaluations show that dynamic fire reduces the Success Rate (SR) and Success weighted by Path Length (SPL) of conventional navigation by 39.1% and 31.2%, respectively. In comparison, FireNav improves SR and SPL by 53.0% and 35.7% on average under the same fire conditions, while reducing Average Hazard Exposure (AHE) and Severe Hazard Exposure Rate (SHER) by 15.0% and 20.5%. Experiments across diverse scenes, fire conditions, and team sizes further demonstrate its robustness, while deployment on two physical quadruped robots shows the practical feasibility of transferring the framework to real-world cooperative search. Dataset, code, and demonstrations are available at <a href="https://firenav.github.io/">https://firenav.github.io/</a>.</p>
         </div>
       </div>
 
@@ -150,6 +174,32 @@
           <strong>−62.0<span>%</span></strong>
           <p>severe hazard exposure in the risk-awareness ablation</p>
         </article>
+      </div>
+    </section>
+
+    <section class="section section-inventory" id="inventory">
+      <div class="shell">
+        <nav class="demo-jump-links" id="demos" aria-label="Demo gallery">
+          <span>Explore the demos</span>
+          <a href="#inventory">Scanned inventory</a>
+          <a href="#fire-evolution">Fire evolution</a>
+          <a href="#sensing">Sensor observations</a>
+          <a href="#navigation-demos">Navigation</a>
+          <a href="#physical-demos">Physical experiments</a>
+        </nav>
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="section-kicker">Scene scanning</p>
+            <h2>Scanned scene inventory.</h2>
+          </div>
+          <p>From the scanned scene to an inventory of object instances: semantic categories, 3D extents, floor assignments, and material-dependent fire properties form the input to fire-plan generation.</p>
+        </div>
+        <figure class="demo-card demo-card-wide" data-reveal>
+          <div class="demo-stage" data-demo="inventory" aria-label="Scanned scene inventory">
+            <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">01 / SCENE INVENTORY</span><strong>Scanned scene &amp; object inventory</strong><span>Visualization forthcoming</span></div>
+          </div>
+          <figcaption><h3>From scene geometry to object instances</h3><p>Explore the scene representation that grounds semantic ignition selection.</p></figcaption>
+        </figure>
       </div>
     </section>
 
@@ -213,6 +263,41 @@
       </div>
     </section>
 
+    <section class="section section-dark section-evolution" id="fire-evolution">
+      <div class="shell">
+        <div class="section-heading section-heading-light" data-reveal>
+          <div><p class="section-kicker">Four semantic templates</p><h2>Temporal Evolution of Fire Scenarios.</h2></div>
+          <p>Follow flame and smoke over time in four semantic fire scenarios, from localized ignition to evolving indoor hazards.</p>
+        </div>
+        <div class="demo-grid">
+          <figure class="demo-card" data-reveal>
+            <div class="demo-stage" data-demo="fire-kitchen" aria-label="Kitchen grease fire evolution">
+              <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">01 / KITCHEN</span><strong>Kitchen Grease Fire</strong><span>Video forthcoming</span></div>
+            </div>
+            <figcaption><h3>Kitchen Grease Fire</h3><p>Temporal evolution of the kitchen fire template.</p></figcaption>
+          </figure>
+          <figure class="demo-card" data-reveal data-delay="1">
+            <div class="demo-stage" data-demo="fire-bedroom" aria-label="Bedroom textile fire evolution">
+              <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">02 / BEDROOM</span><strong>Bedroom Textile Fire</strong><span>Video forthcoming</span></div>
+            </div>
+            <figcaption><h3>Bedroom Textile Fire</h3><p>Temporal evolution of the bedroom fire template.</p></figcaption>
+          </figure>
+          <figure class="demo-card" data-reveal>
+            <div class="demo-stage" data-demo="fire-living-room" aria-label="Living-room electrical fire evolution">
+              <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">03 / LIVING ROOM</span><strong>Living-room Electrical Fire</strong><span>Video forthcoming</span></div>
+            </div>
+            <figcaption><h3>Living-room Electrical Fire</h3><p>Temporal evolution of the living-room fire template.</p></figcaption>
+          </figure>
+          <figure class="demo-card" data-reveal data-delay="1">
+            <div class="demo-stage" data-demo="fire-multi-origin" aria-label="Multi-origin fire evolution">
+              <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">04 / MULTI-ORIGIN</span><strong>Multi-origin Fire</strong><span>Video forthcoming</span></div>
+            </div>
+            <figcaption><h3>Multi-origin Fire</h3><p>Temporal evolution with multiple ignition sources across the scene.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-sensors" id="sensing">
       <div class="shell">
         <div class="section-heading" data-reveal>
@@ -223,13 +308,23 @@
           <p>FireNav fuses RGB-D, thermal, and smoke-resilient geometry into a shared 3D map. The hazard layer turns temperature, smoke, and sensing uncertainty into planning cost.</p>
         </div>
 
-        <figure class="media-frame media-frame-wide" data-reveal>
+        <figure class="demo-card demo-card-wide" data-reveal>
+          <div class="demo-stage" data-demo="sensor-observations" aria-label="Multimodal sensor observations over time">
+            <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">RGB-D / THERMAL / MMWAVE</span><strong>Sensor observations over time</strong><span>Video forthcoming</span></div>
+          </div>
+          <figcaption><h3>Multimodal sensor observations</h3><p>Observe the sensor streams as fire and smoke change the environment.</p></figcaption>
+        </figure>
+
+        <details class="demo-reference">
+          <summary>View the sensor observation figure</summary>
+          <figure class="media-frame media-frame-wide">
           <button class="zoom-trigger" type="button" data-lightbox="static/images/multimodal-observation.png" data-alt="Multimodal observations for PersonNav" aria-label="Enlarge multimodal sensor figure">
             <img src="static/images/multimodal-observation.png" width="1807" height="1021" alt="Clean and smoke-affected RGB and depth alongside thermal, LiDAR, and radar observations of a person" loading="lazy">
             <span aria-hidden="true">Expand ↗</span>
           </button>
           <figcaption><strong>PersonNav observation suite.</strong> Clean and fire-affected observations remain spatially and temporally aligned.</figcaption>
         </figure>
+        </details>
 
         <div class="sensor-grid" data-reveal>
           <article><span>RGB-D</span><h3>Semantic geometry</h3><p>Models smoke attenuation, range noise, invalid returns, and depth dropout.</p></article>
@@ -257,6 +352,69 @@
           </button>
           <figcaption>One construction pipeline for scene-native and externally provided targets.</figcaption>
         </figure>
+      </div>
+    </section>
+
+    <section class="section section-navigation" id="navigation-demos">
+      <div class="shell">
+        <div class="navigation-heading" data-reveal>
+          <div><p class="section-kicker">Navigation demos</p><h2>Cooperative navigation in fire.</h2><p class="navigation-summary">Risk-blind and risk-aware planning, compared side by side across robot views.</p></div>
+          <div class="navigation-intro">
+            <label class="navigation-category" for="navigation-category">Category
+              <select id="navigation-category" data-navigation-category><option value="person">Person search</option><option value="bed">Bed search</option></select>
+            </label>
+          </div>
+        </div>
+        <div class="navigation-case navigation-risk-blind" data-navigation-method="Risk-blind">
+          <div class="navigation-case-heading">
+            <h3>Risk-blind <span class="navigation-method-badge">Baseline</span></h3>
+          </div>
+          <div class="demo-grid demo-grid-three">
+            <figure class="demo-card" data-reveal data-delay="0">
+              <div class="demo-stage" data-demo="risk-blind-agent-0" data-navigation-view="Robot 1" aria-label="Person search: Risk-blind, Robot 1">
+                <div class="demo-placeholder"><strong>Robot 1</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Robot 1</h3></figcaption>
+            </figure>
+            <figure class="demo-card" data-reveal data-delay="1">
+              <div class="demo-stage" data-demo="risk-blind-agent-1" data-navigation-view="Robot 2" aria-label="Person search: Risk-blind, Robot 2">
+                <div class="demo-placeholder"><strong>Robot 2</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Robot 2</h3></figcaption>
+            </figure>
+            <figure class="demo-card" data-reveal data-delay="2">
+              <div class="demo-stage" data-demo="risk-blind-merged" data-navigation-view="Combined view" aria-label="Person search: Risk-blind, Combined view">
+                <div class="demo-placeholder"><strong>Combined view</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Combined view</h3></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="navigation-case navigation-risk-aware" data-navigation-method="Risk-aware">
+          <div class="navigation-case-heading">
+            <h3>Risk-aware <span class="navigation-method-badge">Ours</span></h3>
+          </div>
+          <div class="demo-grid demo-grid-three">
+            <figure class="demo-card" data-reveal data-delay="0">
+              <div class="demo-stage" data-demo="risk-aware-agent-0" data-navigation-view="Robot 1" aria-label="Person search: Risk-aware, Robot 1">
+                <div class="demo-placeholder"><strong>Robot 1</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Robot 1</h3></figcaption>
+            </figure>
+            <figure class="demo-card" data-reveal data-delay="1">
+              <div class="demo-stage" data-demo="risk-aware-agent-1" data-navigation-view="Robot 2" aria-label="Person search: Risk-aware, Robot 2">
+                <div class="demo-placeholder"><strong>Robot 2</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Robot 2</h3></figcaption>
+            </figure>
+            <figure class="demo-card" data-reveal data-delay="2">
+              <div class="demo-stage" data-demo="risk-aware-merged" data-navigation-view="Combined view" aria-label="Person search: Risk-aware, Combined view">
+                <div class="demo-placeholder"><strong>Combined view</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Combined view</h3></figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -304,64 +462,92 @@
     </section>
 
     <section class="section section-dark real-section" id="real-world">
+      <div class="shell physical-heading" data-reveal>
+        <p class="section-kicker">Physical deployment &amp; experiments</p>
+        <h2>From simulation to two quadruped robots.</h2>
+      </div>
       <div class="shell real-grid">
-        <div data-reveal>
-          <p class="section-kicker">Physical deployment</p>
-          <h2>From simulation to two quadruped robots.</h2>
-          <p>Two Unitree Go2 robots cooperatively search for a person and a bed. Each platform carries an Intel RealSense D455 and Livox Mid-360 LiDAR, with FAST-LIO2 localization and onboard trajectory tracking.</p>
-          <div class="runtime-row">
-            <div><strong>≈10 Hz</strong><span>onboard control</span></div>
-            <div><strong>≈4 Hz</strong><span>navigation loop</span></div>
-            <div><strong>2.1 s</strong><span>global VLM plan</span></div>
-          </div>
-        </div>
-        <figure class="media-frame media-frame-dark" data-reveal data-delay="1">
-          <button class="zoom-trigger" type="button" data-lightbox="static/images/real-world.jpg" data-alt="Real-world FireNav deployment" aria-label="Enlarge real-world robot experiment">
-            <img src="static/images/real-world.jpg" width="1237" height="728" alt="Two Unitree Go2 robots cooperatively navigating toward a person in a physical environment" loading="lazy">
+        <figure class="media-frame media-frame-dark robot-platforms" data-reveal>
+          <button class="zoom-trigger" type="button" data-lightbox="static/images/robots.png" data-alt="Two Unitree Go2 robots with their onboard sensors and computing hardware" aria-label="Enlarge the two robot platforms">
+            <img src="static/images/robots.png" width="1162" height="424" alt="Two physical Unitree Go2 robots equipped with Intel RealSense D455 cameras, Livox Mid-360 LiDAR, and NVIDIA Jetson Orin computers" loading="lazy">
             <span aria-hidden="true">Expand ↗</span>
           </button>
-          <figcaption>Closed-loop cooperative search using two physical quadruped robots.</figcaption>
+          <figcaption><span>Hardware platform</span><strong>2 × Unitree Go2</strong></figcaption>
         </figure>
-      </div>
-    </section>
-
-    <section class="section section-resources" id="resources">
-      <div class="shell">
-        <div class="resource-heading" data-reveal>
-          <p class="section-kicker">Open materials</p>
-          <h2>Build on FireNav.</h2>
-          <p>Benchmark data, model weights, embodied assets, fire plans, and the paper are organized here for review and reproduction.</p>
+        <div class="physical-setup" data-reveal data-delay="1">
+          <p>Two Unitree Go2 robots cooperatively search for person and bed targets, with onboard sensing, localization, and trajectory tracking.</p>
+          <dl class="hardware-specs">
+            <div><dt>RGB-D camera</dt><dd>Intel RealSense D455</dd></div>
+            <div><dt>3D LiDAR</dt><dd>Livox Mid-360</dd></div>
+            <div><dt>Onboard compute</dt><dd>NVIDIA Jetson Orin</dd></div>
+            <div><dt>Localization</dt><dd>FAST-LIO2</dd></div>
+          </dl>
+          <div class="runtime-row" aria-label="System runtime">
+            <div><strong>≈10 Hz</strong><span>Onboard control</span></div>
+            <div><strong>≈4 Hz</strong><span>Navigation loop</span></div>
+            <div><strong>2.1 s</strong><span>Global VLM plan</span></div>
+          </div>
         </div>
-
-        <div class="resource-grid">
-          <a class="resource-card resource-primary" href="https://drive.google.com/drive/folders/1CXMR67kMRdj6dJoohCUBJ_WgjwU3BPbQ?usp=drive_lin" target="_blank" rel="noopener" data-reveal>
-            <span class="resource-index">01</span>
-            <div><p>DATA RELEASE</p><h3>Dataset, weights &amp; embodied assets</h3><span>Open Google Drive</span></div>
-            <span class="resource-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <article class="resource-card" data-reveal data-delay="1">
-            <span class="resource-index">02</span>
-            <div>
-              <p>FIRE PLANS</p>
-              <h3>Per-scene plans</h3>
-              <code id="plan-path">scenes/&lt;scene_id&gt;/plans</code>
-              <button class="copy-path" type="button" data-copy="#plan-path">Copy path</button>
+      </div>
+      <div class="shell physical-transfer" data-reveal>
+        <h3>From planned trajectories to physical execution</h3>
+        <p>Given the current map and robot poses, the framework generates navigation actions and their corresponding motion trajectories in the simulation environment. The trajectories are sent to the physical robots, which track them using LiDAR-based pose estimates. High-level perception and planning remain unchanged from the simulation setup, while trajectory tracking and low-level motion execution run on the physical robots.</p>
+        <ol class="transfer-steps" aria-label="Simulation-to-robot execution pipeline">
+          <li><span>01 / PLAN IN SIMULATION</span><strong>Map + robot poses → actions + trajectories</strong></li>
+          <li><span>02 / TRANSFER</span><strong>Send planned trajectories to the robots</strong></li>
+          <li><span>03 / EXECUTE ON ROBOTS</span><strong>LiDAR-based tracking + motion execution</strong></li>
+        </ol>
+      </div>
+      <div class="shell physical-recordings" id="physical-demos">
+        <h3 class="recordings-heading" data-reveal>Physical search experiments</h3>
+        <div class="demo-grid">
+          <figure class="demo-card" data-reveal>
+            <div class="demo-stage" data-demo="physical-person" aria-label="Physical experiment searching for a person">
+              <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">01 / PERSON SEARCH</span><strong>Find the person</strong><span>Video forthcoming</span></div>
             </div>
-            <a class="resource-arrow" href="https://drive.google.com/drive/folders/1CXMR67kMRdj6dJoohCUBJ_WgjwU3BPbQ?usp=drive_lin" target="_blank" rel="noopener" aria-label="Open data release for fire plans">↗</a>
-          </article>
-
-          <article class="resource-card" data-reveal data-delay="2">
-            <span class="resource-index">03</span>
-            <div><p>SOURCE CODE</p><h3>Anonymous repository</h3><span class="pending-link">Anonymous GitHub URL pending</span></div>
-            <span class="status-pill">COMING SOON</span>
-          </article>
-
-          <a class="resource-card" href="static/pdfs/FireNav_MobiCom2027.pdf" target="_blank" rel="noopener" data-reveal data-delay="3">
-            <span class="resource-index">04</span>
-            <div><p>MANUSCRIPT</p><h3>FireNav paper</h3><span>Open PDF · 13.5 MB</span></div>
-            <span class="resource-arrow" aria-hidden="true">↗</span>
-          </a>
+            <figcaption><h3>Person search</h3></figcaption>
+          </figure>
+          <figure class="demo-card" data-reveal data-delay="1">
+            <div class="demo-stage" data-demo="physical-bed" aria-label="Physical experiment searching for a bed">
+              <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">02 / BED SEARCH</span><strong>Find the bed</strong><span>Video forthcoming</span></div>
+            </div>
+            <figcaption><h3>Bed search</h3></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="shell physical-details">
+        <!-- <div class="experiment-table-block" data-reveal>
+          <h3 id="grounding-heading">Physical and empirical grounding</h3>
+          <p id="grounding-note">FireWorld targets decision-relevant physical structure rather than CFD-level predictive accuracy.</p>
+          <div class="experiment-table-scroll" role="region" aria-labelledby="grounding-heading" tabindex="0">
+            <table class="experiment-table grounding-table" aria-describedby="grounding-note">
+              <caption>Sources of physical and empirical grounding in FireWorld</caption>
+              <colgroup><col class="grounding-stage"><col class="grounding-type"><col></colgroup>
+              <thead><tr><th scope="col">Stage</th><th scope="col">Grounding</th><th scope="col">FireWorld realization</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Scene and material inputs</th><td>Physical attributes</td><td>Object geometry, structural boundaries, flammability, and smoke yield.</td></tr>
+                <tr><th scope="row">Fire initialization</th><td>Physical source conditions</td><td>Ignition location and time, source temperature, fuel mass, and intensity.</td></tr>
+                <tr><th scope="row">Hazard evolution</th><td>Physics-inspired mechanisms</td><td>Heat diffusion, buoyancy, ignition, fuel consumption, flame and smoke generation, dissipation, and cooling.</td></tr>
+                <tr><th scope="row">RGB-D and thermal sensing</th><td>Hazard-coupled observations</td><td>Smoke-dependent RGB-D degradation and temperature-derived thermal response.</td></tr>
+                <tr><th scope="row">Radar sensing</th><td>Empirically motivated behavior</td><td>Sparse geometric observations approximating the smoke-resilient characteristics of mmWave sensing.</td></tr>
+                <tr><th scope="row">Intended fidelity</th><td>Decision-oriented physical structure</td><td>Reproducible, geometry-aware, and temporally evolving hazards for embodied perception and planning.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div> -->
+        <div class="experiment-table-block" data-reveal>
+          <h3 id="runtime-heading">Online navigation runtime</h3>
+          <p id="runtime-note">Mean and standard deviation over 100 runs, in milliseconds. VLM planning is invoked only during global replanning.</p>
+          <div class="experiment-table-scroll" role="region" aria-labelledby="runtime-heading" tabindex="0">
+            <table class="experiment-table runtime-table" aria-describedby="runtime-note">
+              <caption>Runtime breakdown of the online navigation pipeline (ms)</caption>
+              <thead><tr><th scope="col">Statistic</th><th scope="col">Preprocessing</th><th scope="col">Mapping</th><th scope="col">Exploration<br>planning</th><th scope="col">VLM<br>planning</th><th scope="col">Visualization</th><th scope="col">Communication</th><th scope="col">Action<br>completion</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Mean</th><td>57.0</td><td>89.63</td><td>100.1</td><td>2155.4</td><td>33.7</td><td>4.31</td><td>378.4</td></tr>
+                <tr><th scope="row">Std.</th><td>32.6</td><td>34.16</td><td>15.9</td><td>578.6</td><td>12.1</td><td>13.83</td><td>112.43</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
@@ -407,6 +593,8 @@
   </dialog>
 
   <div class="toast" role="status" aria-live="polite" data-toast>Copied to clipboard</div>
+  <script src="static/js/demo-media.js" defer></script>
   <script src="static/js/index.js" defer></script>
+  <script src="static/js/navigation-playback.js" defer></script>
 </body>
 </html>

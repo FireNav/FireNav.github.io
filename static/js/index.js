@@ -8,6 +8,73 @@
   const toast = document.querySelector("[data-toast]");
   let toastTimer;
 
+  // Empty slots remain readable placeholders and never request nonexistent files.
+  document.querySelectorAll("[data-demo]").forEach((stage) => {
+    const media = window.fireNavDemoMedia?.[stage.dataset.demo];
+    if (!media?.src || !["image", "video"].includes(media.type)) return;
+    const label = stage.getAttribute("aria-label");
+    const placeholder = stage.querySelector(".demo-placeholder");
+    const showMediaError = () => {
+      const message = placeholder?.querySelector("span:last-child");
+      if (message) message.textContent = "Media unavailable. Please try again later.";
+      if (placeholder) stage.replaceChildren(placeholder);
+    };
+
+    if (media.type === "image") {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "zoom-trigger";
+      button.dataset.lightbox = media.src;
+      button.dataset.alt = media.alt || label;
+      button.setAttribute("aria-label", `Enlarge ${label}`);
+      const img = document.createElement("img");
+      img.alt = media.alt || label;
+      img.loading = "lazy";
+      img.addEventListener("error", showMediaError, { once: true });
+      img.src = media.src;
+      button.append(img);
+      stage.replaceChildren(button);
+      return;
+    }
+
+    const video = document.createElement("video");
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = "none";
+    video.setAttribute("aria-label", label);
+    if (media.poster) video.poster = media.poster;
+    if (media.captions) {
+      const track = document.createElement("track");
+      track.kind = "captions";
+      track.src = media.captions;
+      track.srclang = media.captionLanguage || "en";
+      track.label = media.captionLabel || "English";
+      video.append(track);
+    }
+    video.addEventListener("error", showMediaError);
+    video.src = media.src;
+    video.append("Your browser does not support HTML video.");
+    stage.replaceChildren(video);
+
+    const categorySelect = stage.closest("#navigation-demos")?.querySelector("[data-navigation-category]");
+    const updateCategory = () => {
+      const selected = media.categories?.[categorySelect.value];
+      if (!selected?.src) return;
+      video.pause();
+      video.poster = selected.poster || "";
+      video.src = selected.src;
+      const method = stage.closest("[data-navigation-method]").dataset.navigationMethod;
+      const categoryLabel = categorySelect.selectedOptions[0].textContent;
+      const videoLabel = `${categoryLabel}: ${method}, ${stage.dataset.navigationView}`;
+      stage.setAttribute("aria-label", videoLabel);
+      video.setAttribute("aria-label", videoLabel);
+      stage.replaceChildren(video);
+      video.load();
+    };
+    categorySelect?.addEventListener("change", updateCategory);
+    if (categorySelect && categorySelect.value !== "person") updateCategory();
+  });
+
   const updateHeader = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > 18);
   };
