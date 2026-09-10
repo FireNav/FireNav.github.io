@@ -1223,6 +1223,18 @@ button {
   border-top: 3px solid var(--ember);
 }
 
+.navigation-success .navigation-method-badge {
+  color: #a7e8bb;
+  border-color: #477857;
+  background: #183321;
+}
+
+.navigation-failure .navigation-method-badge {
+  color: #ffb3a9;
+  border-color: #a04f45;
+  background: #411e1a;
+}
+
 .navigation-intro {
   align-self: center;
 }

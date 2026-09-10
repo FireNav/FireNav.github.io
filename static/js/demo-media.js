@@ -1,10 +1,50 @@
 // Paths are relative to index.html. Empty sources retain their placeholders.
 // Category selection updates both method rows; existing recordings and posters are reused.
 window.fireNavDemoMedia = {
-  "inventory": {
-    "type": "image",
-    "src": "",
-    "alt": "Scanned scene inventory with object instances and spatial annotations"
+  "normal-person-agent-0": {
+    "type": "video",
+    "src": "static/videos/normal_person_videos/agent_0.mp4",
+    "poster": "static/images/demo-posters/normal-person-agent-0.jpg"
+  },
+  "normal-person-agent-1": {
+    "type": "video",
+    "src": "static/videos/normal_person_videos/agent_1.mp4",
+    "poster": "static/images/demo-posters/normal-person-agent-1.jpg"
+  },
+  "normal-person-merged": {
+    "type": "video",
+    "src": "static/videos/normal_person_videos/merged.mp4",
+    "poster": "static/images/demo-posters/normal-person-merged.jpg"
+  },
+  "conventional-fire-person-agent-0": {
+    "type": "video",
+    "src": "static/videos/fire_conventional_person/agent_0.mp4",
+    "poster": "static/images/demo-posters/conventional-fire-person-agent-0.jpg"
+  },
+  "conventional-fire-person-agent-1": {
+    "type": "video",
+    "src": "static/videos/fire_conventional_person/agent_1.mp4",
+    "poster": "static/images/demo-posters/conventional-fire-person-agent-1.jpg"
+  },
+  "conventional-fire-person-merged": {
+    "type": "video",
+    "src": "static/videos/fire_conventional_person/merged.mp4",
+    "poster": "static/images/demo-posters/conventional-fire-person-merged.jpg"
+  },
+  "firenav-person-agent-0": {
+    "type": "video",
+    "src": "static/videos/fire_person_videos/oracle_agent_0.mp4",
+    "poster": "static/images/demo-posters/fire-person-agent-0-oracle.jpg"
+  },
+  "firenav-person-agent-1": {
+    "type": "video",
+    "src": "static/videos/fire_person_videos/oracle_agent_1.mp4",
+    "poster": "static/images/demo-posters/fire-person-agent-1-oracle.jpg"
+  },
+  "firenav-person-merged": {
+    "type": "video",
+    "src": "static/videos/fire_person_videos/oracle_merged.mp4",
+    "poster": "static/images/demo-posters/fire-person-merged-oracle.jpg"
   },
   "fire-kitchen": {
     "type": "video",

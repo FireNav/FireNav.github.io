@@ -38,6 +38,7 @@
   <link rel="preload" as="image" href="static/images/background.webp" fetchpriority="high">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/sections.css">
+  <link rel="stylesheet" href="static/css/scene-explorer.css">
 
   <script type="application/ld+json">
   {
@@ -194,12 +195,68 @@
           </div>
           <p>From the scanned scene to an inventory of object instances: semantic categories, 3D extents, floor assignments, and material-dependent fire properties form the input to fire-plan generation.</p>
         </div>
-        <figure class="demo-card demo-card-wide" data-reveal>
-          <div class="demo-stage" data-demo="inventory" aria-label="Scanned scene inventory">
-            <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">01 / SCENE INVENTORY</span><strong>Scanned scene &amp; object inventory</strong><span>Visualization forthcoming</span></div>
+        <div class="scene-explorer" data-scene-explorer>
+          <div class="scene-toolbar">
+            <label for="scene-select">Scene
+              <select id="scene-select">
+                <option value="Nfvxx8J5NCo">Nfvxx8J5NCo</option>
+                <option value="TEEsavR23oF">TEEsavR23oF</option>
+              </select>
+            </label>
+            <p id="scene-summary" aria-live="polite">Explore a scene and its corresponding inventory.</p>
           </div>
-          <figcaption><h3>From scene geometry to object instances</h3><p>Explore the scene representation that grounds semantic ignition selection.</p></figcaption>
-        </figure>
+          <div class="scene-explorer-grid">
+            <section class="scene-model-panel" aria-labelledby="scene-model-heading">
+              <div class="scene-panel-heading">
+                <h3 id="scene-model-heading">3D scene</h3>
+                <div class="scene-view-actions">
+                  <button type="button" data-scene-top disabled>Top view</button>
+                  <button type="button" data-scene-reset disabled>Reset view</button>
+                </div>
+              </div>
+              <div class="scene-viewport" aria-busy="true">
+                <div class="scene-loading" role="status">
+                  <span data-scene-status>The scene loads when this panel comes into view.</span>
+                  <button type="button" data-scene-retry hidden>Retry loading</button>
+                </div>
+              </div>
+              <div class="scene-render-options">
+                <label for="scene-appearance">Display
+                  <select id="scene-appearance" disabled>
+                    <option value="semantic">Semantic colors</option>
+                    <option value="texture">Embedded textures</option>
+                  </select>
+                </label>
+                <label for="scene-cutaway">Cutaway
+                  <input id="scene-cutaway" type="range" min="5" max="100" value="65" disabled>
+                  <output for="scene-cutaway" id="scene-cutaway-value">65%</output>
+                </label>
+              </div>
+              <p class="scene-help">Drag to rotate · Scroll to zoom · Right-drag to pan. Adjust the cutaway to look inside.</p>
+            </section>
+            <section class="scene-inventory-panel" aria-labelledby="scene-inventory-heading">
+              <div class="scene-panel-heading">
+                <h3 id="scene-inventory-heading">Object inventory</h3>
+                <a data-inventory-download href="static/Scenes/Nfvxx8J5NCo_inventory.json" download>Download JSON ↗</a>
+              </div>
+              <div class="inventory-tools">
+                <label class="sr-only" for="inventory-search">Filter inventory by category or instance ID</label>
+                <input id="inventory-search" type="search" placeholder="Search category or instance ID…" disabled>
+                <div class="inventory-view-actions" aria-label="Inventory display">
+                  <button type="button" data-inventory-view="instances" aria-pressed="true">Instances</button>
+                  <button type="button" data-inventory-view="json" aria-pressed="false">Full JSON</button>
+                </div>
+              </div>
+              <p class="inventory-count" aria-live="polite">Inventory loads with the selected scene.</p>
+              <div class="inventory-scroll" role="region" aria-label="Scrollable scene inventory" tabindex="0" aria-busy="true">
+                <div data-inventory-list></div>
+                <pre data-inventory-json hidden></pre>
+              </div>
+              <p class="scene-help">Scroll inside this panel. Expand an instance to inspect its properties.</p>
+            </section>
+          </div>
+          <noscript><p>Enable JavaScript to explore the 3D scenes. Inventory files: <a href="static/Scenes/Nfvxx8J5NCo_inventory.json">Nfvxx8J5NCo</a> · <a href="static/Scenes/TEEsavR23oF_inventory.json">TEEsavR23oF</a>.</p></noscript>
+        </div>
       </div>
     </section>
 
@@ -355,7 +412,95 @@
       </div>
     </section>
 
-    <section class="section section-navigation" id="navigation-demos">
+    <section class="section section-navigation" id="fire-impact" data-synchronized-videos aria-labelledby="fire-impact-heading">
+      <div class="shell">
+        <div class="navigation-heading" data-reveal>
+          <div>
+            <p class="section-kicker">Fire impact &amp; FireNav effectiveness</p>
+            <h2 id="fire-impact-heading">Successful person search under fire conditions.</h2>
+            <p class="navigation-summary">In this person-search case, conventional navigation succeeds without fire but fails in the fire environment, illustrating the impact of fire on navigation. FireNav successfully reaches the person under fire conditions, demonstrating its effectiveness.</p>
+            <p class="navigation-summary">All nine views play in sync. Play, pause, or seek any video to control the comparison.</p>
+          </div>
+        </div>
+        <div class="navigation-case navigation-success">
+          <div class="navigation-case-heading">
+            <h3>Conventional navigation / No fire <span class="navigation-method-badge">Success</span></h3>
+          </div>
+          <div class="demo-grid demo-grid-three">
+            <figure class="demo-card" data-reveal data-delay="0">
+              <div class="demo-stage" data-demo="normal-person-agent-0" aria-label="Person search: Conventional navigation / No fire, Robot 1, success">
+                <div class="demo-placeholder"><strong>Robot 1</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Robot 1</h3></figcaption>
+            </figure>
+            <figure class="demo-card" data-reveal data-delay="1">
+              <div class="demo-stage" data-demo="normal-person-agent-1" aria-label="Person search: Conventional navigation / No fire, Robot 2, success">
+                <div class="demo-placeholder"><strong>Robot 2</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Robot 2</h3></figcaption>
+            </figure>
+            <figure class="demo-card" data-reveal data-delay="2">
+              <div class="demo-stage" data-demo="normal-person-merged" aria-label="Person search: Conventional navigation / No fire, Combined view, success">
+                <div class="demo-placeholder"><strong>Combined view</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Combined view</h3></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="navigation-case navigation-failure">
+          <div class="navigation-case-heading">
+            <h3>Conventional navigation / Fire <span class="navigation-method-badge">Failure</span></h3>
+          </div>
+          <div class="demo-grid demo-grid-three">
+            <figure class="demo-card" data-reveal data-delay="0">
+              <div class="demo-stage" data-demo="conventional-fire-person-agent-0" aria-label="Person search: Conventional navigation / Fire, Robot 1, failure">
+                <div class="demo-placeholder"><strong>Robot 1</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Robot 1</h3></figcaption>
+            </figure>
+            <figure class="demo-card" data-reveal data-delay="1">
+              <div class="demo-stage" data-demo="conventional-fire-person-agent-1" aria-label="Person search: Conventional navigation / Fire, Robot 2, failure">
+                <div class="demo-placeholder"><strong>Robot 2</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Robot 2</h3></figcaption>
+            </figure>
+            <figure class="demo-card" data-reveal data-delay="2">
+              <div class="demo-stage" data-demo="conventional-fire-person-merged" aria-label="Person search: Conventional navigation / Fire, Combined view, failure">
+                <div class="demo-placeholder"><strong>Combined view</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Combined view</h3></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="navigation-case navigation-risk-aware navigation-success">
+          <div class="navigation-case-heading">
+            <h3>FireNav / Fire <span class="navigation-method-badge">Success</span></h3>
+          </div>
+          <div class="demo-grid demo-grid-three">
+            <figure class="demo-card" data-reveal data-delay="0">
+              <div class="demo-stage" data-demo="firenav-person-agent-0" aria-label="Person search: FireNav / Fire, Robot 1, success">
+                <div class="demo-placeholder"><strong>Robot 1</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Robot 1</h3></figcaption>
+            </figure>
+            <figure class="demo-card" data-reveal data-delay="1">
+              <div class="demo-stage" data-demo="firenav-person-agent-1" aria-label="Person search: FireNav / Fire, Robot 2, success">
+                <div class="demo-placeholder"><strong>Robot 2</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Robot 2</h3></figcaption>
+            </figure>
+            <figure class="demo-card" data-reveal data-delay="2">
+              <div class="demo-stage" data-demo="firenav-person-merged" aria-label="Person search: FireNav / Fire, Combined view, success">
+                <div class="demo-placeholder"><strong>Combined view</strong><span>Loading video</span></div>
+              </div>
+              <figcaption><h3>Combined view</h3></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-navigation" id="navigation-demos" data-synchronized-videos>
       <div class="shell">
         <div class="navigation-heading" data-reveal>
           <div><p class="section-kicker">Navigation demos</p><h2>Cooperative navigation in fire.</h2><p class="navigation-summary">Risk-blind and risk-aware planning, compared side by side across robot views.</p></div>
@@ -537,14 +682,14 @@
         </div> -->
         <div class="experiment-table-block" data-reveal>
           <h3 id="runtime-heading">Online navigation runtime</h3>
-          <p id="runtime-note">Mean and standard deviation over 100 runs, in milliseconds. VLM planning is invoked only during global replanning.</p>
+          <p id="runtime-note">Mean and standard deviation over 100 runs, in milliseconds. VLM planning is invoked only during global replanning. Deployment on two physical quadruped robots demonstrates the framework’s feasibility for real-world, closed-loop cooperative navigation with practical runtime overhead.</p>
           <div class="experiment-table-scroll" role="region" aria-labelledby="runtime-heading" tabindex="0">
             <table class="experiment-table runtime-table" aria-describedby="runtime-note">
               <caption>Runtime breakdown of the online navigation pipeline (ms)</caption>
               <thead><tr><th scope="col">Statistic</th><th scope="col">Preprocessing</th><th scope="col">Mapping</th><th scope="col">Exploration<br>planning</th><th scope="col">VLM<br>planning</th><th scope="col">Visualization</th><th scope="col">Communication</th><th scope="col">Action<br>completion</th></tr></thead>
               <tbody>
-                <tr><th scope="row">Mean</th><td>57.0</td><td>89.63</td><td>100.1</td><td>2155.4</td><td>33.7</td><td>4.31</td><td>378.4</td></tr>
-                <tr><th scope="row">Std.</th><td>32.6</td><td>34.16</td><td>15.9</td><td>578.6</td><td>12.1</td><td>13.83</td><td>112.43</td></tr>
+                <tr><th scope="row">Mean (ms)</th><td>57.0</td><td>89.63</td><td>100.1</td><td>2155.4</td><td>33.7</td><td>4.31</td><td>378.4</td></tr>
+                <tr><th scope="row">Std. (ms)</th><td>32.6</td><td>34.16</td><td>15.9</td><td>578.6</td><td>12.1</td><td>13.83</td><td>112.43</td></tr>
               </tbody>
             </table>
           </div>
@@ -596,5 +741,6 @@
   <script src="static/js/demo-media.js" defer></script>
   <script src="static/js/index.js" defer></script>
   <script src="static/js/navigation-playback.js" defer></script>
+  <script src="static/js/scene-explorer.js" defer></script>
 </body>
 </html>
