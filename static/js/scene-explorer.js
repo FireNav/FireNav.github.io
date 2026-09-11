@@ -311,7 +311,7 @@ if (explorer) {
     const { signal } = controller;
     const isCurrent = () => version === revision;
     const sceneId = select.value;
-    const base = "static/Scenes/" + sceneId;
+    const base = "scens/" + sceneId + "/";
     viewer?.clear();
     inventory = null;
     list.replaceChildren();
@@ -327,11 +327,11 @@ if (explorer) {
     status.textContent = "Loading 3D scene…";
     summary.textContent = "Scene " + sceneId;
     count.textContent = "Loading inventory…";
-    explorer.querySelector("[data-inventory-download]").href = base + "_inventory.json";
+    explorer.querySelector("[data-inventory-download]").href = base + "inventory.json";
 
     const inventoryTask = (async () => {
       try {
-        const response = await fetch(base + "_inventory.json", { signal });
+        const response = await fetch(base + "inventory.json", { signal });
         if (!response.ok) throw new Error("Inventory HTTP " + response.status);
         const data = await response.json();
         if (!Array.isArray(data.instances) || data.scene_id !== sceneId) throw new Error("Mismatched inventory");
@@ -358,7 +358,7 @@ if (explorer) {
         // Share initialization if a user switches scenes while modules load.
         viewer = await (viewerPromise ||= createViewer().catch((error) => { viewerPromise = null; throw error; }));
         if (!isCurrent()) return;
-        const buffer = await readModel(base + ".semantic.glb", signal, isCurrent);
+        const buffer = await readModel(base + sceneId + ".semantic.glb", signal, isCurrent);
         if (!isCurrent()) return;
         status.textContent = "Preparing scene for exploration…";
         const loaded = await viewer.load(buffer, isCurrent);
@@ -392,7 +392,9 @@ if (explorer) {
   top.addEventListener("click", () => viewer?.frame(true));
   reset.addEventListener("click", () => viewer?.frame());
   if ("IntersectionObserver" in window) {
-    new IntersectionObserver(([entry]) => {
+    new IntersectionObserver((entries) => {
+      // Scrolling and resizing can queue more than one visibility change.
+      const entry = entries[entries.length - 1];
       visible = entry.isIntersecting;
       if (visible && !started) loadScene();
       else if (visible) viewer?.render();
