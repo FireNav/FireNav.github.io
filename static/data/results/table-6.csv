@@ -1,0 +1,14 @@
+﻿,,Navigation Performance,Navigation Performance,Navigation Performance,Navigation Performance,Safety,Safety
+Global,Local,SR ↑,SPL ↑,DTG (m) ↓,NS ↓,AHE (%) ↓,SHER (× 10^-3) ↓
+RGB-D Only,RGB-D Only,RGB-D Only,RGB-D Only,RGB-D Only,RGB-D Only,RGB-D Only,RGB-D Only
+Nearest,FMM,.190,.103,3.552,288.35,8.275,.0478
+Co-UT,FMM,.190,.101,3.793,307.25,8.820,.0613
+Fill,FMM,.215,.122,3.647,300.85,7.885,.0373
+Random,FMM,.183,.084,3.587,318.40,7.890,.0510
+GPT-4o,FMM,.200,.114,4.129,319.45,9.475,.0390
+Multi-modal Perception and Fusion,Multi-modal Perception and Fusion,Multi-modal Perception and Fusion,Multi-modal Perception and Fusion,Multi-modal Perception and Fusion,Multi-modal Perception and Fusion,Multi-modal Perception and Fusion,Multi-modal Perception and Fusion
+Nearest,FMM,.375,.176,2.781,260.65,8.830,.2060
+Co-UT,FMM,.385,.181,2.929,248.75,7.940,.2383
+Fill,FMM,.408,.195,2.557,243.65,8.165,.2669
+Random,FMM,.318,.145,3.231,266.65,8.655,.3140
+GPT-4o,FMM,.353,.173,3.193,280.05,8.840,.1739

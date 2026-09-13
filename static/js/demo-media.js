@@ -46,26 +46,6 @@ window.fireNavDemoMedia = {
     "src": "static/videos/fire_person_videos/oracle_merged.mp4",
     "poster": "static/images/demo-posters/fire-person-merged-oracle.jpg"
   },
-  "fire-kitchen": {
-    "type": "video",
-    "src": ""
-  },
-  "fire-bedroom": {
-    "type": "video",
-    "src": ""
-  },
-  "fire-living-room": {
-    "type": "video",
-    "src": ""
-  },
-  "fire-multi-origin": {
-    "type": "video",
-    "src": ""
-  },
-  "sensor-observations": {
-    "type": "video",
-    "src": ""
-  },
   "risk-blind-agent-0": {
     "type": "video",
     "src": "static/videos/fire_person_videos/risk_none_agent_0.mp4",

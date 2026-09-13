@@ -1,0 +1,51 @@
+{
+  "id": "4ok3usBNeis",
+  "severity": "medium",
+  "planId": "4ok3usBNeis_multi_origin_medium_gallery_union_ad269c4d3934",
+  "views": [
+    {
+      "id": "kitchen_grease_fire",
+      "label": "Kitchen Grease Fire",
+      "directory": "01_kitchen_grease_fire",
+      "timeSeconds": 10.0,
+      "sourceCategory": "cooker",
+      "sourceObjectId": 325,
+      "semanticFallback": false,
+      "image": "scens/4ok3usBNeis/fire/01_kitchen_grease_fire/template_scene.png",
+      "sensorImage": "scens/4ok3usBNeis/fire/01_kitchen_grease_fire/sensor_dashboard.png"
+    },
+    {
+      "id": "bedroom_textile",
+      "label": "Bedroom Textile Fire",
+      "directory": "02_bedroom_textile",
+      "timeSeconds": 10.0,
+      "sourceCategory": "bed",
+      "sourceObjectId": 199,
+      "semanticFallback": false,
+      "image": "scens/4ok3usBNeis/fire/02_bedroom_textile/template_scene.png",
+      "sensorImage": "scens/4ok3usBNeis/fire/02_bedroom_textile/sensor_dashboard.png"
+    },
+    {
+      "id": "living_room_electric",
+      "label": "Living-room Electrical Fire",
+      "directory": "03_living_room_electric",
+      "timeSeconds": 30.0,
+      "sourceCategory": "speaker",
+      "sourceObjectId": 10,
+      "semanticFallback": false,
+      "image": "scens/4ok3usBNeis/fire/03_living_room_electric/template_scene.png",
+      "sensorImage": "scens/4ok3usBNeis/fire/03_living_room_electric/sensor_dashboard.png"
+    },
+    {
+      "id": "multi_origin",
+      "label": "Multi-origin Fire",
+      "directory": "04_multi_origin",
+      "timeSeconds": 10.0,
+      "sourceCategory": "bed",
+      "sourceObjectId": 417,
+      "semanticFallback": false,
+      "image": "scens/4ok3usBNeis/fire/04_multi_origin/template_scene.png",
+      "sensorImage": "scens/4ok3usBNeis/fire/04_multi_origin/sensor_dashboard.png"
+    }
+  ]
+}

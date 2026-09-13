@@ -1,0 +1,51 @@
+{
+  "id": "k1cupFYWXJ6",
+  "severity": "medium",
+  "planId": "k1cupFYWXJ6_multi_origin_medium_gallery_union_62e06fc4c542",
+  "views": [
+    {
+      "id": "kitchen_grease_fire",
+      "label": "Additional origin: curtain",
+      "directory": "01_kitchen_grease_fire",
+      "timeSeconds": 10.0,
+      "sourceCategory": "curtain",
+      "sourceObjectId": 12,
+      "semanticFallback": true,
+      "image": "scens/k1cupFYWXJ6/fire/01_kitchen_grease_fire/template_scene.png",
+      "sensorImage": "scens/k1cupFYWXJ6/fire/01_kitchen_grease_fire/sensor_dashboard.png"
+    },
+    {
+      "id": "bedroom_textile",
+      "label": "Bedroom Textile Fire",
+      "directory": "02_bedroom_textile",
+      "timeSeconds": 10.0,
+      "sourceCategory": "armchair",
+      "sourceObjectId": 43,
+      "semanticFallback": false,
+      "image": "scens/k1cupFYWXJ6/fire/02_bedroom_textile/template_scene.png",
+      "sensorImage": "scens/k1cupFYWXJ6/fire/02_bedroom_textile/sensor_dashboard.png"
+    },
+    {
+      "id": "living_room_electric",
+      "label": "Additional origin: sofa",
+      "directory": "03_living_room_electric",
+      "timeSeconds": 10.0,
+      "sourceCategory": "sofa",
+      "sourceObjectId": 734,
+      "semanticFallback": true,
+      "image": "scens/k1cupFYWXJ6/fire/03_living_room_electric/template_scene.png",
+      "sensorImage": "scens/k1cupFYWXJ6/fire/03_living_room_electric/sensor_dashboard.png"
+    },
+    {
+      "id": "multi_origin",
+      "label": "Multi-origin Fire",
+      "directory": "04_multi_origin",
+      "timeSeconds": 10.0,
+      "sourceCategory": "table",
+      "sourceObjectId": 128,
+      "semanticFallback": false,
+      "image": "scens/k1cupFYWXJ6/fire/04_multi_origin/template_scene.png",
+      "sensorImage": "scens/k1cupFYWXJ6/fire/04_multi_origin/sensor_dashboard.png"
+    }
+  ]
+}

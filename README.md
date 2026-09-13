@@ -14,13 +14,17 @@ Do not double-click `index.html` to preview the 3D explorer: browsers block
 module and JSON/model loading through `file://`. The page now explains this
 instead of leaving the scene and inventory blank.
 
-Run any static file server from this directory, for example:
+For a command-line preview with video seeking support, run:
 
 ```bash
-python -m http.server 8000
+python preview_server.py 8000
 ```
 
 Then open `http://localhost:8000`.
+
+The included server supports HTTP byte ranges, so video players can seek without
+reloading an entire recording. The Windows launcher reuses a matching preview
+with this capability or selects another available localhost port.
 
 ## Publish
 
@@ -28,15 +32,14 @@ The site has no build step and can be served directly by GitHub Pages. Point the
 
 ## Demo media
 
-The page has an interactive scene explorer and 22 media slots, including nine fire-impact comparison players, six risk-awareness comparison players, and two physical experiment players. Configure their paths in [`static/js/demo-media.js`](static/js/demo-media.js). Empty `src` values display a clearly labeled placeholder without loading a missing file. The existing template videos are not assigned to research demos.
+The page has an interactive scene explorer, linked fire-template and sensor image galleries, 12 temporal-evolution videos, and 17 other video slots: nine fire-impact comparison players, six risk-awareness comparison players, and two physical experiment players. Configure the latter video paths in [`static/js/demo-media.js`](static/js/demo-media.js).
+
+The image galleries contain all 36 scenes and 144 template/sensor pairs, indexed in [`scens/fire-gallery.json`](scens/fire-gallery.json). Both scene selectors stay in sync; the sensor template buttons switch between the four corresponding boards. Images load on demand and open at their original resolution. See [`scens/FIRE_GALLERY.md`](scens/FIRE_GALLERY.md) for the per-scene file structure and capture metadata. Gallery behavior and layout are in `static/js/fire-gallery.js` and `static/css/fire-gallery.css`.
+
+The temporal-evolution gallery (`#temporal-evolution`) follows the static fire images. It has four template rows with three scene videos each, using the original MP4s and posters in `static/videos/temporal_evolution_12_videos_15s/`. The columns consistently show `4ok3usBNeis`, `6s7QHgap2fW`, and `BAbdmeyTvMZ`. Each 15-second clip includes 0–600 seconds of simulated evolution at 50× speed plus brief reference/final holds. Native controls support playback, seeking, and fullscreen; `preload="none"` avoids downloading all 12 videos on page load. On small screens each template row scrolls horizontally to keep its three videos legible.
 
 | Slot | Content | Suggested file path |
 | --- | --- | --- |
-| `fire-kitchen` | Kitchen Grease Fire evolution | `static/videos/fire-kitchen.mp4` |
-| `fire-bedroom` | Bedroom Textile Fire evolution | `static/videos/fire-bedroom.mp4` |
-| `fire-living-room` | Living-room Electrical Fire evolution | `static/videos/fire-living-room.mp4` |
-| `fire-multi-origin` | Multi-origin Fire evolution | `static/videos/fire-multi-origin.mp4` |
-| `sensor-observations` | Sensor observation demo | `static/videos/sensor-observations.mp4` |
 | `normal-person-agent-0`, `normal-person-agent-1`, `normal-person-merged` | Conventional navigation without fire: success | `static/videos/normal_person_videos/{agent_0,agent_1,merged}.mp4` |
 | `conventional-fire-person-agent-0`, `conventional-fire-person-agent-1`, `conventional-fire-person-merged` | Conventional navigation in fire: failure | `static/videos/fire_conventional_person/{agent_0,agent_1,merged}.mp4` |
 | `firenav-person-agent-0`, `firenav-person-agent-1`, `firenav-person-merged` | FireNav in fire: success | `static/videos/fire_person_videos/oracle_{agent_0,agent_1,merged}.mp4` |
@@ -48,7 +51,7 @@ The page has an interactive scene explorer and 22 media slots, including nine fi
 Copy each asset into the site directory, then set its `src` to a path relative to `index.html`. For example:
 
 ```js
-"fire-kitchen": { type: "video", src: "static/videos/fire-kitchen.mp4" },
+"physical-person": { type: "video", src: "static/videos/physical_experiments/physical_experiments_person.mp4" },
 ```
 
 The scanned inventory section uses `static/js/scene-explorer.js` and `static/css/scene-explorer.css`. A scene selector switches between all 36 scanned scenes, loading `scens/<scene_id>/<scene_id>.semantic.glb` and the matching `scens/<scene_id>/inventory.json`. The default scene is `Nfvxx8J5NCo`. Desktop shows the interactive model on the left and a fixed-height, independently scrollable inventory on the right; mobile stacks these panels. Inventory includes searchable, expandable instances and the complete JSON, with a download link. Counts use the recovered `instances` array rather than the larger source annotation totals.
@@ -62,6 +65,28 @@ The fire-impact section precedes the risk-awareness comparison and shows person 
 The navigation section compares two methods in two rows of three players on desktop: risk-blind above risk-aware (ours), each with Robot 1, Robot 2, and combined views. A single Category selector at the upper right switches all six players between person and bed search. The risk-blind row uses `risk_none` recordings, and the risk-aware row uses the existing `oracle` recordings. Each slot maps `categories.person` and `categories.bed` to a video source and its matching poster; `src` and `poster` provide the default person-search view. Switching categories resets all six players and starts the new comparison together. `static/js/navigation-playback.js` synchronizes playback, pause, seeking, and playback speed across all six players. Shorter recordings hold their final frame until the longest finishes, then all six restart together. The compact comparison uses each video's native controls to pause, play, or seek all six videos together; there is no separate playback toolbar. Leaving the section or hiding the browser tab pauses playback; returning resumes unless the user manually paused. When the browser blocks autoplay, pressing play on any video starts the comparison with a user gesture. Smaller screens stack the players vertically.
 
 Physical deployment and experiments share one section, with the two-robot hardware photo in `static/images/robots.png` and only the two recordings from `physical_experiments/`. The original spelling `physical_experimens_bed.mp4` is preserved in its path.
+
+## Paper results
+
+The Experimental Evaluation section contains the six experimental figures
+(Figures 6–11) and eight tables from the paper. A direct-link index leads to each
+comparison figure and table. All content is displayed in five topic groups:
+overall performance, ablation studies, MicroBenchmark Experiments, physical
+validation, and infrastructure evaluation. Tables appear alongside the related
+figures and remain fully expanded. Each figure opens in the image viewer and
+links to its original vector PDF and related tables. Tables preserve the source
+values, units, bold entries, and underlines, and provide CSV downloads. Wide
+tables scroll within their own containers on small screens. The index and all
+figures and tables remain accessible without JavaScript.
+
+Assets live in `static/images/results/`, `static/pdfs/results/`, and
+`static/data/results/`. The latter includes a source manifest with figure hashes
+and table row counts. To refresh from the paper source, install PyMuPDF and Pillow,
+then run `python scripts/import-paper-results.py --paper-dir ..`. The importer reads
+the active tables in `sections/appendix.tex` and the six original figure PDFs,
+ignores commented-out drafts, and updates the Results markup. Figure numbering,
+table titles, and paper page links are defined in the importer and should be
+reviewed when the manuscript changes. The website itself requires no build step.
 
 ## Code and fire plans
 

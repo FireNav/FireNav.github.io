@@ -38,7 +38,10 @@
   <link rel="preload" as="image" href="static/images/background.webp" fetchpriority="high">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/sections.css">
+  <link rel="stylesheet" href="static/css/benchmark.css">
   <link rel="stylesheet" href="static/css/scene-explorer.css">
+  <link rel="stylesheet" href="static/css/fire-gallery.css">
+  <link rel="stylesheet" href="static/css/results.css">
 
   <script type="application/ld+json">
   {
@@ -178,12 +181,158 @@
       </div>
     </section>
 
+    <section class="section section-dark section-benchmark" id="benchmark" aria-labelledby="benchmark-title">
+      <div class="shell">
+        <div class="section-heading section-heading-light benchmark-heading" data-reveal>
+          <div>
+            <p class="section-kicker">Inside FireNav</p>
+            <h2 id="benchmark-title">The benchmark.</h2>
+          </div>
+          <p>Reproducible fire worlds, a unified navigation framework, and a shared protocol for measuring performance and safety.</p>
+        </div>
+
+        <div class="benchmark-stack">
+          <article class="benchmark-module benchmark-infra" aria-labelledby="benchmark-infra-title">
+            <header class="benchmark-module-heading">
+              <span class="benchmark-number" aria-hidden="true">01</span>
+              <h3 id="benchmark-infra-title">Benchmark Infra: <span>FireWorld</span></h3>
+              <p>From static scenes to dynamic fire environments.</p>
+            </header>
+            <div class="benchmark-module-body benchmark-infra-grid">
+              <figure class="benchmark-figure">
+                <button class="zoom-trigger" type="button" data-lightbox="static/images/fireworld-pipeline.jpg" data-alt="FireWorld construction pipeline" aria-label="Enlarge FireWorld construction pipeline">
+                  <img src="static/images/fireworld-pipeline.jpg" width="4280" height="1854" alt="FireWorld pipeline: scene scanning and physics grounding, fire plan generation, voxel propagation, rendering, and sensor synthesis" loading="lazy">
+                  <span aria-hidden="true">Expand ↗</span>
+                </button>
+                <figcaption>Semantic scenes → evolving hazards → synchronized observations</figcaption>
+              </figure>
+              <ul class="benchmark-components" aria-label="Three core FireWorld components">
+                <li>
+                  <span class="benchmark-component-mark" aria-hidden="true">01</span>
+                  <div><h4>Dynamic fire worlds</h4><p>Semantic fire plans drive evolving flame, smoke, and temperature.</p></div>
+                </li>
+                <li>
+                  <span class="benchmark-component-mark" aria-hidden="true">02</span>
+                  <div><h4>Multimodal sensing</h4><p>Synchronized RGB, depth, thermal, and mmWave radar observations.</p></div>
+                </li>
+                <li>
+                  <span class="benchmark-component-mark" aria-hidden="true">03</span>
+                  <div><h4>Category-extensible tasks</h4><p>Scene-native objects and external assets share one ObjectNav interface.</p></div>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="benchmark-scene-overview">
+              <figure class="benchmark-figure benchmark-contact-sheet" id="all-scenes-overview">
+                <button class="zoom-trigger" type="button" data-lightbox="static/images/all_scenes_contact_sheet.jpg" data-alt="All 36 indoor scenes, with four fire-template views per scene" aria-label="Enlarge the overview of all 36 fire scenes">
+                  <img src="static/images/all_scenes_contact_sheet.jpg" width="1920" height="1728" alt="Contact sheet showing all 36 indoor scenes and their four fire-template views, grouped by scene ID" loading="lazy">
+                  <span aria-hidden="true">Expand overview &#8599;</span>
+                </button>
+                <figcaption><span><strong>All scenes at a glance.</strong> 36 scenes &middot; 144 template views</span><a href="static/images/all_scenes_contact_sheet.jpg" target="_blank" rel="noopener">Open original &#8599;</a></figcaption>
+              </figure>
+            </div> -->
+          </article>
+
+          <article class="benchmark-module benchmark-framework" aria-labelledby="benchmark-framework-title">
+            <header class="benchmark-module-heading">
+              <span class="benchmark-number" aria-hidden="true">02</span>
+              <h3 id="benchmark-framework-title">Evaluation Methodology</h3>
+              <p>Shared perception. Cooperative planning. Risk-aware navigation.</p>
+            </header>
+            <div class="benchmark-module-body benchmark-framework-grid">
+              <figure class="benchmark-figure">
+                <button class="zoom-trigger" type="button" data-lightbox="static/images/unified-framework.png" data-alt="Overview of the unified FireNav framework" aria-label="Enlarge the unified FireNav framework">
+                  <img src="static/images/unified-framework.png" width="1458" height="942" alt="FireNav framework connecting multimodal perception, fused 3D maps, frontier extraction and risk assessment, global assignment, and local hazard-aware planning" loading="lazy">
+                  <span aria-hidden="true">Expand ↗</span>
+                </button>
+                <figcaption>We propose a unified hazard-aware multi-agent navigation framework, FireNav, tailored for indoor fire SAR scenarios.</figcaption>
+              </figure>
+              <div class="benchmark-baselines">
+                <div class="benchmark-detail-heading">
+                  <h4>Evaluated baselines</h4>
+                  <span class="benchmark-small-label">Global × Local</span>
+                </div>
+                <div class="benchmark-planner-group">
+                  <p class="benchmark-planner-label">Global planners <span>Frontier assignment</span></p>
+                  <ul class="benchmark-chips" aria-label="Global planner baselines">
+                    <li>Random</li><li>Nearest</li><li>Fill</li><li>Co-UT</li><li>GPT-4o</li>
+                  </ul>
+                </div>
+                <div class="benchmark-planner-group">
+                  <p class="benchmark-planner-label">Local planners <span>Path execution</span></p>
+                  <ul class="benchmark-chips" aria-label="Local planner baselines">
+                    <li>FMM</li><li>A*</li><li>PointNav DD-PPO</li>
+                  </ul>
+                </div>
+                <div class="benchmark-combinations">
+                  <p><strong>5</strong> global <span aria-hidden="true">×</span> <strong>3</strong> local <span aria-hidden="true">=</span> <strong>15</strong> combinations</p>
+                  <span>Compared within the same navigation framework.</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="benchmark-module benchmark-protocol" aria-labelledby="benchmark-protocol-title">
+            <header class="benchmark-module-heading">
+              <span class="benchmark-number" aria-hidden="true">03</span>
+              <h3 id="benchmark-protocol-title">Evaluation Protocol</h3>
+              <p>Shared tasks and metrics across ObjectNav and PersonNav.</p>
+            </header>
+            <div class="benchmark-module-body benchmark-protocol-grid">
+              <div class="benchmark-task">
+                <h4>Category-extensible ObjectNav<br class="benchmark-title-break"> task construction pipeline</h4>
+                <figure class="benchmark-figure">
+                  <button class="zoom-trigger" type="button" data-lightbox="static/images/category-extensible.jpg" data-alt="Category-extensible ObjectNav task construction pipeline" aria-label="Enlarge the category-extensible ObjectNav task construction pipeline">
+                    <img src="static/images/category-extensible.jpg" width="4238" height="1678" alt="Retrieve scene-native instances or place external assets, register target categories, then generate evaluation viewpoints and reachable episode starts" loading="lazy">
+                    <span aria-hidden="true">Expand ↗</span>
+                  </button>
+                  <figcaption>Scene-native and external targets become Habitat-compatible navigation episodes.</figcaption>
+                </figure>
+              </div>
+              <div class="benchmark-metrics">
+                <div class="benchmark-detail-heading">
+                  <h4>Evaluation metrics</h4>
+                  <span class="benchmark-small-label">↑ Higher / ↓ Lower is better</span>
+                </div>
+                <dl class="benchmark-metric-grid">
+                  <div>
+                    <dt>SR <span aria-label="higher is better">↑</span></dt>
+                    <dd><span class="benchmark-metric-name">Success Rate</span><span class="benchmark-metric-description">Share of episodes where at least one robot reaches a valid goal.</span></dd>
+                  </div>
+                  <div>
+                    <dt>DTG <span aria-label="lower is better">↓</span></dt>
+                    <dd><span class="benchmark-metric-name">Distance to Goal</span><span class="benchmark-metric-description">Minimum remaining geodesic distance from any robot to the goal at episode end.</span></dd>
+                  </div>
+                  <div>
+                    <dt>SPL <span aria-label="higher is better">↑</span></dt>
+                    <dd><span class="benchmark-metric-name">Success weighted by Path Length</span><span class="benchmark-metric-description">Success weighted by path efficiency relative to the shortest path.</span></dd>
+                  </div>
+                  <div>
+                    <dt>NS <span aria-label="lower is better">↓</span></dt>
+                    <dd><span class="benchmark-metric-name">Number of Steps</span><span class="benchmark-metric-description">Navigation steps taken before the episode ends.</span></dd>
+                  </div>
+                  <div class="benchmark-metric-safety">
+                    <dt>AHE <span aria-label="lower is better">↓</span></dt>
+                    <dd><span class="benchmark-metric-name">Average Hazard Exposure</span><span class="benchmark-metric-description">Mean hazard intensity experienced across all robots and time steps.</span></dd>
+                  </div>
+                  <div class="benchmark-metric-safety">
+                    <dt>SHER <span aria-label="lower is better">↓</span></dt>
+                    <dd><span class="benchmark-metric-name">Severe Hazard Exposure Rate</span><span class="benchmark-metric-description">Fraction of robot time steps with exposure above the severe-hazard threshold.</span></dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-inventory" id="inventory">
       <div class="shell">
         <nav class="demo-jump-links" id="demos" aria-label="Demo gallery">
           <span>Explore the demos</span>
           <a href="#inventory">Scanned inventory</a>
-          <a href="#fire-evolution">Fire evolution</a>
+          <a href="#fire-evolution">Fire templates</a>
+          <a href="#temporal-evolution">Fire evolution</a>
           <a href="#sensing">Sensor observations</a>
           <a href="#navigation-demos">Navigation</a>
           <a href="#physical-demos">Physical experiments</a>
@@ -294,155 +443,206 @@
       </div>
     </section>
 
-    <section class="section section-dark" id="benchmark">
+    <section class="section section-dark section-evolution" id="fire-evolution" aria-labelledby="fire-gallery-title">
       <div class="shell">
         <div class="section-heading section-heading-light" data-reveal>
-          <div>
-            <p class="section-kicker">Inside the benchmark</p>
-            <h2>From clean scans to changing hazards.</h2>
-          </div>
-          <p>FireWorld separates expensive hazard propagation from the online control loop, enabling reproducible fire timelines and low-latency robot interaction.</p>
+          <div><p class="section-kicker">Four semantic templates</p><h2 id="fire-gallery-title">Fire scenarios across indoor scenes.</h2></div>
+          <p>Explore four template views in each of 36 indoor scenes, with matching fire-sensor observations. Each scene shares a medium-severity fire plan.</p>
         </div>
-
-        <figure class="media-frame media-frame-dark" data-reveal>
-          <button class="zoom-trigger" type="button" data-lightbox="static/images/fireworld-pipeline.jpg" data-alt="FireWorld construction pipeline" aria-label="Enlarge FireWorld construction pipeline">
-            <img src="static/images/fireworld-pipeline.jpg" width="4280" height="1854" alt="FireWorld pipeline from scene scanning and fire plan generation to voxel propagation and sensor synthesis" loading="lazy">
-            <span aria-hidden="true">Expand ↗</span>
-          </button>
-          <figcaption><strong>FireWorld construction.</strong> Scene semantics and physical attributes drive fire plans, propagation, rendering, and synchronized sensor observations.</figcaption>
-        </figure>
-
-        <div class="feature-tabs" data-tabs data-reveal>
-          <div class="tab-list" role="tablist" aria-label="FireNav benchmark components">
-            <button id="tab-worlds" role="tab" aria-selected="true" aria-controls="panel-worlds" tabindex="0" data-tab="worlds"><span>01</span> Dynamic worlds</button>
-            <button id="tab-sensing" role="tab" aria-selected="false" aria-controls="panel-sensing" tabindex="-1" data-tab="sensing"><span>02</span> Multimodal sensing</button>
-            <button id="tab-tasks" role="tab" aria-selected="false" aria-controls="panel-tasks" tabindex="-1" data-tab="tasks"><span>03</span> Extensible tasks</button>
-          </div>
-          <div class="tab-panels">
-            <article id="panel-worlds" role="tabpanel" aria-labelledby="tab-worlds" data-panel="worlds">
-              <p class="mono-label">FIRE PLAN → VOXEL FIELD → TIMELINE</p>
-              <h3>Controllable and replayable by design.</h3>
-              <p>Semantic ignition selection and material priors parameterize where fire begins and how it evolves. The lightweight solver jointly models flame, smoke, temperature, fuel, buoyancy, spread, and dissipation.</p>
-              <ul>
-                <li>Four semantic scenario templates</li>
-                <li>Light, medium, and severe presets</li>
-                <li>Seeded, machine-readable fire plans</li>
-              </ul>
-            </article>
-            <article id="panel-sensing" role="tabpanel" aria-labelledby="tab-sensing" data-panel="sensing" hidden>
-              <p class="mono-label">ONE FIRE CLOCK → CONSISTENT OBSERVATIONS</p>
-              <h3>See the same hazard through complementary sensors.</h3>
-              <p>RGB and optical depth degrade as smoke increases, while thermal sensing exposes heat and simulated mmWave radar preserves sparse geometry. Every modality is synthesized from the same time-indexed hazard state.</p>
-              <ul>
-                <li>Volumetric flame and smoke rendering</li>
-                <li>Smoke-dependent depth noise and dropout</li>
-                <li>Thermal and radar-style observations</li>
-              </ul>
-            </article>
-            <article id="panel-tasks" role="tabpanel" aria-labelledby="tab-tasks" data-panel="tasks" hidden>
-              <p class="mono-label">OBJECTNAV + EXTERNAL ASSET → PERSONNAV</p>
-              <h3>Bring new targets into existing worlds.</h3>
-              <p>Category-extensible ObjectNav instantiates external embodied assets while retaining the original observation, action, and evaluation interfaces. FireNav uses this path to build person-search episodes for rescue.</p>
-              <ul>
-                <li>Scene-native and external targets</li>
-                <li>Reachable starts and valid viewpoints</li>
-                <li>One Habitat-compatible protocol</li>
-              </ul>
-            </article>
-          </div>
+        <div class="gallery-toolbar">
+          <label for="fire-gallery-scene">Scene
+            <select id="fire-gallery-scene" data-gallery-scene disabled><option value="Nfvxx8J5NCo">Nfvxx8J5NCo</option></select>
+          </label>
+          <p data-gallery-status aria-live="polite">36 scenes · 4 template views per scene</p>
         </div>
+        <div class="fire-gallery-grid">
+          <figure class="demo-card">
+            <button class="zoom-trigger gallery-template-image" type="button" data-gallery-template="kitchen_grease_fire" data-lightbox="scens/Nfvxx8J5NCo/fire/01_kitchen_grease_fire/template_scene.png" data-alt="Kitchen Grease Fire in scene Nfvxx8J5NCo" aria-label="Enlarge Kitchen Grease Fire in scene Nfvxx8J5NCo">
+              <img src="scens/Nfvxx8J5NCo/fire/01_kitchen_grease_fire/template_scene.png" width="960" height="720" alt="Kitchen Grease Fire in scene Nfvxx8J5NCo, centered on an oven and stove" loading="lazy">
+              <span aria-hidden="true">Expand ↗</span>
+            </button>
+            <figcaption><h3>Kitchen Grease Fire</h3><p data-gallery-caption="kitchen_grease_fire">Source: oven and stove · t = 10 s</p><a href="#sensing" data-gallery-show-sensor="kitchen_grease_fire">View sensor board <span aria-hidden="true">↗</span></a></figcaption>
+          </figure>
+          <figure class="demo-card">
+            <button class="zoom-trigger gallery-template-image" type="button" data-gallery-template="bedroom_textile" data-lightbox="scens/Nfvxx8J5NCo/fire/02_bedroom_textile/template_scene.png" data-alt="Bedroom Textile Fire in scene Nfvxx8J5NCo" aria-label="Enlarge Bedroom Textile Fire in scene Nfvxx8J5NCo">
+              <img src="scens/Nfvxx8J5NCo/fire/02_bedroom_textile/template_scene.png" width="960" height="720" alt="Bedroom Textile Fire in scene Nfvxx8J5NCo, centered on a pillow" loading="lazy">
+              <span aria-hidden="true">Expand ↗</span>
+            </button>
+            <figcaption><h3>Bedroom Textile Fire</h3><p data-gallery-caption="bedroom_textile">Source: pillow · t = 10 s</p><a href="#sensing" data-gallery-show-sensor="bedroom_textile">View sensor board <span aria-hidden="true">↗</span></a></figcaption>
+          </figure>
+          <figure class="demo-card">
+            <button class="zoom-trigger gallery-template-image" type="button" data-gallery-template="living_room_electric" data-lightbox="scens/Nfvxx8J5NCo/fire/03_living_room_electric/template_scene.png" data-alt="Living-room Electrical Fire in scene Nfvxx8J5NCo" aria-label="Enlarge Living-room Electrical Fire in scene Nfvxx8J5NCo">
+              <img src="scens/Nfvxx8J5NCo/fire/03_living_room_electric/template_scene.png" width="960" height="720" alt="Living-room Electrical Fire in scene Nfvxx8J5NCo, centered on a laptop" loading="lazy">
+              <span aria-hidden="true">Expand ↗</span>
+            </button>
+            <figcaption><h3>Living-room Electrical Fire</h3><p data-gallery-caption="living_room_electric">Source: laptop · t = 10 s</p><a href="#sensing" data-gallery-show-sensor="living_room_electric">View sensor board <span aria-hidden="true">↗</span></a></figcaption>
+          </figure>
+          <figure class="demo-card">
+            <button class="zoom-trigger gallery-template-image" type="button" data-gallery-template="multi_origin" data-lightbox="scens/Nfvxx8J5NCo/fire/04_multi_origin/template_scene.png" data-alt="Multi-origin Fire in scene Nfvxx8J5NCo" aria-label="Enlarge Multi-origin Fire in scene Nfvxx8J5NCo">
+              <img src="scens/Nfvxx8J5NCo/fire/04_multi_origin/template_scene.png" width="960" height="720" alt="Multi-origin Fire in scene Nfvxx8J5NCo, viewed near a wardrobe" loading="lazy">
+              <span aria-hidden="true">Expand ↗</span>
+            </button>
+            <figcaption><h3>Multi-origin Fire</h3><p data-gallery-caption="multi_origin">Source: wardrobe · t = 150 s</p><a href="#sensing" data-gallery-show-sensor="multi_origin">View sensor board <span aria-hidden="true">↗</span></a></figcaption>
+          </figure>
+        </div>
+        <p class="gallery-note">Select a scene to update both galleries. Click any image to inspect the original at full resolution.</p>
+
+        <section class="temporal-gallery" id="temporal-evolution" aria-labelledby="temporal-evolution-title">
+          <div class="temporal-heading">
+            <h3 id="temporal-evolution-title">Temporal evolution of fire scenarios.</h3>
+            <p>Three representative scenes per template. Each 15-second clip includes 0&ndash;600 s of simulated fire evolution at 50&times; speed, with brief reference and final holds.</p>
+          </div>
+          <p class="temporal-mobile-hint">Swipe each row to browse its three scenes.</p>
+          <article class="temporal-row" aria-labelledby="temporal-kitchen_grease_fire">
+            <header class="temporal-row-heading">
+              <span aria-hidden="true">01</span>
+              <h4 id="temporal-kitchen_grease_fire">Kitchen Grease Fire</h4>
+            </header>
+            <div class="temporal-video-grid" role="region" aria-label="Kitchen Grease Fire: three scene videos" tabindex="0">
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="800" height="700" poster="static/videos/temporal_evolution_12_videos_15s/kitchen_grease_fire/4ok3usBNeis/poster.jpg" aria-label="Kitchen Grease Fire evolution in scene 4ok3usBNeis, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/kitchen_grease_fire/4ok3usBNeis/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/kitchen_grease_fire/4ok3usBNeis/temporal_evolution.mp4">Download the Kitchen Grease Fire video for scene 4ok3usBNeis.</a>
+                </video>
+                <figcaption><span>Scene 4ok3usBNeis</span><span>15 s</span></figcaption>
+              </figure>
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="800" height="700" poster="static/videos/temporal_evolution_12_videos_15s/kitchen_grease_fire/6s7QHgap2fW/poster.jpg" aria-label="Kitchen Grease Fire evolution in scene 6s7QHgap2fW, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/kitchen_grease_fire/6s7QHgap2fW/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/kitchen_grease_fire/6s7QHgap2fW/temporal_evolution.mp4">Download the Kitchen Grease Fire video for scene 6s7QHgap2fW.</a>
+                </video>
+                <figcaption><span>Scene 6s7QHgap2fW</span><span>15 s</span></figcaption>
+              </figure>
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="800" height="700" poster="static/videos/temporal_evolution_12_videos_15s/kitchen_grease_fire/BAbdmeyTvMZ/poster.jpg" aria-label="Kitchen Grease Fire evolution in scene BAbdmeyTvMZ, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/kitchen_grease_fire/BAbdmeyTvMZ/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/kitchen_grease_fire/BAbdmeyTvMZ/temporal_evolution.mp4">Download the Kitchen Grease Fire video for scene BAbdmeyTvMZ.</a>
+                </video>
+                <figcaption><span>Scene BAbdmeyTvMZ</span><span>15 s</span></figcaption>
+              </figure>
+            </div>
+          </article>
+          <article class="temporal-row" aria-labelledby="temporal-bedroom_textile">
+            <header class="temporal-row-heading">
+              <span aria-hidden="true">02</span>
+              <h4 id="temporal-bedroom_textile">Bedroom Textile Fire</h4>
+            </header>
+            <div class="temporal-video-grid" role="region" aria-label="Bedroom Textile Fire: three scene videos" tabindex="0">
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="800" height="700" poster="static/videos/temporal_evolution_12_videos_15s/bedroom_textile/4ok3usBNeis/poster.jpg" aria-label="Bedroom Textile Fire evolution in scene 4ok3usBNeis, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/bedroom_textile/4ok3usBNeis/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/bedroom_textile/4ok3usBNeis/temporal_evolution.mp4">Download the Bedroom Textile Fire video for scene 4ok3usBNeis.</a>
+                </video>
+                <figcaption><span>Scene 4ok3usBNeis</span><span>15 s</span></figcaption>
+              </figure>
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="800" height="700" poster="static/videos/temporal_evolution_12_videos_15s/bedroom_textile/6s7QHgap2fW/poster.jpg" aria-label="Bedroom Textile Fire evolution in scene 6s7QHgap2fW, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/bedroom_textile/6s7QHgap2fW/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/bedroom_textile/6s7QHgap2fW/temporal_evolution.mp4">Download the Bedroom Textile Fire video for scene 6s7QHgap2fW.</a>
+                </video>
+                <figcaption><span>Scene 6s7QHgap2fW</span><span>15 s</span></figcaption>
+              </figure>
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="800" height="700" poster="static/videos/temporal_evolution_12_videos_15s/bedroom_textile/BAbdmeyTvMZ/poster.jpg" aria-label="Bedroom Textile Fire evolution in scene BAbdmeyTvMZ, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/bedroom_textile/BAbdmeyTvMZ/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/bedroom_textile/BAbdmeyTvMZ/temporal_evolution.mp4">Download the Bedroom Textile Fire video for scene BAbdmeyTvMZ.</a>
+                </video>
+                <figcaption><span>Scene BAbdmeyTvMZ</span><span>15 s</span></figcaption>
+              </figure>
+            </div>
+          </article>
+          <article class="temporal-row" aria-labelledby="temporal-living_room_electric">
+            <header class="temporal-row-heading">
+              <span aria-hidden="true">03</span>
+              <h4 id="temporal-living_room_electric">Living-room Electrical Fire</h4>
+            </header>
+            <div class="temporal-video-grid" role="region" aria-label="Living-room Electrical Fire: three scene videos" tabindex="0">
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="800" height="700" poster="static/videos/temporal_evolution_12_videos_15s/living_room_electric/4ok3usBNeis/poster.jpg" aria-label="Living-room Electrical Fire evolution in scene 4ok3usBNeis, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/living_room_electric/4ok3usBNeis/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/living_room_electric/4ok3usBNeis/temporal_evolution.mp4">Download the Living-room Electrical Fire video for scene 4ok3usBNeis.</a>
+                </video>
+                <figcaption><span>Scene 4ok3usBNeis</span><span>15 s</span></figcaption>
+              </figure>
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="800" height="700" poster="static/videos/temporal_evolution_12_videos_15s/living_room_electric/6s7QHgap2fW/poster.jpg" aria-label="Living-room Electrical Fire evolution in scene 6s7QHgap2fW, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/living_room_electric/6s7QHgap2fW/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/living_room_electric/6s7QHgap2fW/temporal_evolution.mp4">Download the Living-room Electrical Fire video for scene 6s7QHgap2fW.</a>
+                </video>
+                <figcaption><span>Scene 6s7QHgap2fW</span><span>15 s</span></figcaption>
+              </figure>
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="800" height="700" poster="static/videos/temporal_evolution_12_videos_15s/living_room_electric/BAbdmeyTvMZ/poster.jpg" aria-label="Living-room Electrical Fire evolution in scene BAbdmeyTvMZ, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/living_room_electric/BAbdmeyTvMZ/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/living_room_electric/BAbdmeyTvMZ/temporal_evolution.mp4">Download the Living-room Electrical Fire video for scene BAbdmeyTvMZ.</a>
+                </video>
+                <figcaption><span>Scene BAbdmeyTvMZ</span><span>15 s</span></figcaption>
+              </figure>
+            </div>
+          </article>
+          <article class="temporal-row" aria-labelledby="temporal-multi_origin">
+            <header class="temporal-row-heading">
+              <span aria-hidden="true">04</span>
+              <h4 id="temporal-multi_origin">Multi-origin Fire</h4>
+            </header>
+            <div class="temporal-video-grid" role="region" aria-label="Multi-origin Fire: three scene videos" tabindex="0">
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="1600" height="1356" poster="static/videos/temporal_evolution_12_videos_15s/multi_origin/4ok3usBNeis/poster.jpg" aria-label="Multi-origin Fire evolution in scene 4ok3usBNeis, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/multi_origin/4ok3usBNeis/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/multi_origin/4ok3usBNeis/temporal_evolution.mp4">Download the Multi-origin Fire video for scene 4ok3usBNeis.</a>
+                </video>
+                <figcaption><span>Scene 4ok3usBNeis</span><span>15 s</span></figcaption>
+              </figure>
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="1600" height="1356" poster="static/videos/temporal_evolution_12_videos_15s/multi_origin/6s7QHgap2fW/poster.jpg" aria-label="Multi-origin Fire evolution in scene 6s7QHgap2fW, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/multi_origin/6s7QHgap2fW/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/multi_origin/6s7QHgap2fW/temporal_evolution.mp4">Download the Multi-origin Fire video for scene 6s7QHgap2fW.</a>
+                </video>
+                <figcaption><span>Scene 6s7QHgap2fW</span><span>15 s</span></figcaption>
+              </figure>
+              <figure class="demo-card temporal-video-card">
+                <video controls playsinline muted preload="none" width="1600" height="1356" poster="static/videos/temporal_evolution_12_videos_15s/multi_origin/BAbdmeyTvMZ/poster.jpg" aria-label="Multi-origin Fire evolution in scene BAbdmeyTvMZ, 15 seconds">
+                  <source src="static/videos/temporal_evolution_12_videos_15s/multi_origin/BAbdmeyTvMZ/temporal_evolution.mp4" type="video/mp4">
+                  <a href="static/videos/temporal_evolution_12_videos_15s/multi_origin/BAbdmeyTvMZ/temporal_evolution.mp4">Download the Multi-origin Fire video for scene BAbdmeyTvMZ.</a>
+                </video>
+                <figcaption><span>Scene BAbdmeyTvMZ</span><span>15 s</span></figcaption>
+              </figure>
+            </div>
+          </article>
+        </section>
       </div>
     </section>
 
-    <section class="section section-dark section-evolution" id="fire-evolution">
-      <div class="shell">
-        <div class="section-heading section-heading-light" data-reveal>
-          <div><p class="section-kicker">Four semantic templates</p><h2>Temporal Evolution of Fire Scenarios.</h2></div>
-          <p>Follow flame and smoke over time in four semantic fire scenarios, from localized ignition to evolving indoor hazards.</p>
-        </div>
-        <div class="demo-grid">
-          <figure class="demo-card" data-reveal>
-            <div class="demo-stage" data-demo="fire-kitchen" aria-label="Kitchen grease fire evolution">
-              <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">01 / KITCHEN</span><strong>Kitchen Grease Fire</strong><span>Video forthcoming</span></div>
-            </div>
-            <figcaption><h3>Kitchen Grease Fire</h3><p>Temporal evolution of the kitchen fire template.</p></figcaption>
-          </figure>
-          <figure class="demo-card" data-reveal data-delay="1">
-            <div class="demo-stage" data-demo="fire-bedroom" aria-label="Bedroom textile fire evolution">
-              <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">02 / BEDROOM</span><strong>Bedroom Textile Fire</strong><span>Video forthcoming</span></div>
-            </div>
-            <figcaption><h3>Bedroom Textile Fire</h3><p>Temporal evolution of the bedroom fire template.</p></figcaption>
-          </figure>
-          <figure class="demo-card" data-reveal>
-            <div class="demo-stage" data-demo="fire-living-room" aria-label="Living-room electrical fire evolution">
-              <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">03 / LIVING ROOM</span><strong>Living-room Electrical Fire</strong><span>Video forthcoming</span></div>
-            </div>
-            <figcaption><h3>Living-room Electrical Fire</h3><p>Temporal evolution of the living-room fire template.</p></figcaption>
-          </figure>
-          <figure class="demo-card" data-reveal data-delay="1">
-            <div class="demo-stage" data-demo="fire-multi-origin" aria-label="Multi-origin fire evolution">
-              <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">04 / MULTI-ORIGIN</span><strong>Multi-origin Fire</strong><span>Video forthcoming</span></div>
-            </div>
-            <figcaption><h3>Multi-origin Fire</h3><p>Temporal evolution with multiple ignition sources across the scene.</p></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-sensors" id="sensing">
+    <section class="section section-sensors" id="sensing" aria-labelledby="sensor-gallery-title">
       <div class="shell">
         <div class="section-heading" data-reveal>
           <div>
             <p class="section-kicker">Hazard-coupled perception</p>
-            <h2>When vision fails, the sensor stack adapts.</h2>
+            <h2 id="sensor-gallery-title">When vision fails, the sensor stack adapts.</h2>
           </div>
           <p>FireNav fuses RGB-D, thermal, and smoke-resilient geometry into a shared 3D map. The hazard layer turns temperature, smoke, and sensing uncertainty into planning cost.</p>
         </div>
 
-        <figure class="demo-card demo-card-wide" data-reveal>
-          <div class="demo-stage" data-demo="sensor-observations" aria-label="Multimodal sensor observations over time">
-            <div class="demo-placeholder"><span class="demo-placeholder-mark" aria-hidden="true">RGB-D / THERMAL / MMWAVE</span><strong>Sensor observations over time</strong><span>Video forthcoming</span></div>
-          </div>
-          <figcaption><h3>Multimodal sensor observations</h3><p>Observe the sensor streams as fire and smoke change the environment.</p></figcaption>
-        </figure>
-
-        <details class="demo-reference">
-          <summary>View the sensor observation figure</summary>
-          <figure class="media-frame media-frame-wide">
-          <button class="zoom-trigger" type="button" data-lightbox="static/images/multimodal-observation.png" data-alt="Multimodal observations for PersonNav" aria-label="Enlarge multimodal sensor figure">
-            <img src="static/images/multimodal-observation.png" width="1807" height="1021" alt="Clean and smoke-affected RGB and depth alongside thermal, LiDAR, and radar observations of a person" loading="lazy">
-            <span aria-hidden="true">Expand ↗</span>
-          </button>
-          <figcaption><strong>PersonNav observation suite.</strong> Clean and fire-affected observations remain spatially and temporally aligned.</figcaption>
-        </figure>
-        </details>
-
-        <div class="sensor-grid" data-reveal>
-          <article><span>RGB-D</span><h3>Semantic geometry</h3><p>Models smoke attenuation, range noise, invalid returns, and depth dropout.</p></article>
-          <article><span>THERMAL</span><h3>Temperature field</h3><p>Projects the evolving voxel temperature into a normalized sensor image.</p></article>
-          <article><span>MMWAVE</span><h3>Smoke-resilient shape</h3><p>Approximates radar angular resolution and characteristic point sparsity.</p></article>
-          <article><span>FUSION</span><h3>Hazard-aware map</h3><p>Builds aligned obstacle and risk layers from every robot’s observations.</p></article>
+        <div class="gallery-toolbar">
+          <label for="sensor-gallery-scene">Scene
+            <select id="sensor-gallery-scene" data-gallery-scene disabled><option value="Nfvxx8J5NCo">Nfvxx8J5NCo</option></select>
+          </label>
+          <p data-gallery-status aria-live="polite">36 scenes · 4 sensor boards per scene</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section section-task">
-      <div class="shell task-grid">
-        <div class="task-copy" data-reveal>
-          <p class="section-kicker">Category-extensible navigation</p>
-          <h2>Search beyond the categories already in the scene.</h2>
-          <p>External humanoid assets become first-class navigation goals: FireNav identifies valid placements, registers the new category, synthesizes evaluation viewpoints, and samples reachable starts.</p>
-          <div class="task-tags" aria-label="Supported benchmark tasks">
-            <span>ObjectNav</span><span>PersonNav</span><span>Multi-agent SAR</span>
-          </div>
+        <div class="sensor-template-picker" role="group" aria-label="Choose the fire template for sensor observations">
+          <button type="button" data-gallery-sensor-template="kitchen_grease_fire" aria-pressed="true" aria-controls="gallery-sensor-board" disabled>Kitchen Grease Fire</button>
+          <button type="button" data-gallery-sensor-template="bedroom_textile" aria-pressed="false" aria-controls="gallery-sensor-board" disabled>Bedroom Textile Fire</button>
+          <button type="button" data-gallery-sensor-template="living_room_electric" aria-pressed="false" aria-controls="gallery-sensor-board" disabled>Living-room Electrical Fire</button>
+          <button type="button" data-gallery-sensor-template="multi_origin" aria-pressed="false" aria-controls="gallery-sensor-board" disabled>Multi-origin Fire</button>
         </div>
-        <figure class="media-frame" data-reveal data-delay="1">
-          <button class="zoom-trigger" type="button" data-lightbox="static/images/category-extensible.jpg" data-alt="Category-extensible ObjectNav construction" aria-label="Enlarge category-extensible navigation figure">
-            <img src="static/images/category-extensible.jpg" width="4238" height="1678" alt="Pipeline for adding scene-native or externally supplied target assets to navigation episodes" loading="lazy">
-            <span aria-hidden="true">Expand ↗</span>
+        <figure class="demo-card gallery-sensor-card" id="gallery-sensor-board">
+          <button class="zoom-trigger" type="button" data-gallery-board data-lightbox="scens/Nfvxx8J5NCo/fire/01_kitchen_grease_fire/sensor_dashboard.png" data-alt="FireSensor observation board for Kitchen Grease Fire in scene Nfvxx8J5NCo" aria-label="Enlarge the Kitchen Grease Fire sensor board in scene Nfvxx8J5NCo">
+            <img src="scens/Nfvxx8J5NCo/fire/01_kitchen_grease_fire/sensor_dashboard.png" width="2400" height="1470" alt="Kitchen Grease Fire sensor board: clean and smoke-affected RGB and depth, thermal IR, LiDAR, and radar observations" loading="lazy">
+            <span aria-hidden="true">Expand sensor board ↗</span>
           </button>
-          <figcaption>One construction pipeline for scene-native and externally provided targets.</figcaption>
+          <figcaption aria-live="polite"><h3 data-gallery-sensor-title>Kitchen Grease Fire</h3><p data-gallery-sensor-caption>Scene Nfvxx8J5NCo · Source: oven and stove · t = 10 s</p></figcaption>
         </figure>
+
       </div>
     </section>
 
@@ -597,45 +797,306 @@
       </div>
     </section>
 
-    <section class="section section-results" id="results">
+    <section class="section section-results" id="results" aria-labelledby="results-title">
       <div class="shell">
         <div class="section-heading" data-reveal>
-          <div>
-            <p class="section-kicker">Evaluation</p>
-            <h2>Safer paths emerge from explicit risk.</h2>
-          </div>
-          <p>Across ObjectNav and PersonNav, FireNav improves task success and efficiency while reducing average and severe hazard exposure under the same dynamic-fire conditions.</p>
+          <div><p class="section-kicker">Results</p><h2 id="results-title">Experimental Evaluation</h2></div>
+          <p>Explore performance comparisons, ablation studies, microbenchmark experiments, and deployment results. Jump directly to any figure or table below.</p>
         </div>
-
-        <figure class="media-frame risk-figure" data-reveal>
-          <button class="zoom-trigger" type="button" data-lightbox="static/images/risk-awareness.jpg" data-alt="Risk-blind versus risk-aware cooperative PersonNav" aria-label="Enlarge risk-aware planning comparison">
-            <img src="static/images/risk-awareness.jpg" width="4264" height="1068" alt="Risk-blind agents cross a hazardous region while risk-aware agents take a safer route to find a person" loading="lazy">
-            <span aria-hidden="true">Expand ↗</span>
-          </button>
-          <figcaption><strong>Risk-blind vs. risk-aware PersonNav.</strong> A longer detour sharply lowers cumulative hazard exposure and reaches the goal safely.</figcaption>
-        </figure>
-
-        <div class="result-grid">
-          <article data-reveal>
-            <span class="result-number">+35.7%</span>
-            <h3>Higher SPL</h3>
-            <p>Average improvement over conventional navigation under the same fire conditions.</p>
+        <nav class="results-index" id="results-index" aria-label="Index of experimental figures and tables" tabindex="-1">
+            <div class="results-index-group">
+              <a class="results-index-topic" href="#results-overall"><span>01</span>Overall performance <span aria-hidden="true">&darr;</span></a>
+              <div class="results-index-references"><a href="#results-figure-6">Fig. 6</a><a href="#results-table-4">Table 4</a><a href="#results-figure-7">Fig. 7</a><a href="#results-table-5">Table 5</a></div>
+            </div>
+            <div class="results-index-group">
+              <a class="results-index-topic" href="#results-ablation"><span>02</span>Ablation studies <span aria-hidden="true">&darr;</span></a>
+              <div class="results-index-references"><a href="#results-figure-8">Fig. 8</a><a href="#results-table-6">Table 6</a><a href="#results-figure-10">Fig. 10</a><a href="#results-table-7">Table 7</a></div>
+            </div>
+            <div class="results-index-group">
+              <a class="results-index-topic" href="#results-microbenchmark"><span>03</span>MicroBenchmark Experiments <span aria-hidden="true">&darr;</span></a>
+              <div class="results-index-references"><a href="#results-figure-9">Fig. 9</a><a href="#results-table-8">Table 8</a></div>
+            </div>
+            <div class="results-index-group">
+              <a class="results-index-topic" href="#results-physical"><span>04</span>Physical validation <span aria-hidden="true">&darr;</span></a>
+              <div class="results-index-references"><a href="#results-figure-11">Fig. 11</a><a href="#results-table-3">Table 3</a></div>
+            </div>
+            <div class="results-index-group">
+              <a class="results-index-topic" href="#results-infrastructure"><span>05</span>Infrastructure evaluation <span aria-hidden="true">&darr;</span></a>
+              <div class="results-index-references"><a href="#results-table-1">Table 1</a><a href="#results-table-2">Table 2</a></div>
+            </div>
+        </nav>
+        <div class="results-research">
+          <div class="results-group" id="results-overall" role="region" aria-labelledby="results-overall-title" tabindex="-1">
+            <div class="results-group-heading"><div><span class="results-reference">01 / Experiments</span><h3 id="results-overall-title">Overall performance</h3></div><p>Conventional navigation and FireNav across ObjectNav and PersonNav.</p><a href="#results-index">Back to index &uarr;</a></div>
+            <figure class="results-figure" id="results-figure-6" tabindex="-1">
+              <div class="results-figure-heading"><span class="results-reference">Figure 06</span><h4>Dynamic fire challenges conventional navigation</h4></div>
+              <button class="zoom-trigger" type="button" data-lightbox="static/images/results/dynamic_fire_paired_bars.webp" data-alt="Dynamic fire challenges conventional navigation" aria-label="Enlarge Figure 6: Dynamic fire challenges conventional navigation">
+                <img src="static/images/results/dynamic_fire_paired_bars.webp" width="3000" height="767" alt="Gray solid bars show hazard-free navigation; red hatched bars show dynamic fire. Results are averaged across ObjectNav and PersonNav. F / A / P denote FMM / A* / PointNav; safety metrics apply only under fire." loading="lazy" decoding="async">
+                <span aria-hidden="true">Expand &#8599;</span>
+              </button>
+              <figcaption><p>Gray solid bars show hazard-free navigation; red hatched bars show dynamic fire. Results are averaged across ObjectNav and PersonNav. F / A / P denote FMM / A* / PointNav; safety metrics apply only under fire.</p><div class="results-figure-links"><a href="#results-table-4">Table 4 &darr;</a><a href="static/pdfs/results/dynamic_fire_paired_bars.pdf" target="_blank" rel="noopener">Figure PDF &#8599;</a></div></figcaption>
+            </figure>
+          <article class="results-table-card" id="results-table-4" aria-labelledby="results-table-4-title" tabindex="-1">
+            <header class="results-table-heading"><span class="results-reference">Table 04</span><h4 id="results-table-4-title">Hazard-free vs. dynamic-fire navigation</h4></header>
+            <div class="results-table-body">
+              <p id="results-table-4-note">Performance comparison under hazard-free and dynamic-fire conditions. Higher SR and SPL are better, while lower DTG, NS, AHE, and SHER are better. AHE and SHER are reported only under dynamic fire. Bold and underlined values denote the best and second-best results, respectively, within each task and condition.</p>
+              <div class="results-table-actions"><span>Scroll horizontally to see all columns.</span><a href="static/data/results/table-4.csv" download>Download CSV &darr;</a><a href="static/pdfs/FireNav_MobiCom2027.pdf#page=22" target="_blank" rel="noopener">View in paper &#8599;</a></div>
+              <div class="results-table-scroll" role="region" aria-label="Table 4: Hazard-free vs. dynamic-fire navigation" tabindex="0">
+                <table class="results-data-table" aria-describedby="results-table-4-note">
+                  <caption class="sr-only">Table 4: Hazard-free vs. dynamic-fire navigation</caption>
+                  <thead><tr><th scope="col"></th><th scope="col"></th><th scope="colgroup" colspan="4">Hazard-Free</th><th scope="colgroup" colspan="4">Dynamic Fire</th><th scope="colgroup" colspan="2">Safety under Fire</th></tr>
+<tr><th scope="col">Global</th><th scope="col">Local</th><th scope="col">SR &uarr;</th><th scope="col">SPL &uarr;</th><th scope="col">DTG (m) &darr;</th><th scope="col">NS &darr;</th><th scope="col">SR &uarr;</th><th scope="col">SPL &uarr;</th><th scope="col">DTG (m) &darr;</th><th scope="col">NS &darr;</th><th scope="col">AHE (%) &darr;</th><th scope="col">SHER (/10k) &darr;</th></tr></thead>
+                  <tbody><tr class="results-table-group"><th scope="rowgroup" colspan="12"><em>ObjectNav</em></th></tr>
+<tr><th scope="row">Nearest</th><td>FMM</td><td><u>58.3%</u></td><td>.276</td><td>1.830</td><td>214.9</td><td>16.50%</td><td>.091</td><td>4.095</td><td>320.5</td><td>10.63</td><td><u>.47</u></td></tr>
+<tr><th scope="row">Nearest</th><td>A<sup>*</sup></td><td>37.0%</td><td>.220</td><td>3.063</td><td>295.7</td><td>21.00%</td><td>.121</td><td>3.701</td><td>309.9</td><td>11.60</td><td>1.37</td></tr>
+<tr><th scope="row">Nearest</th><td>PointNav</td><td>49.3%</td><td>.281</td><td>2.069</td><td>264.8</td><td>36.50%</td><td>.231</td><td>2.515</td><td>239.9</td><td>9.55</td><td>2.92</td></tr>
+<tr><th scope="row">Co-UT</th><td>FMM</td><td>56.2%</td><td>.259</td><td>1.982</td><td><u>214.6</u></td><td>17.00%</td><td>.087</td><td>4.332</td><td>333.5</td><td>9.37</td><td>.75</td></tr>
+<tr><th scope="row">Co-UT</th><td>A<sup>*</sup></td><td>35.7%</td><td>.188</td><td>2.922</td><td>298.5</td><td>20.50%</td><td>.107</td><td>4.296</td><td>320.0</td><td>10.66</td><td>.78</td></tr>
+<tr><th scope="row">Co-UT</th><td>PointNav</td><td>53.0%</td><td><u>.286</u></td><td>1.945</td><td>246.4</td><td>41.00%</td><td>.238</td><td>2.538</td><td>226.2</td><td>8.95</td><td>3.76</td></tr>
+<tr><th scope="row">Fill</th><td>FMM</td><td><strong>59.7%</strong></td><td>.285</td><td><u>1.623</u></td><td><strong>197.1</strong></td><td>20.50%</td><td>.114</td><td>3.920</td><td>311.7</td><td>9.61</td><td>.56</td></tr>
+<tr><th scope="row">Fill</th><td>A<sup>*</sup></td><td>35.7%</td><td>.194</td><td>3.169</td><td>293.9</td><td>20.50%</td><td>.111</td><td>3.591</td><td>296.2</td><td>8.98</td><td>1.27</td></tr>
+<tr><th scope="row">Fill</th><td>PointNav</td><td>50.8%</td><td>.284</td><td>1.917</td><td>244.9</td><td><u>43.00%</u></td><td><u>.257</u></td><td><u>1.928</u></td><td><strong>219.3</strong></td><td>8.33</td><td>3.31</td></tr>
+<tr><th scope="row">Random</th><td>FMM</td><td>51.0%</td><td>.228</td><td>2.409</td><td>249.7</td><td>16.50%</td><td>.076</td><td>3.852</td><td>314.0</td><td>10.84</td><td>.56</td></tr>
+<tr><th scope="row">Random</th><td>A<sup>*</sup></td><td>35.7%</td><td>.159</td><td>2.996</td><td>314.0</td><td>23.00%</td><td>.097</td><td>3.602</td><td>315.0</td><td>9.39</td><td>1.11</td></tr>
+<tr><th scope="row">Random</th><td>PointNav</td><td>36.2%</td><td>.215</td><td>2.698</td><td>298.2</td><td>35.50%</td><td>.199</td><td>2.431</td><td>287.5</td><td><u>7.40</u></td><td>.61</td></tr>
+<tr><th scope="row">GPT-4o<sup>&dagger;</sup></th><td>FMM</td><td>58.0%</td><td>.264</td><td>2.044</td><td>222.6</td><td>26.80%</td><td>.164</td><td>2.964</td><td>291.89</td><td>12.6983</td><td><strong>.3532</strong></td></tr>
+<tr><th scope="row">GPT-4o<sup>&dagger;</sup></th><td>A<sup>*</sup></td><td>36.5%</td><td>.200</td><td>3.497</td><td>299.7</td><td>30.77%</td><td>.160</td><td>2.838</td><td>276.82</td><td><strong>6.5875</strong></td><td>1.1578</td></tr>
+<tr><th scope="row">GPT-4o<sup>&dagger;</sup></th><td>PointNav</td><td>58.0%</td><td><strong>.314</strong></td><td><strong>1.575</strong></td><td>240.5</td><td><strong>49.00%</strong></td><td><strong>.294</strong></td><td><strong>1.859</strong></td><td><u>221.95</u></td><td>8.1944</td><td>1.6896</td></tr></tbody><tbody><tr class="results-table-group"><th scope="rowgroup" colspan="12"><em>PersonNav</em></th></tr>
+<tr><th scope="row">Nearest</th><td>FMM</td><td>46.5%</td><td>.279</td><td>6.658</td><td>294.1</td><td>11.50%</td><td>.082</td><td>8.473</td><td>335.1</td><td>15.42</td><td>1.04</td></tr>
+<tr><th scope="row">Nearest</th><td>A<sup>*&dagger;</sup></td><td>25.0%</td><td>.154</td><td>8.446</td><td>366.9</td><td>17.69%</td><td>.124</td><td>8.094</td><td>338.4</td><td>15.81</td><td>1.31</td></tr>
+<tr><th scope="row">Nearest</th><td>PointNav</td><td>37.8%</td><td>.252</td><td>6.878</td><td>332.8</td><td>46.00%</td><td>.330</td><td>6.500</td><td>266.7</td><td>12.85</td><td>2.44</td></tr>
+<tr><th scope="row">Co-UT</th><td>FMM</td><td>48.5%</td><td>.269</td><td>6.195</td><td>287.8</td><td>13.00%</td><td>.094</td><td>8.453</td><td>348.1</td><td>15.89</td><td><u>.65</u></td></tr>
+<tr><th scope="row">Co-UT</th><td>A<sup>*</sup></td><td>25.5%</td><td>.162</td><td>8.172</td><td>364.9</td><td>16.50%</td><td>.118</td><td>8.765</td><td>342.8</td><td>16.34</td><td>1.53</td></tr>
+<tr><th scope="row">Co-UT</th><td>PointNav</td><td>42.0%</td><td>.260</td><td>6.340</td><td>302.2</td><td><u>50.50%</u></td><td><strong>.353</strong></td><td><u>6.221</u></td><td><u>238.3</u></td><td><u>11.64</u></td><td>2.83</td></tr>
+<tr><th scope="row">Fill</th><td>FMM</td><td>52.5%</td><td>.287</td><td><strong>5.234</strong></td><td>276.8</td><td>13.00%</td><td>.095</td><td>8.482</td><td>334.5</td><td>14.68</td><td>.82</td></tr>
+<tr><th scope="row">Fill</th><td>A<sup>*&dagger;</sup></td><td>28.2%</td><td>.175</td><td>7.765</td><td>360.6</td><td>8.84%</td><td>.063</td><td>8.536</td><td>376.0</td><td>16.86</td><td>1.00</td></tr>
+<tr><th scope="row">Fill</th><td>PointNav</td><td>51.2%</td><td>.305</td><td><u>5.349</u></td><td><u>272.4</u></td><td>49.50%</td><td>.340</td><td>6.241</td><td>253.3</td><td>11.98</td><td>2.37</td></tr>
+<tr><th scope="row">Random</th><td>FMM</td><td>47.8%</td><td>.266</td><td>5.930</td><td>285.8</td><td>17.00%</td><td>.109</td><td>8.367</td><td>338.7</td><td>13.39</td><td>.89</td></tr>
+<tr><th scope="row">Random</th><td>A<sup>*</sup></td><td>30.5%</td><td>.168</td><td>7.162</td><td>356.4</td><td>16.00%</td><td>.106</td><td>8.113</td><td>330.2</td><td>14.75</td><td>2.50</td></tr>
+<tr><th scope="row">Random</th><td>PointNav</td><td>40.0%</td><td>.250</td><td>6.413</td><td>315.6</td><td>43.00%</td><td>.312</td><td>7.341</td><td>287.4</td><td>12.21</td><td>1.20</td></tr>
+<tr><th scope="row">GPT-4o<sup>&dagger;</sup></th><td>FMM</td><td><u>57.5%</u></td><td><u>.359</u></td><td>6.205</td><td>274.3</td><td>19.75%</td><td>.126</td><td>10.557</td><td>351.15</td><td>15.5696</td><td><strong>.1758</strong></td></tr>
+<tr><th scope="row">GPT-4o<sup>&dagger;</sup></th><td>A<sup>*</sup></td><td>22.5%</td><td>.154</td><td>8.696</td><td>382.5</td><td>13.21%</td><td>.126</td><td>12.025</td><td>304.53</td><td><strong>11.1868</strong></td><td>1.8587</td></tr>
+<tr><th scope="row">GPT-4o<sup>&dagger;</sup></th><td>PointNav</td><td><strong>59.0%</strong></td><td><strong>.380</strong></td><td>5.688</td><td><strong>264.2</strong></td><td><strong>54.00%</strong></td><td><u>.346</u></td><td><strong>6.187</strong></td><td><strong>227.64</strong></td><td>14.7305</td><td>3.1849</td></tr></tbody>
+                </table>
+              </div>
+            </div>
           </article>
-          <article data-reveal data-delay="1">
-            <span class="result-number">−15.0%</span>
-            <h3>Lower AHE</h3>
-            <p>Average hazard exposure falls through multimodal perception and risk-aware planning.</p>
+            <figure class="results-figure" id="results-figure-7" tabindex="-1">
+              <div class="results-figure-heading"><span class="results-reference">Figure 07</span><h4>FireNav across global and local planners</h4></div>
+              <button class="zoom-trigger" type="button" data-lightbox="static/images/results/fire_overall_heatmap.webp" data-alt="FireNav across global and local planners" aria-label="Enlarge Figure 7: FireNav across global and local planners">
+                <img src="static/images/results/fire_overall_heatmap.webp" width="3000" height="469" alt="Each cell pairs ObjectNav (left) and PersonNav (right). Darker shades indicate better performance, with task completion, efficiency, and safety shown together." loading="lazy" decoding="async">
+                <span aria-hidden="true">Expand &#8599;</span>
+              </button>
+              <figcaption><p>Each cell pairs ObjectNav (left) and PersonNav (right). Darker shades indicate better performance, with task completion, efficiency, and safety shown together.</p><div class="results-figure-links"><a href="#results-table-5">Table 5 &darr;</a><a href="static/pdfs/results/fire_overall_heatmap.pdf" target="_blank" rel="noopener">Figure PDF &#8599;</a></div></figcaption>
+            </figure>
+          <article class="results-table-card" id="results-table-5" aria-labelledby="results-table-5-title" tabindex="-1">
+            <header class="results-table-heading"><span class="results-reference">Table 05</span><h4 id="results-table-5-title">FireNav under dynamic fire</h4></header>
+            <div class="results-table-body">
+              <p id="results-table-5-note">Overall performance of FireNav under dynamic fire conditions. Results for ObjectNav (Obj.) and PersonNav (Per.) are shown as paired subcolumns under each metric. Higher SR and SPL are better, while lower DTG, NS, Average Hazard Exposure (AHE), and Severe Hazard Exposure Rate (SHER) are better. Bold and underlined values denote the best and second-best results for each task, respectively.</p>
+              <div class="results-table-actions"><span>Scroll horizontally to see all columns.</span><a href="static/data/results/table-5.csv" download>Download CSV &darr;</a><a href="static/pdfs/FireNav_MobiCom2027.pdf#page=23" target="_blank" rel="noopener">View in paper &#8599;</a></div>
+              <div class="results-table-scroll" role="region" aria-label="Table 5: FireNav under dynamic fire" tabindex="0">
+                <table class="results-data-table" aria-describedby="results-table-5-note">
+                  <caption class="sr-only">Table 5: FireNav under dynamic fire</caption>
+                  <thead><tr><th scope="col" rowspan="2"><strong>Global</strong><br><strong>Planner</strong></th><th scope="col" rowspan="2"><strong>Local</strong><br><strong>Planner</strong></th><th scope="colgroup" colspan="2"><strong>SR</strong> &uarr;</th><th scope="colgroup" colspan="2"><strong>SPL</strong> &uarr;</th><th scope="colgroup" colspan="2"><strong>DTG (m)</strong> &darr;</th><th scope="colgroup" colspan="2"><strong>NS</strong> &darr;</th><th scope="colgroup" colspan="2"><strong>AHE (%)</strong> &darr;</th><th scope="colgroup" colspan="2"><strong>SHER (/10k)</strong> &darr;</th></tr>
+<tr><th scope="col"><em>Obj.</em></th><th scope="col"><em>Per.</em></th><th scope="col"><em>Obj.</em></th><th scope="col"><em>Per.</em></th><th scope="col"><em>Obj.</em></th><th scope="col"><em>Per.</em></th><th scope="col"><em>Obj.</em></th><th scope="col"><em>Per.</em></th><th scope="col"><em>Obj.</em></th><th scope="col"><em>Per.</em></th><th scope="col"><em>Obj.</em></th><th scope="col"><em>Per.</em></th></tr></thead>
+                  <tbody><tr><th scope="row">Nearest</th><td>FMM</td><td>.420</td><td>.325</td><td>.178</td><td>.187</td><td>2.672</td><td>7.698</td><td>272.8</td><td>303.8</td><td>9.0355</td><td>13.1070</td><td><u>.3327</u></td><td>.8384</td></tr>
+<tr><th scope="row">Nearest</th><td>A<sup>*</sup></td><td>.447</td><td>.3871</td><td>.224</td><td>.240</td><td>2.486</td><td>7.421</td><td>258.0</td><td>273.8</td><td>9.8600</td><td>13.4385</td><td>1.0938</td><td>1.0688</td></tr>
+<tr><th scope="row">Nearest</th><td>PointNav</td><td>.480</td><td>.385</td><td>.266</td><td>.255</td><td>2.317</td><td>7.066</td><td>258.9</td><td>299.3</td><td>8.1175</td><td>10.9225</td><td>2.3140</td><td>1.9885</td></tr>
+<tr><th scope="row">Co-UT</th><td>FMM</td><td>.395</td><td>.370</td><td>.164</td><td>.224</td><td>2.958</td><td>7.597</td><td>282.4</td><td>307.1</td><td>7.9645</td><td>13.5065</td><td>.5519</td><td><u>.5105</u></td></tr>
+<tr><th scope="row">Co-UT</th><td>A<sup>*</sup></td><td>.429</td><td>.4219</td><td>.219</td><td>.266</td><td>2.574</td><td>7.227</td><td><u>235.6</u></td><td>275.0</td><td>9.0610</td><td>13.8890</td><td>.6652</td><td>1.2090</td></tr>
+<tr><th scope="row">Co-UT</th><td>PointNav</td><td>.515</td><td>.405</td><td><u>.277</u></td><td>.247</td><td>2.273</td><td>6.986</td><td>247.4</td><td>289.3</td><td>7.6075</td><td><u>9.8940</u></td><td>2.9841</td><td>2.2709</td></tr>
+<tr><th scope="row">Fill</th><td>FMM</td><td>.330</td><td>.320</td><td>.159</td><td>.175</td><td>2.773</td><td>7.843</td><td>260.7</td><td>313.5</td><td>8.1685</td><td>12.4780</td><td>.4795</td><td>.6193</td></tr>
+<tr><th scope="row">Fill</th><td>A<sup>*</sup></td><td>.448</td><td>.3802</td><td>.214</td><td>.243</td><td>2.343</td><td>7.639</td><td>250.8</td><td>292.0</td><td>7.6330</td><td>14.3310</td><td>1.0200</td><td>.8284</td></tr>
+<tr><th scope="row">Fill</th><td>PointNav</td><td>.475</td><td>.410</td><td>.258</td><td>.252</td><td><u>2.048</u></td><td><u>6.585</u></td><td>242.5</td><td>281.1</td><td>7.0805</td><td>10.1830</td><td>2.6021</td><td>1.8895</td></tr>
+<tr><th scope="row">Random</th><td>FMM</td><td>.350</td><td>.360</td><td>.153</td><td>.197</td><td>3.109</td><td>7.606</td><td>272.7</td><td>292.1</td><td>9.2140</td><td>11.3815</td><td>.4880</td><td>.6871</td></tr>
+<tr><th scope="row">Random</th><td>A<sup>*</sup></td><td>.397</td><td>.3593</td><td>.189</td><td>.209</td><td>3.028</td><td>7.304</td><td>257.5</td><td><u>273.4</u></td><td>7.9815</td><td>12.5375</td><td>.8755</td><td>1.9943</td></tr>
+<tr><th scope="row">Random</th><td>PointNav</td><td>.385</td><td>.345</td><td>.224</td><td>.233</td><td>2.767</td><td>7.492</td><td>282.1</td><td>300.5</td><td><u>6.2900</u></td><td>10.3785</td><td>.4932</td><td>.9319</td></tr>
+<tr><th scope="row">GPT-4o</th><td>FMM</td><td><u>.550</u></td><td><u>.535</u></td><td>.254</td><td><u>.336</u></td><td>2.136</td><td>6.640</td><td><strong>229.53</strong></td><td>281.99</td><td>10.7936</td><td>13.2342</td><td><strong>.3268</strong></td><td><strong>.0887</strong></td></tr>
+<tr><th scope="row">GPT-4o</th><td>A<sup>*</sup></td><td>.360</td><td>.215</td><td>.196</td><td>.151</td><td>3.567</td><td>9.029</td><td>305.69</td><td>390.15</td><td><strong>5.5994</strong></td><td><strong>9.5088</strong></td><td>.8996</td><td>1.4738</td></tr>
+<tr><th scope="row">GPT-4o</th><td>PointNav</td><td><strong>.570</strong></td><td><strong>.585</strong></td><td><strong>.312</strong></td><td><strong>.377</strong></td><td><strong>1.603</strong></td><td><strong>5.738</strong></td><td>245.31</td><td><strong>269.49</strong></td><td>6.9652</td><td>12.5209</td><td>1.3249</td><td>2.5048</td></tr></tbody>
+                </table>
+              </div>
+            </div>
           </article>
-          <article data-reveal data-delay="2">
-            <span class="result-number">−20.5%</span>
-            <h3>Lower SHER</h3>
-            <p>Severe hazard exposure rate drops across the evaluated tasks and planner combinations.</p>
+          </div>
+          <div class="results-group" id="results-ablation" role="region" aria-labelledby="results-ablation-title" tabindex="-1">
+            <div class="results-group-heading"><div><span class="results-reference">02 / Experiments</span><h3 id="results-ablation-title">Ablation studies</h3></div><p>The contributions of multimodal perception, fusion, and risk-aware planning.</p><a href="#results-index">Back to index &uarr;</a></div>
+            <figure class="results-figure" id="results-figure-8" tabindex="-1">
+              <div class="results-figure-heading"><span class="results-reference">Figure 08</span><h4>What perception and risk awareness contribute</h4></div>
+              <button class="zoom-trigger" type="button" data-lightbox="static/images/results/fire_ablation_combined.webp" data-alt="What perception and risk awareness contribute" aria-label="Enlarge Figure 8: What perception and risk awareness contribute">
+                <img src="static/images/results/fire_ablation_combined.webp" width="3000" height="324" alt="Ablations isolate multimodal perception and fusion (a) and risk-aware planning (b). Green hatched segments indicate improvements; orange dotted segments indicate regressions. N / C / F / R / G denote Nearest / Co-UT / Fill / Random / GPT-4o." loading="lazy" decoding="async">
+                <span aria-hidden="true">Expand &#8599;</span>
+              </button>
+              <figcaption><p>Ablations isolate multimodal perception and fusion (a) and risk-aware planning (b). Green hatched segments indicate improvements; orange dotted segments indicate regressions. N / C / F / R / G denote Nearest / Co-UT / Fill / Random / GPT-4o.</p><div class="results-figure-links"><a href="#results-table-6">Table 6 &darr;</a><a href="#results-table-7">Table 7 &darr;</a><a href="static/pdfs/results/fire_ablation_combined.pdf" target="_blank" rel="noopener">Figure PDF &#8599;</a></div></figcaption>
+            </figure>
+          <article class="results-table-card" id="results-table-6" aria-labelledby="results-table-6-title" tabindex="-1">
+            <header class="results-table-heading"><span class="results-reference">Table 06</span><h4 id="results-table-6-title">Multimodal perception and fusion</h4></header>
+            <div class="results-table-body">
+              <p id="results-table-6-note">Ablation of multi-modal perception and fusion in fire-scene ObjectNav. FMM is fixed as the local planner. Results are averaged over the matched risk-blind and oracle-aware settings. Higher SR and SPL are better, while lower DTG, NS, AHE, and SHER are better.</p>
+              <div class="results-table-actions"><span>Scroll horizontally to see all columns.</span><a href="static/data/results/table-6.csv" download>Download CSV &darr;</a><a href="static/pdfs/FireNav_MobiCom2027.pdf#page=23" target="_blank" rel="noopener">View in paper &#8599;</a></div>
+              <div class="results-table-scroll" role="region" aria-label="Table 6: Multimodal perception and fusion" tabindex="0">
+                <table class="results-data-table" aria-describedby="results-table-6-note">
+                  <caption class="sr-only">Table 6: Multimodal perception and fusion</caption>
+                  <thead><tr><th scope="col"></th><th scope="col"></th><th scope="colgroup" colspan="4">Navigation Performance</th><th scope="colgroup" colspan="2">Safety</th></tr>
+<tr><th scope="col">Global</th><th scope="col">Local</th><th scope="col">SR &uarr;</th><th scope="col">SPL &uarr;</th><th scope="col">DTG (m) &darr;</th><th scope="col">NS &darr;</th><th scope="col">AHE (%) &darr;</th><th scope="col">SHER (&times; 10<sup>-3</sup>) &darr;</th></tr></thead>
+                  <tbody><tr class="results-table-group"><th scope="rowgroup" colspan="8"><em>RGB-D Only</em></th></tr>
+<tr><th scope="row">Nearest</th><td>FMM</td><td>.190</td><td>.103</td><td>3.552</td><td>288.35</td><td>8.275</td><td>.0478</td></tr>
+<tr><th scope="row">Co-UT</th><td>FMM</td><td>.190</td><td>.101</td><td>3.793</td><td>307.25</td><td>8.820</td><td>.0613</td></tr>
+<tr><th scope="row">Fill</th><td>FMM</td><td>.215</td><td>.122</td><td>3.647</td><td>300.85</td><td>7.885</td><td>.0373</td></tr>
+<tr><th scope="row">Random</th><td>FMM</td><td>.183</td><td>.084</td><td>3.587</td><td>318.40</td><td>7.890</td><td>.0510</td></tr>
+<tr><th scope="row">GPT-4o</th><td>FMM</td><td>.200</td><td>.114</td><td>4.129</td><td>319.45</td><td>9.475</td><td>.0390</td></tr></tbody><tbody><tr class="results-table-group"><th scope="rowgroup" colspan="8"><em>Multi-modal Perception and Fusion</em></th></tr>
+<tr><th scope="row">Nearest</th><td>FMM</td><td>.375</td><td>.176</td><td>2.781</td><td>260.65</td><td>8.830</td><td>.2060</td></tr>
+<tr><th scope="row">Co-UT</th><td>FMM</td><td>.385</td><td>.181</td><td>2.929</td><td>248.75</td><td>7.940</td><td>.2383</td></tr>
+<tr><th scope="row">Fill</th><td>FMM</td><td>.408</td><td>.195</td><td>2.557</td><td>243.65</td><td>8.165</td><td>.2669</td></tr>
+<tr><th scope="row">Random</th><td>FMM</td><td>.318</td><td>.145</td><td>3.231</td><td>266.65</td><td>8.655</td><td>.3140</td></tr>
+<tr><th scope="row">GPT-4o</th><td>FMM</td><td>.353</td><td>.173</td><td>3.193</td><td>280.05</td><td>8.840</td><td>.1739</td></tr></tbody>
+                </table>
+              </div>
+            </div>
           </article>
-          <article data-reveal data-delay="3">
-            <span class="result-number">1 → 3</span>
-            <h3>Multi-agent gains</h3>
-            <p>Success rises from 33.0% with one agent to 42.5% with three, before returns diminish.</p>
+            <figure class="results-figure" id="results-figure-10" tabindex="-1">
+              <div class="results-figure-heading"><span class="results-reference">Figure 10</span><h4>Risk-aware cooperative PersonNav</h4></div>
+              <button class="zoom-trigger" type="button" data-lightbox="static/images/results/risk_awareness.webp" data-alt="Risk-aware cooperative PersonNav" aria-label="Enlarge Figure 10: Risk-aware cooperative PersonNav">
+                <img src="static/images/results/risk_awareness.webp" width="3000" height="752" alt="Risk-blind (left) and risk-aware (right) navigation in the same dynamic-fire scenario. Hazard-aware planning redirects the team toward safer routes." loading="lazy" decoding="async">
+                <span aria-hidden="true">Expand &#8599;</span>
+              </button>
+              <figcaption><p>Risk-blind (left) and risk-aware (right) navigation in the same dynamic-fire scenario. Hazard-aware planning redirects the team toward safer routes.</p><div class="results-figure-links"><a href="#results-table-7">Table 7 &darr;</a><a href="static/pdfs/results/risk_awareness.pdf" target="_blank" rel="noopener">Figure PDF &#8599;</a></div></figcaption>
+            </figure>
+          <article class="results-table-card" id="results-table-7" aria-labelledby="results-table-7-title" tabindex="-1">
+            <header class="results-table-heading"><span class="results-reference">Table 07</span><h4 id="results-table-7-title">Risk awareness</h4></header>
+            <div class="results-table-body">
+              <p id="results-table-7-note">Ablation of risk awareness in fire-scene ObjectNav. Higher SR and SPL are better, while lower DTG, NS, Average Hazard Exposure (AHE), and Severe Hazard Exposure Rate (SHER) are better. AHE is reported as a percentage, and SHER is reported in units of 10<sup>-3</sup>.</p>
+              <div class="results-table-actions"><span>Scroll horizontally to see all columns.</span><a href="static/data/results/table-7.csv" download>Download CSV &darr;</a><a href="static/pdfs/FireNav_MobiCom2027.pdf#page=24" target="_blank" rel="noopener">View in paper &#8599;</a></div>
+              <div class="results-table-scroll" role="region" aria-label="Table 7: Risk awareness" tabindex="0">
+                <table class="results-data-table" aria-describedby="results-table-7-note">
+                  <caption class="sr-only">Table 7: Risk awareness</caption>
+                  <thead><tr><th scope="col"></th><th scope="col"></th><th scope="colgroup" colspan="4">Navigation Performance</th><th scope="colgroup" colspan="2">Safety</th></tr>
+<tr><th scope="col">Global</th><th scope="col">Local</th><th scope="col">SR &uarr;</th><th scope="col">SPL &uarr;</th><th scope="col">DTG (m) &darr;</th><th scope="col">NS &darr;</th><th scope="col">AHE (%) &darr;</th><th scope="col">SHER (&times; 10<sup>-3</sup>) &darr;</th></tr></thead>
+                  <tbody><tr class="results-table-group"><th scope="rowgroup" colspan="8"><em>Risk-Blind</em></th></tr>
+<tr><th scope="row">Nearest</th><td>FMM</td><td>.375</td><td>.232</td><td>7.617</td><td>310.105</td><td>13.22</td><td>.306</td></tr>
+<tr><th scope="row">Fill</th><td>FMM</td><td>.365</td><td>.228</td><td>7.524</td><td>304.095</td><td>12.52</td><td>.345</td></tr>
+<tr><th scope="row">Co-UT</th><td>FMM</td><td>.360</td><td>.227</td><td>7.643</td><td>293.705</td><td>12.61</td><td>.460</td></tr>
+<tr><th scope="row">Random</th><td>FMM</td><td>.350</td><td>.179</td><td>7.893</td><td>285.905</td><td>12.42</td><td>.752</td></tr>
+<tr><th scope="row">GPT-4o</th><td>FMM</td><td>.485</td><td>.234</td><td>2.482</td><td>239.3</td><td>11.0258</td><td>.2716</td></tr></tbody><tbody><tr class="results-table-group"><th scope="rowgroup" colspan="8"><em>Risk-Aware</em></th></tr>
+<tr><th scope="row">Nearest</th><td>FMM</td><td>.420</td><td>.178</td><td>2.672</td><td>272.78</td><td>10.8201</td><td>.09165</td></tr>
+<tr><th scope="row">Fill</th><td>FMM</td><td>.330</td><td>.159</td><td>2.773</td><td>260.72</td><td>9.6151</td><td>.22055</td></tr>
+<tr><th scope="row">Co-UT</th><td>FMM</td><td>.395</td><td>.164</td><td>2.958</td><td>282.40</td><td><strong>8.8417</strong></td><td>.13279</td></tr>
+<tr><th scope="row">Random</th><td>FMM</td><td>.350</td><td>.153</td><td>3.109</td><td>272.66</td><td>9.5813</td><td>.29341</td></tr>
+<tr><th scope="row">GPT-4o</th><td>FMM</td><td><strong>.550</strong></td><td><strong>.254</strong></td><td><strong>2.136</strong></td><td><strong>229.53</strong></td><td>10.7936</td><td><strong>.03268</strong></td></tr></tbody>
+                </table>
+              </div>
+            </div>
           </article>
+          </div>
+          <div class="results-group" id="results-microbenchmark" role="region" aria-labelledby="results-microbenchmark-title" tabindex="-1">
+            <div class="results-group-heading"><div><span class="results-reference">03 / Experiments</span><h3 id="results-microbenchmark-title">MicroBenchmark Experiments</h3></div><p>Scene scale, fire type, fire severity, and the number of agents.</p><a href="#results-index">Back to index &uarr;</a></div>
+            <figure class="results-figure" id="results-figure-9" tabindex="-1">
+              <div class="results-figure-heading"><span class="results-reference">Figure 09</span><h4>Scene scale, fire conditions, and team size</h4></div>
+              <button class="zoom-trigger" type="button" data-lightbox="static/images/results/environmental_factors_v6.webp" data-alt="Scene scale, fire conditions, and team size" aria-label="Enlarge Figure 9: Scene scale, fire conditions, and team size">
+                <img src="static/images/results/environmental_factors_v6.webp" width="3000" height="596" alt="Sensitivity to scene scale (a), fire type (b), fire severity (c), and the number of agents (d). Increasing team size brings gains that diminish beyond three agents." loading="lazy" decoding="async">
+                <span aria-hidden="true">Expand &#8599;</span>
+              </button>
+              <figcaption><p>Sensitivity to scene scale (a), fire type (b), fire severity (c), and the number of agents (d). Increasing team size brings gains that diminish beyond three agents.</p><div class="results-figure-links"><a href="#results-table-8">Table 8 &darr;</a><a href="static/pdfs/results/environmental_factors_v6.pdf" target="_blank" rel="noopener">Figure PDF &#8599;</a></div></figcaption>
+            </figure>
+          <article class="results-table-card" id="results-table-8" aria-labelledby="results-table-8-title" tabindex="-1">
+            <header class="results-table-heading"><span class="results-reference">Table 08</span><h4 id="results-table-8-title">Number of agents</h4></header>
+            <div class="results-table-body">
+              <p id="results-table-8-note">Navigation performance with different numbers of agents under dynamic fire conditions. FMM is used as the local planner for all configurations.</p>
+              <div class="results-table-actions"><span>Scroll horizontally to see all columns.</span><a href="static/data/results/table-8.csv" download>Download CSV &darr;</a><a href="static/pdfs/FireNav_MobiCom2027.pdf#page=24" target="_blank" rel="noopener">View in paper &#8599;</a></div>
+              <div class="results-table-scroll" role="region" aria-label="Table 8: Number of agents" tabindex="0">
+                <table class="results-data-table" aria-describedby="results-table-8-note">
+                  <caption class="sr-only">Table 8: Number of agents</caption>
+                  <thead><tr><th scope="col"><strong># Agents</strong></th><th scope="col"><strong>Global Planner</strong></th><th scope="col"><strong>SR &uarr;</strong></th><th scope="col"><strong>DTG (m) &darr;</strong></th><th scope="col"><strong>SPL &uarr;</strong></th><th scope="col"><strong>NS &darr;</strong></th><th scope="col"><strong>AHE (%) &darr;</strong></th><th scope="col"><strong>SHER (/10k) &darr;</strong></th></tr></thead>
+                  <tbody><tr><th scope="rowgroup" rowspan="5">1</th><td>Nearest</td><td>35.0%</td><td>3.200</td><td>0.145</td><td>292.4</td><td>9.71</td><td>0.34</td></tr>
+<tr><td>Co-UT</td><td>34.0%</td><td>3.180</td><td>0.142</td><td>287.6</td><td>9.37</td><td>0.92</td></tr>
+<tr><td>Fill</td><td>36.5%</td><td>2.940</td><td>0.155</td><td>278.2</td><td>10.83</td><td>1.52</td></tr>
+<tr><td>Random</td><td>26.5%</td><td>3.800</td><td>0.126</td><td>329.0</td><td>10.20</td><td>2.30</td></tr>
+<tr class="results-table-average"><td><strong>Average</strong></td><td>33.00%</td><td>3.280</td><td>0.142</td><td>296.8</td><td>10.03</td><td>1.27</td></tr>
+<tr><th scope="rowgroup" rowspan="5">2</th><td>Nearest</td><td>42.0%</td><td>2.672</td><td>0.178</td><td>272.8</td><td>10.82</td><td>0.92</td></tr>
+<tr><td>Co-UT</td><td>39.5%</td><td>2.958</td><td>0.164</td><td>282.4</td><td>8.84</td><td>1.33</td></tr>
+<tr><td>Fill</td><td>33.0%</td><td>2.773</td><td>0.159</td><td>260.7</td><td>9.62</td><td>2.21</td></tr>
+<tr><td>Random</td><td>35.0%</td><td>3.109</td><td>0.153</td><td>272.7</td><td>9.58</td><td>2.93</td></tr>
+<tr class="results-table-average"><td><strong>Average</strong></td><td>37.38%</td><td>2.878</td><td>0.164</td><td>272.1</td><td><strong>9.71</strong></td><td>1.84</td></tr>
+<tr><th scope="rowgroup" rowspan="5">3</th><td>Nearest</td><td>41.5%</td><td>2.449</td><td>0.215</td><td>241.4</td><td>10.32</td><td>1.31</td></tr>
+<tr><td>Co-UT</td><td>46.5%</td><td>2.096</td><td>0.225</td><td>221.2</td><td>10.11</td><td>1.28</td></tr>
+<tr><td>Fill</td><td>47.5%</td><td>2.006</td><td>0.233</td><td>227.7</td><td>9.54</td><td>1.61</td></tr>
+<tr><td>Random</td><td>34.5%</td><td>2.802</td><td>0.155</td><td>259.0</td><td>9.77</td><td>1.80</td></tr>
+<tr class="results-table-average"><td><strong>Average</strong></td><td><strong>42.50%</strong></td><td><strong>2.338</strong></td><td><strong>0.207</strong></td><td><strong>237.3</strong></td><td>9.93</td><td>1.51</td></tr>
+<tr><th scope="rowgroup" rowspan="5">4</th><td>Nearest</td><td>40.5%</td><td>2.647</td><td>0.206</td><td>236.5</td><td>8.72</td><td>1.37</td></tr>
+<tr><td>Co-UT</td><td>46.0%</td><td>2.263</td><td>0.247</td><td>218.3</td><td>10.38</td><td>1.15</td></tr>
+<tr><td>Fill</td><td>43.5%</td><td>2.204</td><td>0.221</td><td>237.9</td><td>10.15</td><td>1.05</td></tr>
+<tr><td>Random</td><td>31.0%</td><td>2.860</td><td>0.151</td><td>257.5</td><td>10.35</td><td>1.80</td></tr>
+<tr class="results-table-average"><td><strong>Average</strong></td><td>40.25%</td><td>2.493</td><td>0.206</td><td>237.5</td><td>9.90</td><td><strong>1.36</strong></td></tr></tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+          </div>
+          <div class="results-group" id="results-physical" role="region" aria-labelledby="results-physical-title" tabindex="-1">
+            <div class="results-group-heading"><div><span class="results-reference">04 / Experiments</span><h3 id="results-physical-title">Physical validation</h3></div><p>Cooperative search on physical robots and the online navigation runtime.</p><a href="#results-index">Back to index &uarr;</a></div>
+            <figure class="results-figure results-figure-physical" id="results-figure-11" tabindex="-1">
+              <div class="results-figure-heading"><span class="results-reference">Figure 11</span><h4>Cooperative person search on physical robots</h4></div>
+              <button class="zoom-trigger" type="button" data-lightbox="static/images/results/real_fire_Part2_v2.webp" data-alt="Cooperative person search on physical robots" aria-label="Enlarge Figure 11: Cooperative person search on physical robots">
+                <img src="static/images/results/real_fire_Part2_v2.webp" width="3000" height="1766" alt="A representative real-world person-search episode with two quadruped robots, showing first-person observations, the shared exploration map, and the reconstructed scene." loading="lazy" decoding="async">
+                <span aria-hidden="true">Expand &#8599;</span>
+              </button>
+              <figcaption><p>A representative real-world person-search episode with two quadruped robots, showing first-person observations, the shared exploration map, and the reconstructed scene.</p><div class="results-figure-links"><a href="#results-table-3">Table 3 &darr;</a><a href="static/pdfs/results/real_fire_Part2_v2.pdf" target="_blank" rel="noopener">Figure PDF &#8599;</a></div></figcaption>
+            </figure>
+          <article class="results-table-card" id="results-table-3" aria-labelledby="results-table-3-title" tabindex="-1">
+            <header class="results-table-heading"><span class="results-reference">Table 03</span><h4 id="results-table-3-title">Online navigation runtime</h4></header>
+            <div class="results-table-body">
+              <p id="results-table-3-note">Runtime breakdown of the online navigation pipeline. Values are reported as the mean and standard deviation over 100 runs. VLM planning is invoked only during global replanning.</p>
+              <div class="results-table-actions"><span>Scroll horizontally to see all columns.</span><a href="static/data/results/table-3.csv" download>Download CSV &darr;</a><a href="static/pdfs/FireNav_MobiCom2027.pdf#page=21" target="_blank" rel="noopener">View in paper &#8599;</a></div>
+              <div class="results-table-scroll" role="region" aria-label="Table 3: Online navigation runtime" tabindex="0">
+                <table class="results-data-table" aria-describedby="results-table-3-note">
+                  <caption class="sr-only">Table 3: Online navigation runtime</caption>
+                  <thead><tr><th scope="col"><strong>Statistic</strong></th><th scope="colgroup" colspan="7"><strong>Runtime (ms)</strong></th></tr>
+<tr><th scope="col"></th><th scope="col"><strong>Preprocessing</strong></th><th scope="col"><strong>Mapping</strong></th><th scope="col"><strong>Exploration</strong><br><strong>Planning</strong></th><th scope="col"><strong>VLM</strong><br><strong>Planning</strong></th><th scope="col"><strong>Visualization</strong></th><th scope="col"><strong>Communication</strong></th><th scope="col"><strong>Action</strong><br><strong>Completion</strong></th></tr></thead>
+                  <tbody><tr><th scope="row">Mean</th><td>57.0</td><td>89.63</td><td>100.1</td><td>2155.4</td><td>33.7</td><td>4.31</td><td>378.4</td></tr>
+<tr><th scope="row">Std.</th><td>32.6</td><td>34.16</td><td>15.9</td><td>578.6</td><td>12.1</td><td>13.83</td><td>112.43</td></tr></tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+          </div>
+          <div class="results-group" id="results-infrastructure" role="region" aria-labelledby="results-infrastructure-title" tabindex="-1">
+            <div class="results-group-heading"><div><span class="results-reference">05 / Experiments</span><h3 id="results-infrastructure-title">Infrastructure evaluation</h3></div><p>FireWorld runtime efficiency and the physical grounding of the benchmark.</p><a href="#results-index">Back to index &uarr;</a></div>
+          <article class="results-table-card" id="results-table-1" aria-labelledby="results-table-1-title" tabindex="-1">
+            <header class="results-table-heading"><span class="results-reference">Table 01</span><h4 id="results-table-1-title">FireWorld runtime efficiency</h4></header>
+            <div class="results-table-body">
+              <p id="results-table-1-note">Runtime efficiency of FireWorld. Online latency is measured for joint observations from two agents at 640&times;480.</p>
+              <div class="results-table-actions"><span>Scroll horizontally to see all columns.</span><a href="static/data/results/table-1.csv" download>Download CSV &darr;</a><a href="static/pdfs/FireNav_MobiCom2027.pdf#page=17" target="_blank" rel="noopener">View in paper &#8599;</a></div>
+              <div class="results-table-scroll" role="region" aria-label="Table 1: FireWorld runtime efficiency" tabindex="0">
+                <table class="results-data-table" aria-describedby="results-table-1-note">
+                  <caption class="sr-only">Table 1: FireWorld runtime efficiency</caption>
+                  <thead><tr><th scope="col"><strong>Module</strong></th><th scope="col"><strong>Runtime</strong></th><th scope="col"><strong>Throughput</strong></th></tr></thead>
+                  <tbody><tr><th scope="row">Offline timeline baking</th><td>150.2 s / timeline</td><td>3.98&times; real time</td></tr>
+<tr><th scope="row">Navigation-fast</th><td>74.85 ms / observation</td><td>13.36 FPS</td></tr>
+<tr><th scope="row">Full-quality</th><td>225.73 ms / observation</td><td>4.43 FPS</td></tr></tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+          <article class="results-table-card" id="results-table-2" aria-labelledby="results-table-2-title" tabindex="-1">
+            <header class="results-table-heading"><span class="results-reference">Table 02</span><h4 id="results-table-2-title">Physical and empirical grounding</h4></header>
+            <div class="results-table-body">
+              <p id="results-table-2-note">Sources of physical and empirical grounding in FireWorld. The benchmark targets decision-relevant physical structure rather than CFD-level predictive accuracy.</p>
+              <div class="results-table-actions"><span>Scroll horizontally to see all columns.</span><a href="static/data/results/table-2.csv" download>Download CSV &darr;</a><a href="static/pdfs/FireNav_MobiCom2027.pdf#page=21" target="_blank" rel="noopener">View in paper &#8599;</a></div>
+              <div class="results-table-scroll" role="region" aria-label="Table 2: Physical and empirical grounding" tabindex="0">
+                <table class="results-data-table results-table-prose" aria-describedby="results-table-2-note">
+                  <caption class="sr-only">Table 2: Physical and empirical grounding</caption>
+                  <thead><tr><th scope="col"><strong>Stage</strong></th><th scope="col"><strong>Grounding</strong></th><th scope="col"><strong>FireWorld realization</strong></th></tr></thead>
+                  <tbody><tr><th scope="row">Scene and material inputs</th><td>Physical attributes</td><td>Object geometry, structural boundaries, flammability, and smoke yield.</td></tr>
+<tr><th scope="row">Fire initialization</th><td>Physical source conditions</td><td>Ignition location and time, source temperature, fuel mass, and intensity.</td></tr>
+<tr><th scope="row">Hazard evolution</th><td>Physics-inspired mechanisms</td><td>Heat diffusion, buoyancy, ignition, fuel consumption, flame and smoke generation, dissipation, and cooling.</td></tr>
+<tr><th scope="row">RGB-D and thermal sensing</th><td>Hazard-coupled observations</td><td>Smoke-dependent RGB-D degradation and temperature-derived thermal response.</td></tr>
+<tr><th scope="row">Radar sensing</th><td>Empirically motivated behavior</td><td>Sparse geometric observations approximating the smoke-resilient characteristics of mmWave sensing.</td></tr>
+<tr><th scope="row">Intended fidelity</th><td>Decision-oriented physical structure</td><td>Reproducible, geometry-aware, and temporally evolving hazards for embodied perception and planning.</td></tr></tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -774,6 +1235,7 @@
   <div class="toast" role="status" aria-live="polite" data-toast>Copied to clipboard</div>
   <script src="static/js/demo-media.js" defer></script>
   <script src="static/js/index.js" defer></script>
+  <script src="static/js/fire-gallery.js" defer></script>
   <script src="static/js/navigation-playback.js" defer></script>
   <script src="static/js/scene-explorer.js" defer></script>
 </body>

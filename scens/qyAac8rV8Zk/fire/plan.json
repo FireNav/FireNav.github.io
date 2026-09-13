@@ -1,0 +1,402 @@
+{
+  "default_initial_ignition_range": {
+    "max": 12,
+    "min": 4
+  },
+  "duration_s": 600.0,
+  "fire_type": "multi_origin",
+  "gallery_base_plan_ids": {
+    "bedroom_textile": "qyAac8rV8Zk_bedroom_textile_medium_8549089c0bf3",
+    "kitchen_grease_fire": "qyAac8rV8Zk_kitchen_grease_fire_medium_6338ad01a993",
+    "living_room_electric": "qyAac8rV8Zk_living_room_electric_medium_c81e3d3fcc9f",
+    "multi_origin": "qyAac8rV8Zk_multi_origin_medium_76c8487b8e4e"
+  },
+  "gallery_disclosure": "Union of the available medium template initial-source sets, deduplicated by object ID. Medium multi-origin propagation rules and duration are preserved. Source count and area distribution are custom gallery settings, not the canonical area-stratified multi-origin sampling policy.",
+  "gallery_missing_types": [],
+  "gallery_source_templates": {
+    "157": [
+      "multi_origin"
+    ],
+    "244": [
+      "multi_origin"
+    ],
+    "253": [
+      "bedroom_textile"
+    ],
+    "284": [
+      "kitchen_grease_fire"
+    ],
+    "304": [
+      "bedroom_textile"
+    ],
+    "318": [
+      "living_room_electric"
+    ],
+    "353": [
+      "bedroom_textile"
+    ],
+    "354": [
+      "bedroom_textile"
+    ],
+    "420": [
+      "bedroom_textile"
+    ],
+    "444": [
+      "living_room_electric"
+    ],
+    "458": [
+      "multi_origin"
+    ],
+    "460": [
+      "multi_origin"
+    ],
+    "555": [
+      "multi_origin"
+    ],
+    "558": [
+      "multi_origin",
+      "living_room_electric"
+    ],
+    "562": [
+      "bedroom_textile"
+    ],
+    "8": [
+      "living_room_electric"
+    ]
+  },
+  "ignition_selection_mode": "gallery_union_of_medium_template_sources",
+  "ignition_selection_version": 2,
+  "ignitions": [
+    {
+      "category": "tv",
+      "floor_id": 1,
+      "fuel_kg": 4.6,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 8,
+      "position": [
+        -8.31365966796875,
+        4.453445911407471,
+        2.0161516666412354
+      ],
+      "region_id": 0,
+      "smoke_yield": 0.55,
+      "source_radius_m": 0.56,
+      "source_temp_c": 754.0
+    },
+    {
+      "category": "towel",
+      "floor_id": 1,
+      "fuel_kg": 6.0,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 157,
+      "position": [
+        -3.8220739364624023,
+        3.8170278072357178,
+        0.09747355431318283
+      ],
+      "region_id": 6,
+      "smoke_yield": 0.55,
+      "source_radius_m": 0.357,
+      "source_temp_c": 730.8
+    },
+    {
+      "category": "book",
+      "floor_id": 1,
+      "fuel_kg": 6.0,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 244,
+      "position": [
+        0.009446223266422749,
+        3.6775777339935303,
+        0.03538975492119789
+      ],
+      "region_id": 7,
+      "smoke_yield": 0.5,
+      "source_radius_m": 0.302,
+      "source_temp_c": 759.7
+    },
+    {
+      "category": "bed",
+      "floor_id": 1,
+      "fuel_kg": 6.0,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 253,
+      "position": [
+        0.7579386234283447,
+        3.6842164993286133,
+        0.45771706104278564
+      ],
+      "region_id": 7,
+      "smoke_yield": 0.8,
+      "source_radius_m": 0.6,
+      "source_temp_c": 724.8
+    },
+    {
+      "category": "oven and stove",
+      "fuel_kg": 6.4,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 284,
+      "position": [
+        -8.096687316894531,
+        0.8964805006980896,
+        4.934820652008057
+      ],
+      "smoke_yield": 0.7,
+      "source_radius_m": 0.455,
+      "source_temp_c": 771.5
+    },
+    {
+      "category": "rug",
+      "floor_id": 1,
+      "fuel_kg": 5.6,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 304,
+      "position": [
+        -8.543962478637695,
+        0.00763161014765501,
+        0.34551095962524414
+      ],
+      "region_id": 8,
+      "smoke_yield": 0.55,
+      "source_radius_m": 0.6,
+      "source_temp_c": 756.9
+    },
+    {
+      "category": "tv",
+      "floor_id": 1,
+      "fuel_kg": 4.6,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 318,
+      "position": [
+        -5.240652084350586,
+        0.5157886147499084,
+        0.7317691445350647
+      ],
+      "region_id": 8,
+      "smoke_yield": 0.55,
+      "source_radius_m": 0.511,
+      "source_temp_c": 766.1
+    },
+    {
+      "category": "chair",
+      "floor_id": 1,
+      "fuel_kg": 5.2,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 353,
+      "position": [
+        -3.917454957962036,
+        0.4400588870048523,
+        -0.02155364491045475
+      ],
+      "region_id": 9,
+      "smoke_yield": 0.5,
+      "source_radius_m": 0.417,
+      "source_temp_c": 746.3
+    },
+    {
+      "category": "chair",
+      "floor_id": 1,
+      "fuel_kg": 5.2,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 354,
+      "position": [
+        -3.3601925373077393,
+        0.502025306224823,
+        -0.3714769184589386
+      ],
+      "region_id": 9,
+      "smoke_yield": 0.5,
+      "source_radius_m": 0.419,
+      "source_temp_c": 774.7
+    },
+    {
+      "category": "couch",
+      "floor_id": 1,
+      "fuel_kg": 6.2,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 420,
+      "position": [
+        1.6196788549423218,
+        0.4034355580806732,
+        1.6916470527648926
+      ],
+      "region_id": 10,
+      "smoke_yield": 0.85,
+      "source_radius_m": 0.6,
+      "source_temp_c": 751.5
+    },
+    {
+      "category": "computer",
+      "floor_id": 1,
+      "fuel_kg": 5.0,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 444,
+      "position": [
+        -1.6654213666915894,
+        0.9035796523094177,
+        3.279503345489502
+      ],
+      "region_id": 10,
+      "smoke_yield": 0.55,
+      "source_radius_m": 0.427,
+      "source_temp_c": 721.5
+    },
+    {
+      "category": "lamp",
+      "floor_id": 1,
+      "fuel_kg": 4.6,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 458,
+      "position": [
+        -0.8291187882423401,
+        2.7816741466522217,
+        -1.7028108835220337
+      ],
+      "region_id": 11,
+      "smoke_yield": 0.4,
+      "source_radius_m": 0.295,
+      "source_temp_c": 738.0
+    },
+    {
+      "category": "lamp",
+      "floor_id": 1,
+      "fuel_kg": 4.6,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 460,
+      "position": [
+        -0.33047911524772644,
+        2.446087598800659,
+        -0.6984573602676392
+      ],
+      "region_id": 11,
+      "smoke_yield": 0.4,
+      "source_radius_m": 0.32,
+      "source_temp_c": 722.1
+    },
+    {
+      "category": "lamp",
+      "floor_id": 1,
+      "fuel_kg": 4.6,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 555,
+      "position": [
+        0.4226044714450836,
+        -0.35553523898124695,
+        0.9861127138137817
+      ],
+      "region_id": 14,
+      "smoke_yield": 0.4,
+      "source_radius_m": 0.345,
+      "source_temp_c": 741.6
+    },
+    {
+      "category": "tv",
+      "floor_id": 0,
+      "fuel_kg": 4.6,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 558,
+      "position": [
+        1.0217286348342896,
+        -1.867988109588623,
+        -1.242607593536377
+      ],
+      "region_id": 14,
+      "smoke_yield": 0.55,
+      "source_radius_m": 0.593,
+      "source_temp_c": 743.3
+    },
+    {
+      "category": "couch",
+      "floor_id": 0,
+      "fuel_kg": 6.2,
+      "ignite_time_s": 0.0,
+      "ignition_role": "initial",
+      "object_id": 562,
+      "position": [
+        -0.7037028670310974,
+        -2.319021463394165,
+        -1.1671652793884277
+      ],
+      "region_id": 14,
+      "smoke_yield": 0.85,
+      "source_radius_m": 0.6,
+      "source_temp_c": 721.3
+    }
+  ],
+  "intensity": "medium",
+  "num_fire_sources": 16,
+  "num_initial_ignitions": 16,
+  "plan_hash": "928894c84e70",
+  "plan_id": "qyAac8rV8Zk_multi_origin_medium_gallery_union_928894c84e70",
+  "propagation_rules": {
+    "ambient_temp_c": 25.0,
+    "buoyancy_v_m_per_s": 0.5,
+    "ceiling_jet_speed_m_per_s": 0.3,
+    "flame_column_cells": 3,
+    "flame_column_decay": 0.5,
+    "flame_through_floors": 1,
+    "flammable_threshold": 0.4,
+    "floor_flame_contact_thresh": 0.12,
+    "floor_front_softness_m": 0.18,
+    "floor_fuel_value": 0.52,
+    "floor_gaussian_min_influence": 0.08,
+    "floor_gaussian_sigma_fraction": 0.58,
+    "floor_ignite_radius_cells": 2,
+    "floor_ignite_temp_c": 250.0,
+    "floor_max_spread_radius_m": 2.2,
+    "floor_min_visible_flame": 0.06,
+    "floor_seed_flame_max": 0.58,
+    "floor_seed_flame_min": 0.1,
+    "floor_spread_reach_fraction": 0.9,
+    "floor_spread_speed_m_per_s": 0.0044,
+    "floor_thermal_attenuation": 0.2,
+    "fuel_abundance_max": 2.5,
+    "fuel_abundance_min": 0.5,
+    "fuel_neighborhood_cells": 2,
+    "ignition_temp_c": 200.0,
+    "inextinguishable_sources": 1,
+    "limit_flame_to_source_envelope": 1,
+    "max_flame_column_height_m": 0.3,
+    "object_bbox_fill_flame_min": 0.16,
+    "object_bbox_fill_front_width_layers": 1.0,
+    "object_bbox_fill_speed_m_per_s": 0.008,
+    "object_bbox_fill_temp_margin_c": 40.0,
+    "object_bbox_max_vertical_spread_m": 0.75,
+    "object_flame_extra_height_cells": 0,
+    "object_max_spread_radius_m": 1.35,
+    "object_spread_speed_m_per_s": 0.0066,
+    "radiative_gain_c": 200.0,
+    "radiative_radius_cells": 4,
+    "spread_kernel": "laplacian",
+    "spread_speed_m_per_s": 0.12,
+    "thermal_diffusivity": 0.05
+  },
+  "scene_glb": "data/scene_datasets/hm3d_v0.2/val/00832-qyAac8rV8Zk/qyAac8rV8Zk.basis.glb",
+  "scene_id": "qyAac8rV8Zk",
+  "schema_version": 5,
+  "seed": 42,
+  "template_version": 12,
+  "world_aabb": [
+    -10.799781799316406,
+    -3.280797004699707,
+    -2.712975025177002,
+    3.1373329162597656,
+    6.078518867492676,
+    6.173837184906006
+  ]
+}

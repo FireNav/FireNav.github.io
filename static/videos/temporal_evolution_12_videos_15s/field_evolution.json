@@ -1,0 +1,125 @@
+{
+  "note": "All-source physical voxel-volume diagnostics; these are not projected pixel counts or floor areas.",
+  "scenes": [
+    {
+      "scene_id": "4ok3usBNeis",
+      "stages": [
+        {
+          "t_sim_s": 0,
+          "flame_volume_above_004_m3": 9.092249999999998,
+          "smoke_volume_above_001_m3": 8.88975
+        },
+        {
+          "t_sim_s": 2,
+          "flame_volume_above_004_m3": 13.935374999999999,
+          "smoke_volume_above_001_m3": 46.733624999999996
+        },
+        {
+          "t_sim_s": 10,
+          "flame_volume_above_004_m3": 19.774124999999998,
+          "smoke_volume_above_001_m3": 221.02537499999997
+        },
+        {
+          "t_sim_s": 30,
+          "flame_volume_above_004_m3": 36.331875,
+          "smoke_volume_above_001_m3": 396.4072499999999
+        },
+        {
+          "t_sim_s": 60,
+          "flame_volume_above_004_m3": 58.01624999999999,
+          "smoke_volume_above_001_m3": 471.23437499999994
+        },
+        {
+          "t_sim_s": 180,
+          "flame_volume_above_004_m3": 125.66812499999999,
+          "smoke_volume_above_001_m3": 649.4714999999999
+        },
+        {
+          "t_sim_s": 600,
+          "flame_volume_above_004_m3": 178.44974999999997,
+          "smoke_volume_above_001_m3": 733.7384999999999
+        }
+      ]
+    },
+    {
+      "scene_id": "6s7QHgap2fW",
+      "stages": [
+        {
+          "t_sim_s": 0,
+          "flame_volume_above_004_m3": 8.170874999999999,
+          "smoke_volume_above_001_m3": 8.130374999999999
+        },
+        {
+          "t_sim_s": 2,
+          "flame_volume_above_004_m3": 11.731499999999999,
+          "smoke_volume_above_001_m3": 47.320874999999994
+        },
+        {
+          "t_sim_s": 10,
+          "flame_volume_above_004_m3": 15.646499999999998,
+          "smoke_volume_above_001_m3": 241.99087499999996
+        },
+        {
+          "t_sim_s": 30,
+          "flame_volume_above_004_m3": 24.866999999999997,
+          "smoke_volume_above_001_m3": 502.3383749999999
+        },
+        {
+          "t_sim_s": 60,
+          "flame_volume_above_004_m3": 35.754749999999994,
+          "smoke_volume_above_001_m3": 612.46125
+        },
+        {
+          "t_sim_s": 180,
+          "flame_volume_above_004_m3": 81.68175,
+          "smoke_volume_above_001_m3": 924.7769999999998
+        },
+        {
+          "t_sim_s": 600,
+          "flame_volume_above_004_m3": 135.05062499999997,
+          "smoke_volume_above_001_m3": 1319.004
+        }
+      ]
+    },
+    {
+      "scene_id": "BAbdmeyTvMZ",
+      "stages": [
+        {
+          "t_sim_s": 0,
+          "flame_volume_above_004_m3": 5.649749999999999,
+          "smoke_volume_above_001_m3": 5.649749999999999
+        },
+        {
+          "t_sim_s": 2,
+          "flame_volume_above_004_m3": 6.638624999999999,
+          "smoke_volume_above_001_m3": 33.878249999999994
+        },
+        {
+          "t_sim_s": 10,
+          "flame_volume_above_004_m3": 7.883999999999999,
+          "smoke_volume_above_001_m3": 186.33374999999998
+        },
+        {
+          "t_sim_s": 30,
+          "flame_volume_above_004_m3": 11.316374999999999,
+          "smoke_volume_above_001_m3": 383.16374999999994
+        },
+        {
+          "t_sim_s": 60,
+          "flame_volume_above_004_m3": 15.653249999999998,
+          "smoke_volume_above_001_m3": 462.93187499999993
+        },
+        {
+          "t_sim_s": 180,
+          "flame_volume_above_004_m3": 38.01262499999999,
+          "smoke_volume_above_001_m3": 711.4972499999999
+        },
+        {
+          "t_sim_s": 600,
+          "flame_volume_above_004_m3": 79.626375,
+          "smoke_volume_above_001_m3": 1143.372375
+        }
+      ]
+    }
+  ]
+}

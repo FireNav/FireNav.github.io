@@ -1,0 +1,7 @@
+﻿Stage,Grounding,FireWorld realization
+Scene and material inputs,Physical attributes,"Object geometry, structural boundaries, flammability, and smoke yield."
+Fire initialization,Physical source conditions,"Ignition location and time, source temperature, fuel mass, and intensity."
+Hazard evolution,Physics-inspired mechanisms,"Heat diffusion, buoyancy, ignition, fuel consumption, flame and smoke generation, dissipation, and cooling."
+RGB-D and thermal sensing,Hazard-coupled observations,Smoke-dependent RGB-D degradation and temperature-derived thermal response.
+Radar sensing,Empirically motivated behavior,Sparse geometric observations approximating the smoke-resilient characteristics of mmWave sensing.
+Intended fidelity,Decision-oriented physical structure,"Reproducible, geometry-aware, and temporally evolving hazards for embodied perception and planning."

@@ -1,0 +1,14 @@
+﻿,,Navigation Performance,Navigation Performance,Navigation Performance,Navigation Performance,Safety,Safety
+Global,Local,SR ↑,SPL ↑,DTG (m) ↓,NS ↓,AHE (%) ↓,SHER (× 10^-3) ↓
+Risk-Blind,Risk-Blind,Risk-Blind,Risk-Blind,Risk-Blind,Risk-Blind,Risk-Blind,Risk-Blind
+Nearest,FMM,.375,.232,7.617,310.105,13.22,.306
+Fill,FMM,.365,.228,7.524,304.095,12.52,.345
+Co-UT,FMM,.360,.227,7.643,293.705,12.61,.460
+Random,FMM,.350,.179,7.893,285.905,12.42,.752
+GPT-4o,FMM,.485,.234,2.482,239.3,11.0258,.2716
+Risk-Aware,Risk-Aware,Risk-Aware,Risk-Aware,Risk-Aware,Risk-Aware,Risk-Aware,Risk-Aware
+Nearest,FMM,.420,.178,2.672,272.78,10.8201,.09165
+Fill,FMM,.330,.159,2.773,260.72,9.6151,.22055
+Co-UT,FMM,.395,.164,2.958,282.40,8.8417,.13279
+Random,FMM,.350,.153,3.109,272.66,9.5813,.29341
+GPT-4o,FMM,.550,.254,2.136,229.53,10.7936,.03268

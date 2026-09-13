@@ -1,0 +1,51 @@
+{
+  "id": "Dd4bFSTQ8gi",
+  "severity": "medium",
+  "planId": "Dd4bFSTQ8gi_multi_origin_medium_gallery_union_75e496e65b80",
+  "views": [
+    {
+      "id": "kitchen_grease_fire",
+      "label": "Kitchen Grease Fire",
+      "directory": "01_kitchen_grease_fire",
+      "timeSeconds": 10.0,
+      "sourceCategory": "kitchen extractor",
+      "sourceObjectId": 235,
+      "semanticFallback": false,
+      "image": "scens/Dd4bFSTQ8gi/fire/01_kitchen_grease_fire/template_scene.png",
+      "sensorImage": "scens/Dd4bFSTQ8gi/fire/01_kitchen_grease_fire/sensor_dashboard.png"
+    },
+    {
+      "id": "bedroom_textile",
+      "label": "Bedroom Textile Fire",
+      "directory": "02_bedroom_textile",
+      "timeSeconds": 10.0,
+      "sourceCategory": "pillow",
+      "sourceObjectId": 57,
+      "semanticFallback": false,
+      "image": "scens/Dd4bFSTQ8gi/fire/02_bedroom_textile/template_scene.png",
+      "sensorImage": "scens/Dd4bFSTQ8gi/fire/02_bedroom_textile/sensor_dashboard.png"
+    },
+    {
+      "id": "living_room_electric",
+      "label": "Additional origin: carpet",
+      "directory": "03_living_room_electric",
+      "timeSeconds": 30.0,
+      "sourceCategory": "carpet",
+      "sourceObjectId": 109,
+      "semanticFallback": true,
+      "image": "scens/Dd4bFSTQ8gi/fire/03_living_room_electric/template_scene.png",
+      "sensorImage": "scens/Dd4bFSTQ8gi/fire/03_living_room_electric/sensor_dashboard.png"
+    },
+    {
+      "id": "multi_origin",
+      "label": "Multi-origin Fire",
+      "directory": "04_multi_origin",
+      "timeSeconds": 30.0,
+      "sourceCategory": "carpet",
+      "sourceObjectId": 272,
+      "semanticFallback": false,
+      "image": "scens/Dd4bFSTQ8gi/fire/04_multi_origin/template_scene.png",
+      "sensorImage": "scens/Dd4bFSTQ8gi/fire/04_multi_origin/sensor_dashboard.png"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+﻿Module,Runtime,Throughput
+Offline timeline baking,150.2 s / timeline,3.98× real time
+Navigation-fast,74.85 ms / observation,13.36 FPS
+Full-quality,225.73 ms / observation,4.43 FPS

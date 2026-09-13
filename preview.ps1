@@ -12,7 +12,7 @@ function Test-PreviewSite([string]$Address) {
     try {
         $response = Invoke-WebRequest -Uri ($Address + '/index.html') -UseBasicParsing -TimeoutSec 2
         $pageText = [System.Text.Encoding]::UTF8.GetString($response.RawContentStream.ToArray())
-        return $pageText -ceq $expectedPage
+        return ($pageText -ceq $expectedPage) -and ($response.Headers['Accept-Ranges'] -eq 'bytes')
     } catch {
         return $false
     }
@@ -38,7 +38,7 @@ foreach ($candidatePort in $Port..($Port + 9)) {
     $pythonCommand = Get-Command python -ErrorAction Stop
     $serverOptions = @{
         FilePath = $pythonCommand.Source
-        ArgumentList = @('-m', 'http.server', $candidatePort, '--bind', '127.0.0.1')
+        ArgumentList = @('-B', ('"' + (Join-Path $siteRoot 'preview_server.py') + '"'), $candidatePort, '--bind', '127.0.0.1')
         WorkingDirectory = $siteRoot
         WindowStyle = 'Hidden'
         PassThru = $true

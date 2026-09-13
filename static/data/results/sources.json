@@ -1,0 +1,122 @@
+{
+  "figures": [
+    {
+      "number": 6,
+      "source": "figures/dynamic_fire_paired_bars.pdf",
+      "sha256": "bb69d6277b73589a2de209d5a6852dccd927fd3018423d0be45f19ced2aa943e",
+      "width": 3000,
+      "height": 767
+    },
+    {
+      "number": 7,
+      "source": "figures/fire_overall_heatmap.pdf",
+      "sha256": "cabf0a3c421268fb52b8831444bbe7a3d79954718bce1fbbb7779002719f6f4c",
+      "width": 3000,
+      "height": 469
+    },
+    {
+      "number": 8,
+      "source": "figures/fire_ablation_combined.pdf",
+      "sha256": "a89ea0ed8d3b000aa31125eeac83bd4161614a57002ead1c0515e77b70644349",
+      "width": 3000,
+      "height": 324
+    },
+    {
+      "number": 9,
+      "source": "figures/environmental_factors_v6.pdf",
+      "sha256": "4fecfd5b3c66c93c50d43beb88c22b18c6fffdd4c05a9fda394a66701c8962bc",
+      "width": 3000,
+      "height": 596
+    },
+    {
+      "number": 10,
+      "source": "figures/risk_awareness.pdf",
+      "sha256": "7ff7fef82ae0fcd0e3c26df3b4fd02a1d5266ebb4c4da97be58e9cbef00b2f92",
+      "width": 3000,
+      "height": 752
+    },
+    {
+      "number": 11,
+      "source": "figures/real_fire_Part2_v2.pdf",
+      "sha256": "31c41b228f78a76e5af78dcc64902dc3d6a7305258dff1081a3a2a59d6e21074",
+      "width": 3000,
+      "height": 1766
+    }
+  ],
+  "tables": [
+    {
+      "number": 1,
+      "title": "FireWorld runtime efficiency",
+      "rows": 3,
+      "columns": 3,
+      "csv": "table-1.csv",
+      "paper_page": 17,
+      "label": "tab:fireworld_runtime"
+    },
+    {
+      "number": 2,
+      "title": "Physical and empirical grounding",
+      "rows": 6,
+      "columns": 3,
+      "csv": "table-2.csv",
+      "paper_page": 21,
+      "label": "tab:physical_grounding"
+    },
+    {
+      "number": 3,
+      "title": "Online navigation runtime",
+      "rows": 2,
+      "columns": 8,
+      "csv": "table-3.csv",
+      "paper_page": 21,
+      "label": "tab:runtime"
+    },
+    {
+      "number": 4,
+      "title": "Hazard-free vs. dynamic-fire navigation",
+      "rows": 30,
+      "columns": 12,
+      "csv": "table-4.csv",
+      "paper_page": 22,
+      "label": "tab:hazard_free_vs_fire"
+    },
+    {
+      "number": 5,
+      "title": "FireNav under dynamic fire",
+      "rows": 15,
+      "columns": 14,
+      "csv": "table-5.csv",
+      "paper_page": 23,
+      "label": "tab:fire_overall"
+    },
+    {
+      "number": 6,
+      "title": "Multimodal perception and fusion",
+      "rows": 10,
+      "columns": 8,
+      "csv": "table-6.csv",
+      "paper_page": 23,
+      "label": "tab:perception_ablation_overall"
+    },
+    {
+      "number": 7,
+      "title": "Risk awareness",
+      "rows": 10,
+      "columns": 8,
+      "csv": "table-7.csv",
+      "paper_page": 24,
+      "label": "tab:risk_aware_overall"
+    },
+    {
+      "number": 8,
+      "title": "Number of agents",
+      "rows": 20,
+      "columns": 8,
+      "csv": "table-8.csv",
+      "paper_page": 24,
+      "label": "tab:agent_number"
+    }
+  ],
+  "appendix_source": "sections/appendix.tex",
+  "appendix_sha256": "65cef2f1f68d591357c049a65c6861c9420b98caab106b17325f0973e4eddaa5"
+}

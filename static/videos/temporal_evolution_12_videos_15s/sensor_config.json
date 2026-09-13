@@ -1,0 +1,90 @@
+{
+  "dashboard_size": [
+    2000,
+    900
+  ],
+  "depth": {
+    "clip_to_smoke": true,
+    "dropout_max": 0.5,
+    "quant_m": 0.02,
+    "sigma_base_m": 0.01,
+    "sigma_range_m": 0.005,
+    "sigma_smoke_m": 0.05
+  },
+  "hfov_deg": 79.0,
+  "lidar": {
+    "bev_size_px": 360,
+    "clip_to_smoke": true,
+    "dropout_max": 0.5,
+    "elev_fov_deg": 30.0,
+    "fov_deg_yaw": 360.0,
+    "max_range_m": 10.0,
+    "sigma_base_m": 0.01,
+    "sigma_range_m": 0.005,
+    "sigma_smoke_m": 0.05,
+    "stride": 2,
+    "z_color_range_m": [
+      -0.6,
+      1.6
+    ]
+  },
+  "max_depth_m": 12.0,
+  "radar": {
+    "az_bins": 64,
+    "az_fov_deg": 90.0,
+    "bev_size_px": 360,
+    "elev_fov_deg": 25.0,
+    "learned_noise_m": 0.1,
+    "learned_stride": 4,
+    "learned_target_points": 4000,
+    "max_range_m": 10.0,
+    "mode": "learned",
+    "noise_std": 0.03,
+    "range_bins": 256,
+    "sinc_sigma_bins": 1.2,
+    "threshold": 0.18
+  },
+  "save_dashboard": true,
+  "save_npz": false,
+  "smoke": {
+    "smoke_color_rgb": [
+      72,
+      72,
+      72
+    ],
+    "smoke_density": 0.6,
+    "smoke_k_max": 2.3
+  },
+  "smoke_density": 0.6,
+  "voxel": {
+    "flame_color_jitter": 0.28,
+    "flame_edge_break": 1.15,
+    "flame_emission_gain": 8.0,
+    "flame_glow_gain": 0.18,
+    "flame_glow_ksize": 13,
+    "flame_highlight_compression": 0.85,
+    "flame_k_ext": 0.5,
+    "flame_noise_strength": 0.9,
+    "flame_smoke_displacement": 0.52,
+    "flame_smoke_passthrough": 0.95,
+    "flame_surface_reveal": 0.08,
+    "flame_threshold": 0.015,
+    "flame_time_speed": 12.0,
+    "max_sample_points": 2000000,
+    "n_steps": 64,
+    "render_backend": "torch",
+    "render_device": "cuda:0",
+    "render_dtype": "float16",
+    "render_scale": 0.5,
+    "smoke_color_rgb": [
+      72,
+      72,
+      72
+    ],
+    "smoke_k_ext": 3.0,
+    "smoke_noise_strength": 0.24,
+    "thermal_air_coupling": 0.025,
+    "thermal_color_blend": 0.85,
+    "thermal_surface_start": 0.72
+  }
+}

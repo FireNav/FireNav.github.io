@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "completed_at": "2026-09-12T21:50:58.202643+00:00",
+  "videos": 12,
+  "video_duration_s": 15,
+  "frames_per_video": 375,
+  "fps": 25,
+  "speedup": 50,
+  "simulation_range_s": [
+    0,
+    600
+  ],
+  "simulation_frames_preserved": 301,
+  "clean_reference_hold_s": 1.48,
+  "final_state_hold_s": 1.48,
+  "full_decode_passed": true,
+  "time_and_speed_labels_verified": true,
+  "original_64s_videos_preserved": true,
+  "new_render_frames": 0,
+  "new_bakes": 0,
+  "archive": "temporal_evolution_12_videos_15s.zip"
+}

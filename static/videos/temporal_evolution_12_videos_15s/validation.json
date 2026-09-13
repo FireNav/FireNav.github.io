@@ -1,0 +1,104 @@
+{
+  "expected_videos": 12,
+  "failures": [],
+  "passed": true,
+  "results": [
+    {
+      "changed_frames": 367,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "4ok3usBNeis",
+      "template": "kitchen_grease_fire"
+    },
+    {
+      "changed_frames": 360,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "6s7QHgap2fW",
+      "template": "kitchen_grease_fire"
+    },
+    {
+      "changed_frames": 363,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "BAbdmeyTvMZ",
+      "template": "kitchen_grease_fire"
+    },
+    {
+      "changed_frames": 370,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "4ok3usBNeis",
+      "template": "bedroom_textile"
+    },
+    {
+      "changed_frames": 374,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "6s7QHgap2fW",
+      "template": "bedroom_textile"
+    },
+    {
+      "changed_frames": 372,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "BAbdmeyTvMZ",
+      "template": "bedroom_textile"
+    },
+    {
+      "changed_frames": 365,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "4ok3usBNeis",
+      "template": "living_room_electric"
+    },
+    {
+      "changed_frames": 367,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "6s7QHgap2fW",
+      "template": "living_room_electric"
+    },
+    {
+      "changed_frames": 360,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "BAbdmeyTvMZ",
+      "template": "living_room_electric"
+    },
+    {
+      "changed_frames": 374,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "4ok3usBNeis",
+      "template": "multi_origin"
+    },
+    {
+      "changed_frames": 374,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "6s7QHgap2fW",
+      "template": "multi_origin"
+    },
+    {
+      "changed_frames": 374,
+      "decoded_frames": 375,
+      "duration_s": 15.0,
+      "fps": 25.0,
+      "scene": "BAbdmeyTvMZ",
+      "template": "multi_origin"
+    }
+  ],
+  "videos": 12
+}

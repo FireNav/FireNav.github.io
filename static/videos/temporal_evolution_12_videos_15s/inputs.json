@@ -1,0 +1,1571 @@
+{
+  "duration_s": 600.0,
+  "expected_videos": 12,
+  "note": "Each multi-origin video synchronizes four views of one shared merged medium plan.",
+  "save_dt_s": 2.0,
+  "scenes": [
+    {
+      "canonical_inputs": [
+        {
+          "path": "scenes/4ok3usBNeis/plans/4ok3usBNeis_bedroom_textile_medium_c01b51d04e75.json",
+          "sha256": "0a478def5a1e50b823b45d426d586ae3d742677b9a984dcd0190edcf23a29d61"
+        },
+        {
+          "path": "scenes/4ok3usBNeis/plans/4ok3usBNeis_kitchen_grease_fire_medium_51856de7ef15.json",
+          "sha256": "0c29e769ce88d7a81f0a43b5652239fd5a6441d9bdb64d99f0732b11b5e468ea"
+        },
+        {
+          "path": "scenes/4ok3usBNeis/plans/4ok3usBNeis_living_room_electric_medium_82572a23cf2c.json",
+          "sha256": "0547aeafd4b3cdc2e93ba074c4b74c9ab8f3ec1988a9413e558da8f53a63ac54"
+        },
+        {
+          "path": "scenes/4ok3usBNeis/plans/4ok3usBNeis_multi_origin_medium_0e3c1811e576.json",
+          "sha256": "7bb4ce4b717ef62aaa9f1c9b796682510974995b5cac344c52bac89e58a9b2e2"
+        }
+      ],
+      "inventory_path": "/home/liushe10/Co-NavGPT2/scenes/4ok3usBNeis/inventory.json",
+      "inventory_sha256": "b0e3d654894a1e33457792bcbc4d6cb00ea2bb4c71a30f61e1a662b5f98ea0a5",
+      "missing_types": [],
+      "plan_id": "4ok3usBNeis_multi_origin_medium_gallery_union_ad269c4d3934",
+      "plan_path": "/home/liushe10/Co-NavGPT2/outputs/fire_gallery_medium_36_20260911/4ok3usBNeis/plan.json",
+      "plan_sha256": "ff8d8e92d6083cbba53ea0d797d83db4cca83caa3e463420043a91373ca4908d",
+      "reference_gallery": "/home/liushe10/Co-NavGPT2/outputs/fire_gallery_medium_36_stronger_20260912",
+      "reference_timeline": "/home/liushe10/Co-NavGPT2/outputs/fire_gallery_medium_36_20260911/timelines/4ok3usBNeis/4ok3usBNeis_multi_origin_medium_gallery_union_ad269c4d3934/timeline.npz",
+      "scene_id": "4ok3usBNeis",
+      "scene_mesh": "/home/liushe10/Co-NavGPT2/data/scene_datasets/hm3d_v0.2/val/00877-4ok3usBNeis/4ok3usBNeis.basis.glb",
+      "source_count": 19,
+      "views": [
+        {
+          "agent_position": [
+            6.787395477294922,
+            2.0644748210906982,
+            4.633557319641113
+          ],
+          "camera_position": [
+            6.787395477294922,
+            3.3644747734069824,
+            4.633557319641113
+          ],
+          "camera_rotation_xyzw": [
+            -0.013364961370825768,
+            -0.837537407875061,
+            -0.020507534965872765,
+            0.5458313226699829
+          ],
+          "directory": "01_kitchen_grease_fire",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 10.0,
+          "hfov_deg": 79.0,
+          "label": "Kitchen Grease Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.9817895827205647,
+            "flame_center_distance": 0.10234800642265932,
+            "flame_fraction": 0.3393967013888889,
+            "mean_luminance": 0.32989768233953737,
+            "mean_smoke_attenuation": 0.36538058519363403,
+            "near_obstacle_fraction": 0.006575520833333333,
+            "rgb_fire_fraction": 0.12146412037037037,
+            "rgb_fire_ratio": 0.35788244220792786,
+            "score": 6.175748627450133,
+            "smoke_fraction": 0.6039048032407407,
+            "source_visible_fraction": 0.0018721064814814815
+          },
+          "plan_id": "4ok3usBNeis_multi_origin_medium_gallery_union_ad269c4d3934",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 0.9827021519202309,
+            "flame_center_distance": 0.10893237633203974,
+            "flame_fraction": 0.298169849537037,
+            "mean_luminance": 0.3464979882333793,
+            "mean_smoke_attenuation": 0.17103858292102814,
+            "near_obstacle_fraction": 0.006575520833333333,
+            "rgb_fire_fraction": 0.06445167824074075,
+            "rgb_fire_ratio": 0.2161575972245809,
+            "score": 6.565125322694412,
+            "smoke_fraction": 0.5065089699074075,
+            "source_visible_fraction": 0.0018721064814814815
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "kitchen_grease_fire",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "cooker",
+            "floor_id": 0,
+            "fuel_kg": 6.2,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 325,
+            "position": [
+              9.916650772094727,
+              3.01686954498291,
+              6.014678478240967
+            ],
+            "region_id": 8,
+            "smoke_yield": 0.65,
+            "source_radius_m": 0.367,
+            "source_temp_c": 726.9
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 1,
+          "smoke_k_ext": 3.0
+        },
+        {
+          "agent_position": [
+            7.4262213706970215,
+            -0.5355252027511597,
+            0.5339196920394897
+          ],
+          "camera_position": [
+            7.4262213706970215,
+            0.7644747495651245,
+            0.5339196920394897
+          ],
+          "camera_rotation_xyzw": [
+            -0.11539338529109955,
+            -0.8133369088172913,
+            -0.17269840836524963,
+            0.5434544086456299
+          ],
+          "directory": "02_bedroom_textile",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 10.0,
+          "hfov_deg": 79.0,
+          "label": "Bedroom Textile Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.9995309819897084,
+            "flame_center_distance": 0.1626622319887058,
+            "flame_fraction": 0.21592592592592594,
+            "mean_luminance": 0.45461437748927697,
+            "mean_smoke_attenuation": 0.5215181708335876,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.06462528935185186,
+            "rgb_fire_ratio": 0.29929379288164665,
+            "score": 14.153588628318815,
+            "smoke_fraction": 1.0,
+            "source_visible_fraction": 0.40758680555555554
+          },
+          "plan_id": "4ok3usBNeis_multi_origin_medium_gallery_union_ad269c4d3934",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 1.0,
+            "flame_center_distance": 0.13634714283746902,
+            "flame_fraction": 0.15355034722222222,
+            "mean_luminance": 0.5307261747472426,
+            "mean_smoke_attenuation": 0.23083609342575073,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.031647858796296294,
+            "rgb_fire_ratio": 0.2061073736974014,
+            "score": 15.518312155945846,
+            "smoke_fraction": 0.7771021412037037,
+            "source_visible_fraction": 0.40758680555555554
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "bedroom_textile",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "bed",
+            "floor_id": 0,
+            "fuel_kg": 6.0,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 199,
+            "position": [
+              8.996816635131836,
+              -0.17154332995414734,
+              1.1844815015792847
+            ],
+            "region_id": 4,
+            "smoke_yield": 0.8,
+            "source_radius_m": 0.6,
+            "source_temp_c": 725.2
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 2,
+          "smoke_k_ext": 3.0
+        },
+        {
+          "agent_position": [
+            1.6656830310821533,
+            -0.5355252027511597,
+            1.0615168809890747
+          ],
+          "camera_position": [
+            1.6656830310821533,
+            0.7644747495651245,
+            1.0615168809890747
+          ],
+          "camera_rotation_xyzw": [
+            -0.10252191126346588,
+            -0.3803199231624603,
+            -0.04246596619486809,
+            0.9181734919548035
+          ],
+          "directory": "03_living_room_electric",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 30.0,
+          "hfov_deg": 79.0,
+          "label": "Living-room Electrical Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.9142563184449767,
+            "flame_center_distance": 0.12779025502669394,
+            "flame_fraction": 0.24889467592592593,
+            "mean_luminance": 0.36795968448414523,
+            "mean_smoke_attenuation": 0.32932111620903015,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.11627025462962963,
+            "rgb_fire_ratio": 0.46714641121625705,
+            "score": 14.408034450800061,
+            "smoke_fraction": 1.0,
+            "source_visible_fraction": 0.0075839120370370374
+          },
+          "plan_id": "4ok3usBNeis_multi_origin_medium_gallery_union_ad269c4d3934",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 0.9254528250878615,
+            "flame_center_distance": 0.12547673172742574,
+            "flame_fraction": 0.2140625,
+            "mean_luminance": 0.35738004796645223,
+            "mean_smoke_attenuation": 0.12142401933670044,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.04522424768518519,
+            "rgb_fire_ratio": 0.21126655852933227,
+            "score": 13.087363360133388,
+            "smoke_fraction": 0.5855049189814815,
+            "source_visible_fraction": 0.0075839120370370374
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "living_room_electric",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "speaker",
+            "floor_id": 0,
+            "fuel_kg": 4.6,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 10,
+            "position": [
+              3.221318006515503,
+              0.08697459101676941,
+              -0.4941180944442749
+            ],
+            "region_id": 0,
+            "smoke_yield": 0.5,
+            "source_radius_m": 0.335,
+            "source_temp_c": 744.8
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 3,
+          "smoke_k_ext": 3.0
+        },
+        {
+          "agent_position": [
+            2.275313377380371,
+            2.0644748210906982,
+            0.7588237524032593
+          ],
+          "camera_position": [
+            2.275313377380371,
+            3.3644747734069824,
+            0.7588237524032593
+          ],
+          "camera_rotation_xyzw": [
+            -0.16515816748142242,
+            0.6875483989715576,
+            0.16515816748142242,
+            0.6875483989715576
+          ],
+          "directory": "04_multi_origin",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 10.0,
+          "hfov_deg": 79.0,
+          "label": "Multi-origin Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.9684145181590892,
+            "flame_center_distance": 0.19655128275695355,
+            "flame_fraction": 0.25403211805555553,
+            "mean_luminance": 0.379100814520144,
+            "mean_smoke_attenuation": 0.5336034893989563,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.08775028935185185,
+            "rgb_fire_ratio": 0.34542990084687364,
+            "score": 11.848873577777201,
+            "smoke_fraction": 1.0,
+            "source_visible_fraction": 0.29015625
+          },
+          "plan_id": "4ok3usBNeis_multi_origin_medium_gallery_union_ad269c4d3934",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 1.0,
+            "flame_center_distance": 0.1646414495042229,
+            "flame_fraction": 0.18215133101851852,
+            "mean_luminance": 0.43625736610562194,
+            "mean_smoke_attenuation": 0.23952876031398773,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.021261574074074075,
+            "rgb_fire_ratio": 0.11672478018792244,
+            "score": 13.829646505776303,
+            "smoke_fraction": 0.7965060763888889,
+            "source_visible_fraction": 0.29015625
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "multi_origin",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "bed",
+            "floor_id": 0,
+            "fuel_kg": 6.0,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 417,
+            "position": [
+              0.5753134489059448,
+              2.317737340927124,
+              0.7588237524032593
+            ],
+            "region_id": 10,
+            "smoke_yield": 0.8,
+            "source_radius_m": 0.6,
+            "source_temp_c": 726.8
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 4,
+          "smoke_k_ext": 3.0
+        }
+      ]
+    },
+    {
+      "canonical_inputs": [
+        {
+          "path": "scenes/6s7QHgap2fW/plans/6s7QHgap2fW_bedroom_textile_medium_23447a023b5d.json",
+          "sha256": "f02feaf29b2f8668ee05ca2a6c7a779bdce497ce4fe0e6835676d3882737f69b"
+        },
+        {
+          "path": "scenes/6s7QHgap2fW/plans/6s7QHgap2fW_kitchen_grease_fire_medium_dd3f407047b2.json",
+          "sha256": "7ccbc4fad0d1c7a22e96eddeb82860664002027c20117f3410c4b9ac58128113"
+        },
+        {
+          "path": "scenes/6s7QHgap2fW/plans/6s7QHgap2fW_living_room_electric_medium_e2185b406589.json",
+          "sha256": "7354f9319aa624366503a496bbd2edd3a83722629e7f833d8df10b63ac32a61d"
+        },
+        {
+          "path": "scenes/6s7QHgap2fW/plans/6s7QHgap2fW_multi_origin_medium_7a0dbec56956.json",
+          "sha256": "dbcd4e280699cab805241f49c48b57e35ffb8eab043a004bf51e02a97988b0a7"
+        }
+      ],
+      "inventory_path": "/home/liushe10/Co-NavGPT2/scenes/6s7QHgap2fW/inventory.json",
+      "inventory_sha256": "aad4ba4aea8bc437c077ddd40720aa935c0716f43ff292295ba086b417a15b8b",
+      "missing_types": [],
+      "plan_id": "6s7QHgap2fW_multi_origin_medium_gallery_union_08c32cb46260",
+      "plan_path": "/home/liushe10/Co-NavGPT2/outputs/fire_gallery_medium_36_20260911/6s7QHgap2fW/plan.json",
+      "plan_sha256": "88560a75a39e858f55facbfefacf2f612ede5e299df7cd50a47996e82f5ed660",
+      "reference_gallery": "/home/liushe10/Co-NavGPT2/outputs/fire_gallery_medium_36_stronger_20260912",
+      "reference_timeline": "/home/liushe10/Co-NavGPT2/outputs/fire_gallery_medium_36_20260911/timelines/6s7QHgap2fW/6s7QHgap2fW_multi_origin_medium_gallery_union_08c32cb46260/timeline.npz",
+      "scene_id": "6s7QHgap2fW",
+      "scene_mesh": "/home/liushe10/Co-NavGPT2/data/scene_datasets/hm3d_v0.2/val/00890-6s7QHgap2fW/6s7QHgap2fW.basis.glb",
+      "source_count": 18,
+      "views": [
+        {
+          "agent_position": [
+            17.447124481201172,
+            0.09943583607673645,
+            -0.9920020699501038
+          ],
+          "camera_position": [
+            17.447124481201172,
+            1.3994357585906982,
+            -0.9920020699501038
+          ],
+          "camera_rotation_xyzw": [
+            0.00266298302449286,
+            -0.9574640393257141,
+            0.008840733207762241,
+            0.2884048819541931
+          ],
+          "directory": "01_kitchen_grease_fire",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 10.0,
+          "hfov_deg": 79.0,
+          "label": "Kitchen Grease Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.7716317565107643,
+            "flame_center_distance": 0.18855328848584552,
+            "flame_fraction": 0.2980396412037037,
+            "mean_luminance": 0.33530521766812194,
+            "mean_smoke_attenuation": 0.8208856582641602,
+            "near_obstacle_fraction": 0.010386284722222222,
+            "rgb_fire_fraction": 0.04450954861111111,
+            "rgb_fire_ratio": 0.14934103541176186,
+            "score": 1.692785253641548,
+            "smoke_fraction": 0.9896137152777778,
+            "source_visible_fraction": 0.06787471064814815
+          },
+          "plan_id": "6s7QHgap2fW_multi_origin_medium_gallery_union_08c32cb46260",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 0.8339256299723128,
+            "flame_center_distance": 0.19513216790338028,
+            "flame_fraction": 0.20640190972222222,
+            "mean_luminance": 0.43310801188151044,
+            "mean_smoke_attenuation": 0.40100786089897156,
+            "near_obstacle_fraction": 0.010386284722222222,
+            "rgb_fire_fraction": 0.003739872685185185,
+            "rgb_fire_ratio": 0.018119370553394316,
+            "score": 7.427678258661494,
+            "smoke_fraction": 0.9904456018518518,
+            "source_visible_fraction": 0.06787471064814815
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "kitchen_grease_fire",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "microwave",
+            "floor_id": 0,
+            "fuel_kg": 4.6,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 188,
+            "position": [
+              18.243562698364258,
+              1.2460671663284302,
+              0.21007946133613586
+            ],
+            "region_id": 3,
+            "smoke_yield": 0.5,
+            "source_radius_m": 0.404,
+            "source_temp_c": 729.8
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 1,
+          "smoke_k_ext": 3.0
+        },
+        {
+          "agent_position": [
+            0.3296927213668823,
+            2.8994359970092773,
+            -3.2021453380584717
+          ],
+          "camera_position": [
+            0.3296927213668823,
+            4.199436187744141,
+            -3.2021453380584717
+          ],
+          "camera_rotation_xyzw": [
+            -0.0887378677725792,
+            -0.8207949995994568,
+            -0.13280560076236725,
+            0.5484377145767212
+          ],
+          "directory": "02_bedroom_textile",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 30.0,
+          "hfov_deg": 79.0,
+          "label": "Bedroom Textile Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.9030926137232528,
+            "flame_center_distance": 0.1374854555741119,
+            "flame_fraction": 0.24597511574074074,
+            "mean_luminance": 0.3549177880380668,
+            "mean_smoke_attenuation": 0.6139321327209473,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.1398509837962963,
+            "rgb_fire_ratio": 0.5685574468585679,
+            "score": 14.691008361183341,
+            "smoke_fraction": 1.0,
+            "source_visible_fraction": 0.36162181712962965
+          },
+          "plan_id": "6s7QHgap2fW_multi_origin_medium_gallery_union_08c32cb46260",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 0.9468232953464898,
+            "flame_center_distance": 0.13426138169142415,
+            "flame_fraction": 0.19779224537037038,
+            "mean_luminance": 0.3735949048808977,
+            "mean_smoke_attenuation": 0.3056483268737793,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.11025462962962963,
+            "rgb_fire_ratio": 0.5574264523018857,
+            "score": 19.027488123556477,
+            "smoke_fraction": 0.8339221643518518,
+            "source_visible_fraction": 0.36162181712962965
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "bedroom_textile",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "bed",
+            "floor_id": 1,
+            "fuel_kg": 6.0,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 252,
+            "position": [
+              2.36222767829895,
+              3.2883718013763428,
+              -2.3602418899536133
+            ],
+            "region_id": 6,
+            "smoke_yield": 0.8,
+            "source_radius_m": 0.6,
+            "source_temp_c": 756.4
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 2,
+          "smoke_k_ext": 3.0
+        },
+        {
+          "agent_position": [
+            5.297122955322266,
+            0.09943583607673645,
+            -2.4933807849884033
+          ],
+          "camera_position": [
+            5.297122955322266,
+            1.3994357585906982,
+            -2.4933807849884033
+          ],
+          "camera_rotation_xyzw": [
+            -0.033694833517074585,
+            0.9341921210289001,
+            0.09173790365457535,
+            0.3431236743927002
+          ],
+          "directory": "03_living_room_electric",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 10.0,
+          "hfov_deg": 79.0,
+          "label": "Living-room Electrical Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.7767605178690679,
+            "flame_center_distance": 0.11047467806612608,
+            "flame_fraction": 0.47012008101851854,
+            "mean_luminance": 0.3729505351945466,
+            "mean_smoke_attenuation": 0.7069041132926941,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.15872106481481482,
+            "rgb_fire_ratio": 0.33761813464965057,
+            "score": -7.44766806424885,
+            "smoke_fraction": 1.0,
+            "source_visible_fraction": 0.0466796875
+          },
+          "plan_id": "6s7QHgap2fW_multi_origin_medium_gallery_union_08c32cb46260",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 0.7737842629426767,
+            "flame_center_distance": 0.1367416513593323,
+            "flame_fraction": 0.3647728587962963,
+            "mean_luminance": 0.39821385402305454,
+            "mean_smoke_attenuation": 0.3112848699092865,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.05673032407407407,
+            "rgb_fire_ratio": 0.15552232767886534,
+            "score": -0.4008135988238557,
+            "smoke_fraction": 1.0,
+            "source_visible_fraction": 0.0466796875
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "living_room_electric",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "tv",
+            "fuel_kg": 4.6,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 34,
+            "position": [
+              4.276383876800537,
+              0.906697690486908,
+              -1.2912992238998413
+            ],
+            "smoke_yield": 0.55,
+            "source_radius_m": 0.487,
+            "source_temp_c": 771.5
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 3,
+          "smoke_k_ext": 3.0
+        },
+        {
+          "agent_position": [
+            10.998125076293945,
+            2.8994359970092773,
+            -0.48814207315444946
+          ],
+          "camera_position": [
+            10.998125076293945,
+            4.199436187744141,
+            -0.48814207315444946
+          ],
+          "camera_rotation_xyzw": [
+            -0.1638684719800949,
+            -0.1923481673002243,
+            -0.03259548917412758,
+            0.9669988751411438
+          ],
+          "directory": "04_multi_origin",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 30.0,
+          "hfov_deg": 79.0,
+          "label": "Multi-origin Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.997491243018082,
+            "flame_center_distance": 0.08306190649850904,
+            "flame_fraction": 0.21394965277777778,
+            "mean_luminance": 0.4548998963599111,
+            "mean_smoke_attenuation": 0.36156898736953735,
+            "near_obstacle_fraction": 0.033933738425925924,
+            "rgb_fire_fraction": 0.05906539351851852,
+            "rgb_fire_ratio": 0.27607146238216956,
+            "score": 13.849083100091049,
+            "smoke_fraction": 0.9622294560185185,
+            "source_visible_fraction": 0.01443431712962963
+          },
+          "plan_id": "6s7QHgap2fW_multi_origin_medium_gallery_union_08c32cb46260",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 1.0,
+            "flame_center_distance": 0.1069807339380588,
+            "flame_fraction": 0.16267361111111112,
+            "mean_luminance": 0.5050711837469363,
+            "mean_smoke_attenuation": 0.13159750401973724,
+            "near_obstacle_fraction": 0.033933738425925924,
+            "rgb_fire_fraction": 0.02962673611111111,
+            "rgb_fire_ratio": 0.18212379935965847,
+            "score": 14.987119526179177,
+            "smoke_fraction": 0.6126822916666667,
+            "source_visible_fraction": 0.01443431712962963
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "multi_origin",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "pillow",
+            "floor_id": 1,
+            "fuel_kg": 6.2,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 313,
+            "position": [
+              11.648687362670898,
+              3.426234006881714,
+              -2.058737277984619
+            ],
+            "region_id": 9,
+            "smoke_yield": 0.55,
+            "source_radius_m": 0.374,
+            "source_temp_c": 775.6
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 4,
+          "smoke_k_ext": 3.0
+        }
+      ]
+    },
+    {
+      "canonical_inputs": [
+        {
+          "path": "scenes/BAbdmeyTvMZ/plans/BAbdmeyTvMZ_bedroom_textile_medium_8cfc9eab318f.json",
+          "sha256": "f9cee02d704635fe173366939e1316afd247465e2ebcbc7c8b60b881449a8611"
+        },
+        {
+          "path": "scenes/BAbdmeyTvMZ/plans/BAbdmeyTvMZ_kitchen_grease_fire_medium_6e629269614b.json",
+          "sha256": "d504015656f6f77f30402f55c7966a27a392867d85a6afeb93abcad73e096f42"
+        },
+        {
+          "path": "scenes/BAbdmeyTvMZ/plans/BAbdmeyTvMZ_living_room_electric_medium_46b7dbcc9adf.json",
+          "sha256": "1e35511740d6039394f21421e5eec71f478435cd479b1e87061d83e7dbc75adf"
+        },
+        {
+          "path": "scenes/BAbdmeyTvMZ/plans/BAbdmeyTvMZ_multi_origin_medium_4b852e371317.json",
+          "sha256": "15013ebfd8435b0dbf43c9a0fd88c338c4e0e21ac42d3b8df7257dba2fb9d24e"
+        }
+      ],
+      "inventory_path": "/home/liushe10/Co-NavGPT2/scenes/BAbdmeyTvMZ/inventory.json",
+      "inventory_sha256": "a596c5a3c5231a5c9b5fefd49d0e8c06c659f4418795332c7eb849c5d11f00d3",
+      "missing_types": [],
+      "plan_id": "BAbdmeyTvMZ_multi_origin_medium_gallery_union_764752383003",
+      "plan_path": "/home/liushe10/Co-NavGPT2/outputs/fire_gallery_medium_36_20260911/BAbdmeyTvMZ/plan.json",
+      "plan_sha256": "fcce53d6353695cf0426b085a609cf0ecae4798515898ad3e7c2e15a0649d244",
+      "reference_gallery": "/home/liushe10/Co-NavGPT2/outputs/fire_gallery_medium_36_stronger_20260912",
+      "reference_timeline": "/home/liushe10/Co-NavGPT2/outputs/fire_gallery_medium_36_20260911/timelines/BAbdmeyTvMZ/BAbdmeyTvMZ_multi_origin_medium_gallery_union_764752383003/timeline.npz",
+      "scene_id": "BAbdmeyTvMZ",
+      "scene_mesh": "/home/liushe10/Co-NavGPT2/data/scene_datasets/hm3d_v0.2/val/00827-BAbdmeyTvMZ/BAbdmeyTvMZ.basis.glb",
+      "source_count": 14,
+      "views": [
+        {
+          "agent_position": [
+            1.8295040130615234,
+            -0.0047907233238220215,
+            6.78748083114624
+          ],
+          "camera_position": [
+            1.8295040130615234,
+            1.2952091693878174,
+            6.78748083114624
+          ],
+          "camera_rotation_xyzw": [
+            -0.22549305856227875,
+            0.40330109000205994,
+            0.10324668884277344,
+            0.8808184862136841
+          ],
+          "directory": "01_kitchen_grease_fire",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 10.0,
+          "hfov_deg": 79.0,
+          "label": "Kitchen Grease Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.973075227161777,
+            "flame_center_distance": 0.04328856176811287,
+            "flame_fraction": 0.3674826388888889,
+            "mean_luminance": 0.3310644411573223,
+            "mean_smoke_attenuation": 0.7774560451507568,
+            "near_obstacle_fraction": 0.05924334490740741,
+            "rgb_fire_fraction": 0.052171585648148146,
+            "rgb_fire_ratio": 0.141970205193619,
+            "score": -3.3826679837060616,
+            "smoke_fraction": 0.9887413194444444,
+            "source_visible_fraction": 0.1419068287037037
+          },
+          "plan_id": "BAbdmeyTvMZ_multi_origin_medium_gallery_union_764752383003",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 0.991156858540371,
+            "flame_center_distance": 0.03688979275959704,
+            "flame_fraction": 0.283359375,
+            "mean_luminance": 0.3717890421549479,
+            "mean_smoke_attenuation": 0.37898361682891846,
+            "near_obstacle_fraction": 0.05924334490740741,
+            "rgb_fire_fraction": 0.013087384259259259,
+            "rgb_fire_ratio": 0.04618652288903185,
+            "score": 2.6435346432716766,
+            "smoke_fraction": 0.9899869791666667,
+            "source_visible_fraction": 0.1419068287037037
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "kitchen_grease_fire",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "stove",
+            "fuel_kg": 6.4,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 345,
+            "position": [
+              0.9510878324508667,
+              0.4794383645057678,
+              6.029341220855713
+            ],
+            "smoke_yield": 0.7,
+            "source_radius_m": 0.5,
+            "source_temp_c": 746.3
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 1,
+          "smoke_k_ext": 3.0
+        },
+        {
+          "agent_position": [
+            6.823482036590576,
+            0.1952092945575714,
+            1.8880306482315063
+          ],
+          "camera_position": [
+            6.823482036590576,
+            1.4952092170715332,
+            1.8880306482315063
+          ],
+          "camera_rotation_xyzw": [
+            -0.1090288832783699,
+            0.5507731437683105,
+            0.0728507712483406,
+            0.8242902755737305
+          ],
+          "directory": "02_bedroom_textile",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 30.0,
+          "hfov_deg": 79.0,
+          "label": "Bedroom Textile Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.9450088604288306,
+            "flame_center_distance": 0.12119820319980426,
+            "flame_fraction": 0.20492042824074075,
+            "mean_luminance": 0.3862434536803002,
+            "mean_smoke_attenuation": 0.4477950632572174,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.06814091435185185,
+            "rgb_fire_ratio": 0.33252377489568696,
+            "score": 15.545505915427096,
+            "smoke_fraction": 1.0,
+            "source_visible_fraction": 0.02357638888888889
+          },
+          "plan_id": "BAbdmeyTvMZ_multi_origin_medium_gallery_union_764752383003",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 0.9374100028799078,
+            "flame_center_distance": 0.1536781202456865,
+            "flame_fraction": 0.16577980324074074,
+            "mean_luminance": 0.4249164656096814,
+            "mean_smoke_attenuation": 0.16317740082740784,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.02437644675925926,
+            "rgb_fire_ratio": 0.14704111286620647,
+            "score": 14.680783303350648,
+            "smoke_fraction": 0.7960966435185185,
+            "source_visible_fraction": 0.02357638888888889
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "bedroom_textile",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "pillow",
+            "floor_id": 0,
+            "fuel_kg": 6.2,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 132,
+            "position": [
+              5.252886772155762,
+              0.8574831485748291,
+              1.2374688386917114
+            ],
+            "region_id": 4,
+            "smoke_yield": 0.55,
+            "source_radius_m": 0.376,
+            "source_temp_c": 729.0
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 2,
+          "smoke_k_ext": 3.0
+        },
+        {
+          "agent_position": [
+            3.1720824241638184,
+            -0.0047907233238220215,
+            9.019049644470215
+          ],
+          "camera_position": [
+            3.1720824241638184,
+            1.2952091693878174,
+            9.019049644470215
+          ],
+          "camera_rotation_xyzw": [
+            0.10366325825452805,
+            0.5512353777885437,
+            -0.06926555931568146,
+            0.8249822854995728
+          ],
+          "directory": "03_living_room_electric",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 30.0,
+          "hfov_deg": 79.0,
+          "label": "Living-room Electrical Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.9581918613490092,
+            "flame_center_distance": 0.05115637645814047,
+            "flame_fraction": 0.2283912037037037,
+            "mean_luminance": 0.38657118853400735,
+            "mean_smoke_attenuation": 0.52984219789505,
+            "near_obstacle_fraction": 0.04111834490740741,
+            "rgb_fire_fraction": 0.017472511574074073,
+            "rgb_fire_ratio": 0.07650255916485076,
+            "score": 8.674187259234738,
+            "smoke_fraction": 1.0,
+            "source_visible_fraction": 0.1905931712962963
+          },
+          "plan_id": "BAbdmeyTvMZ_multi_origin_medium_gallery_union_764752383003",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 0.9490099894743114,
+            "flame_center_distance": 0.0686822334024808,
+            "flame_fraction": 0.14569733796296297,
+            "mean_luminance": 0.43260405297372856,
+            "mean_smoke_attenuation": 0.22254572808742523,
+            "near_obstacle_fraction": 0.04111834490740741,
+            "rgb_fire_fraction": 0.004518229166666667,
+            "rgb_fire_ratio": 0.031011061902965067,
+            "score": 10.310019144692232,
+            "smoke_fraction": 0.7806712962962963,
+            "source_visible_fraction": 0.1905931712962963
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "living_room_electric",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "tv",
+            "fuel_kg": 4.6,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 30,
+            "position": [
+              1.601487159729004,
+              1.7870758771896362,
+              8.368487358093262
+            ],
+            "smoke_yield": 0.55,
+            "source_radius_m": 0.6,
+            "source_temp_c": 746.3
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 3,
+          "smoke_k_ext": 3.0
+        },
+        {
+          "agent_position": [
+            2.3161399364471436,
+            -0.0047907233238220215,
+            9.602540016174316
+          ],
+          "camera_position": [
+            2.3161399364471436,
+            1.2952091693878174,
+            9.602540016174316
+          ],
+          "camera_rotation_xyzw": [
+            -0.21070246398448944,
+            0.3725983500480652,
+            0.08727581053972244,
+            0.8995320796966553
+          ],
+          "directory": "04_multi_origin",
+          "files": [
+            "rgb_clean.png",
+            "rgb_fire_smoke.png",
+            "depth_clean.png",
+            "depth_smoke.png",
+            "thermal.png",
+            "lidar_bev.png",
+            "radar_bev.png",
+            "radar_range_azimuth.png",
+            "radar_range_elevation.png",
+            "sensor_dashboard.png",
+            "fire_sensor_arrays.npz",
+            "template_scene.png",
+            "rgb_fire_smoke_physical.png",
+            "fire_sensor_observation.png",
+            "presentation_haze.npz",
+            "source_object_mask.png"
+          ],
+          "final_sensor_seed": 117,
+          "fire_time_s": 10.0,
+          "hfov_deg": 79.0,
+          "label": "Multi-origin Fire",
+          "lidar_is_360": true,
+          "physical_visibility_metrics": {
+            "central_flame_ratio": 0.8420319276070994,
+            "flame_center_distance": 0.08463708384851219,
+            "flame_fraction": 0.2772294560185185,
+            "mean_luminance": 0.38026431214575673,
+            "mean_smoke_attenuation": 0.5013529658317566,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.035050636574074076,
+            "rgb_fire_ratio": 0.12643186289602915,
+            "score": 6.643814029842217,
+            "smoke_fraction": 1.0,
+            "source_visible_fraction": 0.03698061342592593
+          },
+          "plan_id": "BAbdmeyTvMZ_multi_origin_medium_gallery_union_764752383003",
+          "presentation_haze": {
+            "density_per_m": 0.045,
+            "gray_rgb": [
+              140,
+              140,
+              140
+            ],
+            "max_alpha": 0.22,
+            "physical_transmittance_unchanged": true
+          },
+          "preview_metrics": {
+            "central_flame_ratio": 0.8334267603811824,
+            "flame_center_distance": 0.10379117002668393,
+            "flame_fraction": 0.1677589699074074,
+            "mean_luminance": 0.43611872055951284,
+            "mean_smoke_attenuation": 0.1979191154241562,
+            "near_obstacle_fraction": 0.0,
+            "rgb_fire_fraction": 0.013514178240740742,
+            "rgb_fire_ratio": 0.08055711267301971,
+            "score": 12.443708696367054,
+            "smoke_fraction": 0.8224565972222222,
+            "source_visible_fraction": 0.03698061342592593
+          },
+          "preview_native_resolution": [
+            320,
+            240
+          ],
+          "preview_ray_resolution": [
+            240,
+            180
+          ],
+          "preview_seed": 17,
+          "ray_samples": 96,
+          "render_scale": 1.0,
+          "render_version": 3,
+          "renderer": {
+            "backend": "torch",
+            "device": "cuda:0"
+          },
+          "requested_type": "multi_origin",
+          "resolution": [
+            960,
+            720
+          ],
+          "reused_views_from": "outputs/fire_gallery_medium_36_20260911",
+          "selected_source": {
+            "category": "table",
+            "floor_id": 0,
+            "fuel_kg": 5.2,
+            "ignite_time_s": 0.0,
+            "ignition_role": "initial",
+            "object_id": 29,
+            "position": [
+              1.1140583753585815,
+              0.27257585525512695,
+              8.400458335876465
+            ],
+            "region_id": 1,
+            "smoke_yield": 0.45,
+            "source_radius_m": 0.485,
+            "source_temp_c": 745.4
+          },
+          "semantic_fallback": false,
+          "sensor_max_depth_m": 12.0,
+          "slot": 4,
+          "smoke_k_ext": 3.0
+        }
+      ]
+    }
+  ],
+  "types": [
+    "kitchen_grease_fire",
+    "bedroom_textile",
+    "living_room_electric",
+    "multi_origin"
+  ]
+}

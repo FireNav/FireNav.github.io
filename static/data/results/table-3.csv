@@ -1,0 +1,4 @@
+﻿Statistic,Runtime (ms),Runtime (ms),Runtime (ms),Runtime (ms),Runtime (ms),Runtime (ms),Runtime (ms)
+,Preprocessing,Mapping,Exploration Planning,VLM Planning,Visualization,Communication,Action Completion
+Mean,57.0,89.63,100.1,2155.4,33.7,4.31,378.4
+Std.,32.6,34.16,15.9,578.6,12.1,13.83,112.43
